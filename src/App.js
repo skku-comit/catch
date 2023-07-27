@@ -1,11 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+// imports
+import { Routes, Route } from "react-router-dom";
+
+// pages
+import StartPage from './pages/StartPage';
+
 
 function App() {
   return (
-    <div className="App">
-      catch
-    </div>
+    <Routes>
+      <Route path="/" element={<StartPage />} />
+      <Route path="*" element={<p>Path not resolved</p>} />
+    </Routes>
   );
 }
 
