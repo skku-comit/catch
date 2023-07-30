@@ -1,0 +1,17 @@
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.button {
+  background-color: #62b87f;
+  width: 240px;
+  height: 80px;
+  border: 3px solid black;
+  border-radius: 12px;
+  box-shadow: 0px 12px 0px black;
+  position: relative;
+  top: 70%;
+}

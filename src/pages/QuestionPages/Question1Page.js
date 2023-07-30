@@ -3,7 +3,7 @@ import classes from "./Question1Page.module.css";
 
 //imports
 import QuestionImage from "./QuestionImage";
-
+import QuestionButton from "./QuestionButton";
 const Question1Page = () => {
   return (
     <div className={classes["question-container"]}>
@@ -16,8 +16,7 @@ const Question1Page = () => {
 
       <div className={classes["question-answer"]}>
         <QuestionImage />
-        <div className={classes["question-button"]}></div>
-        <div className={classes["question-button"]}></div>
+        <QuestionButton />
       </div>
     </div>
   );

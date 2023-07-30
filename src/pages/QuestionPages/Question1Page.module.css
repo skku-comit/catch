@@ -5,7 +5,6 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
-  border: 3px solid red;
 }
 
 .question-problem {
@@ -35,15 +34,4 @@
   flex-flow: row wrap;
   justify-content: space-around;
   align-content: center;
-}
-
-.question-button {
-  background-color: #62b87f;
-  width: 240px;
-  height: 80px;
-  border: 3px solid black;
-  border-radius: 12px;
-  box-shadow: 0px 12px 0px black;
-  position: relative;
-  top: 10%;
 }
