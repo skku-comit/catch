@@ -2,11 +2,13 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
 }
 
 .image {
+  background-color: white;
   width: 325px;
   height: 250px;
-  background-color: white;
   border: 3px solid black;
+  border-radius: 12px;
 }
