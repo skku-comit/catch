@@ -15,6 +15,7 @@ const Question1Page = () => {
       </div>
 
       <div className={classes["question-answer"]}>
+        <div className={classes["question-border"]}></div>;
         <QuestionImage />
         <QuestionButton />
       </div>

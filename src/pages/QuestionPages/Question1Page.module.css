@@ -14,24 +14,39 @@
   border-radius: 12px;
   background-color: #ffa077;
   box-shadow: 6px 6px 0px black;
+
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   position: relative;
+  z-index: 1;
   top: 43%;
 }
 
 .question-answer {
-  background-color: #f3ebd6;
   width: 818px;
   height: 618px;
   border: 3px solid black;
   border-radius: 24px;
   margin-bottom: 65px;
+  background-color: #f3ebd6;
   box-shadow: 12px 12px 0px black;
+
+  order: 1;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   align-content: center;
+
+  position: relative;
+}
+
+.question-border {
+  position: absolute;
+  width: 96%;
+  height: 94%;
+  top: 3%;
+  border: 5px dashed #decda2;
+  border-radius: 24px;
 }
