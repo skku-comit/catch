@@ -1,5 +1,4 @@
 // images
-import StartButton from "../assets/images/start-button.png";
 
 // css
 import classes from "./StartPage.module.css";
@@ -7,12 +6,10 @@ import classes from "./StartPage.module.css";
 const StartPage = () => {
   return (
     <div className={classes["start-page-container"]}>
-      <div className={classes["start-page__logo"]}>
+      <div className={classes["start-page-logo"]}>
         <h1>Logo</h1>
       </div>
-      <div>
-        <img src={StartButton} alt="start button" />
-      </div>
+      <button className={classes["start-page-button"]} />
     </div>
   );
 };
