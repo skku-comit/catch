@@ -1,6 +1,9 @@
 //css
 import classes from "./Question1Page.module.css";
 
+//imports
+import QuestionImage from "./QuestionImage";
+
 const Question1Page = () => {
   return (
     <div className={classes["question-container"]}>

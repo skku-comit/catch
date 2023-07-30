@@ -1,0 +1,12 @@
+.image-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.image {
+  width: 325px;
+  height: 250px;
+  background-color: white;
+  border: 3px solid black;
+}
