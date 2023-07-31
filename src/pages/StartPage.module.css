@@ -28,3 +28,8 @@
   height: 30%;
   cursor: pointer;
 }
+
+.start-page-button button{
+  border: none;
+  background-color: transparent;
+}

@@ -10,7 +10,9 @@ const StartPage = () => {
       <div className={classes["start-page-logo"]}>
         <h1>Logo</h1>
       </div>
-      <Link to={"./q1-page"} className={classes["start-page-button"]}></Link>
+      <Link to={"./q1"} className={classes["start-page-button"]}>
+        <button/>
+      </Link>
     </div>
   );
 };

@@ -1,11 +1,10 @@
 //css
 import classes from "./QuestionNumber.module.css";
 
-const QuestionNumber = () => {
-  let number = 1;
+const QuestionNumber = ({Number}) => {
   return (
     <div className={classes["QuestionNumber"]}>
-      <h1>{number}</h1>
+      <h1>{Number}</h1>
     </div>
   );
 };
