@@ -7,7 +7,7 @@ const QuestionButton = () => {
   const correctLink = "./ans";
   const wrongLink = "./wrg";
   return (
-    <Link to={correctLink} className={classes["button-container"]}>
+    <Link to={"./ans"} className={classes["button-container"]}>
       <button className={classes["button"]} />
       <button className={classes["button"]} />
     </Link>

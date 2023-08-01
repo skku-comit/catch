@@ -11,7 +11,7 @@ function App() {
     <Routes>
       <Route path="/" element={<StartPage />} />
       <Route path="/q1" element={<Question1Page />} />
-      <Route path="/ans" element={<CorrectPage />} />
+      <Route path="/q1/ans" element={<CorrectPage />} />
     </Routes>
   );
 }
