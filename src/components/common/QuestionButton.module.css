@@ -1,17 +1,34 @@
 .button-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   width: 100%;
 }
 
-.button {
+.button1 {
   background-color: #62b87f;
-  width: 240px;
-  height: 80px;
+  padding: 0;
+  width: 246px;
+  height: 86px;
+  border: 2px solid black;
+  border-radius: 12px;
+  box-shadow: 0px 12px 0px black;
+
+  position: relative;
+  right: 8%;
+  bottom: 60%;
+}
+
+.button2 {
+  background-color: #62b87f;
+  padding: 0;
+  width: 246px;
+  height: 86px;
   border: 3px solid black;
   border-radius: 12px;
   box-shadow: 0px 12px 0px black;
   position: relative;
-  top: 70%;
+
+  left: 8%;
+  bottom: 60%;
 }

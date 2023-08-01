@@ -8,8 +8,8 @@ const QuestionButton = () => {
   const wrongLink = "./wrg";
   return (
     <Link to={"./ans"} className={classes["button-container"]}>
-      <button className={classes["button"]} />
-      <button className={classes["button"]} />
+      <button className={classes["button1"]} />
+      <button className={classes["button2"]} />
     </Link>
   );
 };

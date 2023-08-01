@@ -1,6 +1,35 @@
+.bottom-container {
+  margin: auto 184px;
+  margin-top: 0;
+  width: 86%;
+  height: 47%;
+  background-color: #f3ebd6;
+  border: 3px solid black;
+  border-radius: 24px;
+  box-shadow: 12px 12px 0px black;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+
+  position: relative;
+}
+
+.question-border {
+  /*bottom-container 기준*/
+  position: absolute;
+  width: 96%;
+  height: 96%;
+  border: 5px dashed #decda2;
+  border-radius: 24px;
+
+  top: 2%;
+}
+/* 여기전 */
 .question-problem {
-  width: 70%;
-  height: 14%;
+  width: 83.1%;
+  height: 35.6%;
   border: 3px solid black;
   border-radius: 12px;
   background-color: #ffa077;
@@ -8,26 +37,46 @@
 
   position: relative;
   z-index: 1;
-  top: 43%;
+  top: -15%;
 
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
+/*뾰족한 모양 만들기 (실패-도전중)*/
+/* .question-problem:after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-bottom-color: #ffa077;
+  border-top: 0;
+  border-right: 0;
+  margin-left: -7%;
+  margin-top: -7%;
+  box-shadow: 6px 6px 0px black;
+} */
+
 .question-problem__text {
+  position: relative;
+  right: 40%;
+  text-align: start;
   /* text style created after font received*/
 }
 
-.question-answer {
-  width: 80%;
-  height: 45%;
+.question-select {
+  /* width: 80%;
+  height: 100%; */
   border: 3px solid black;
   border-radius: 24px;
   margin-bottom: 65px;
-  background-color: #f3ebd6;
-  box-shadow: 12px 12px 0px black;
+  /* background-color: #f3ebd6;
+  box-shadow: 12px 12px 0px black; */
 
   order: 1;
   display: flex;
@@ -36,13 +85,6 @@
   align-content: center;
 
   position: relative;
-}
-
-.question-border {
-  position: absolute;
-  width: 96%;
-  height: 94%;
-  top: 3%;
-  border: 5px dashed #decda2;
-  border-radius: 24px;
+  top: 0%;
+  /* top: -12.3%; */
 }

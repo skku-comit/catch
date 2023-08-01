@@ -8,9 +8,12 @@ import QuestionContainer from "../components/common/layout/QuestionContainer";
 const Question1Page = () => {
   return (
     <div className={classes["question-page"]}>
+      {/* 추후에 이미지 컨테이너로 대체될 예정 */}
+      <div className={classes["top-container"]}></div>
+
       <QuestionContainer
         Number={1}
-        Problem={"안녕 캐치, 부동산이 너무 많아 우리 부동산이..."}
+        Problem={"안녕 캐치, 부동산이 너무 많아"}
         Image1={Image1}
         Image2={Image1}
       />
