@@ -2,34 +2,31 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* background: url(""); */
   align-items: center;
   margin: 0px;
   height: 100vh;
-  background: white;
+  /* background changes to img later */
+  background: transparent;
 }
 
 .start-page-logo {
-  /* temp logo changes to img later */
   border: 1px solid black;
   width: 80%;
-  height: 20%;
-  text-align: center;
+  height: 15%;
+  /* temp logo changes to img later */
+  background: transparent;
 }
 
-.start-page-button{
-  background-image: url('../assets/images/start-button.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: transparent;
+.start-page-button {
+  background: url("../assets/images/start-button.png") center center/contain
+    no-repeat transparent;
   border: none;
   width: 50%;
-  height: 30%;
+  height: 10%;
   cursor: pointer;
 }
 
-.start-page-button button{
+.start-page-button button {
   border: none;
   background-color: transparent;
 }
