@@ -5,13 +5,15 @@
   border-radius: 12px;
   background-color: #ffa077;
   box-shadow: 6px 6px 0px black;
+
+  position: relative;
+  z-index: 1;
+  top: 43%;
+
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  position: relative;
-  z-index: 1;
-  top: 43%;
 }
 
 .question-problem__text {
