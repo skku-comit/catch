@@ -10,8 +10,10 @@ import QuestionContainer from "../components/layout/QuestionContainer";
 const Question1Page = () => {
   return (
     <div className={classes["question-page"]}>
-      <ExperimentBar />
-      <CharacterContainer/>
+      <div className={classes["image-container"]}>
+        <ExperimentBar />
+        <CharacterContainer />
+      </div>
       <QuestionContainer
         Number={1}
         Problem={"안녕 캐치, 부동산이 너무 많아"}

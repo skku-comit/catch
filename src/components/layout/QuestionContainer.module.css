@@ -1,19 +1,26 @@
 .question-container {
-  width: 810px;
-  height: 610px;
+  width: 86%;
+  height: 47%;
+
+  margin: auto 184px;
+  margin-top: 0;
+
   background: url("../../assets/box/box_main.png") no-repeat;
   background-size: contain;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
 }
 
-
 .question-problem {
-  width: 700px;
-  height: 200px;
+  width: 83.1%;
+  height: 45%;
   background: url("../../assets/box/box_content_default.png") no-repeat;
   background-size: contain;
+
+  position: relative;
   z-index: 1;
   top: -15%;
 
@@ -22,23 +29,6 @@
   justify-content: space-between;
   align-items: center;
 }
-
-/*뾰족한 모양 만들기 (실패-도전중)*/
-/* .question-problem:after {
-  content: "";
-  position: absolute;
-  top: 0%;
-  left: 100%;
-  width: 0;
-  height: 0;
-  border: 50px solid transparent;
-  border-bottom-color: #ffa077;
-  border-top: 0;
-  border-right: 0;
-  margin-left: -7%;
-  margin-top: -7%;
-  box-shadow: 6px 6px 0px black;
-} */
 
 .question-problem__text {
   position: relative;
