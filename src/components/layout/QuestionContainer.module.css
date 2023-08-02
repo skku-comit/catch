@@ -1,12 +1,10 @@
 .question-container {
   width: 86%;
   height: 47%;
-
   margin: auto 184px;
   margin-top: 0;
-
-  background: url("../../assets/box/box_main.png") no-repeat;
-  background-size: contain;
+  background: url("../../assets/box/box_main.png") center center/contain
+    no-repeat transparent;
 
   display: flex;
   flex-direction: column;
@@ -17,9 +15,8 @@
 .question-problem {
   width: 83.1%;
   height: 45%;
-  background: url("../../assets/box/box_content_default.png") no-repeat;
-  background-size: contain;
-
+  background: url("../../assets/box/box_content_default.png") center center/contain
+    no-repeat transparent;
   position: relative;
   z-index: 1;
   top: -15%;
