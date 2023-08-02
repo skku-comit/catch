@@ -9,7 +9,7 @@ import QuestionContainer from "../components/layout/QuestionContainer";
 
 const Question1Page = () => {
   return (
-    <div className={classes["question-page"]}>
+    <div className={classes["page"]}>
       <div className={classes["image-container"]}>
         <ExperimentBar />
         <CharacterContainer />
