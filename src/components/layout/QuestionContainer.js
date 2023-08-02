@@ -1,14 +1,14 @@
 // components
-import QuestionNumber from "../QuestionNumber";
-import QuestionImage from "../QuestionImage";
-import QuestionButton from "../QuestionButton";
+import QuestionNumber from "../common/QuestionNumber";
+import QuestionImage from "../common/QuestionImage";
+import QuestionButton from "../common/QuestionButton";
 
 // css
 import classes from "./QuestionContainer.module.css";
 
 const QuestionContainer = ({ Number, Problem, Image1, Image2 }) => {
   return (
-    <div className={classes["bottom-container"]}>
+    <div className={classes["question-container"]}>
       {/* <div className={classes["question-border"]}></div> */}
 
       <div className={classes["question-problem"]}>

@@ -1,10 +1,10 @@
 .start-page{
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin: 0px;
-  height: 100vh;
   /* background changes to img later */
   background: transparent;
 }

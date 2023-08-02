@@ -2,7 +2,7 @@
 import classes from "./AnswerContainer.module.css";
 
 //imports
-import QuestionImage from "../QuestionImage";
+import QuestionImage from "../common/QuestionImage";
 
 const AnswerContainer = ({ Problem, Image1, Image2 }) => {
   return (

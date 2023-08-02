@@ -3,7 +3,7 @@ import classes from "./CorrectPage.module.css";
 import Image1 from "../../assets/button/start-button.png";
 
 //imports
-import AnswerContainer from "../../components/common/layout/AnswerContainer";
+import AnswerContainer from "../../components/layout/AnswerContainer";
 
 const CorrectPage = () => {
   return (

@@ -2,15 +2,16 @@
 import classes from "./Question1Page.module.css";
 import Image1 from "../assets/button/start-button.png";
 
-//imports
-import QuestionContainer from "../components/common/layout/QuestionContainer";
+// components
+import ExperimentBar from "../components/layout/ExperimentBar";
+import CharacterContainer from "../components/layout/CharacterContainer";
+import QuestionContainer from "../components/layout/QuestionContainer";
 
 const Question1Page = () => {
   return (
     <div className={classes["question-page"]}>
-      {/* 추후에 이미지 컨테이너로 대체될 예정 */}
-      <div className={classes["top-container"]}></div>
-
+      <ExperimentBar />
+      <CharacterContainer/>
       <QuestionContainer
         Number={1}
         Problem={"안녕 캐치, 부동산이 너무 많아"}
