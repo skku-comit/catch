@@ -15,8 +15,8 @@
   align-items: center;
 }
 .answer-text {
-  width: 83.1%;
-  height: 45%;
+  width: 81%;
+  height: 40%;
 
   background: url("../../assets/box/box_content_results.png") no-repeat;
   background-size: contain;
