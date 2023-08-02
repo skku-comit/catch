@@ -1,4 +1,4 @@
-.start-page-container {
+.start-page{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -17,16 +17,15 @@
   background: transparent;
 }
 
-.start-page-button {
+.start-link {
   background: url("../assets/button/start-button.png") center center/contain
     no-repeat transparent;
-  border: none;
   width: 50%;
   height: 10%;
-  cursor: pointer;
 }
 
-.start-page-button button {
+.start-button {
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
