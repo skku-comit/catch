@@ -2,8 +2,8 @@
 import classes from "./Question1Page.module.css";
 import Image1 from "../assets/button/start-button.png";
 //imports
-import ExperimentBar from "../components/layout/ExperimentBar";
-import CharacterContainer from "../components/layout/CharacterContainer";
+import ExperimentBar from "../components/common/ExperimentBar";
+import CharacterContainer from "../components/common/Characters";
 import AnswerContainer from "../components/layout/AnswerContainer";
 
 const AnswerPage = () => {
