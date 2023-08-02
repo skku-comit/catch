@@ -1,5 +1,11 @@
-.experiment-bar{
-  width: 40%;
-  height: 10%;
-  border: 1px solid black;
+.experiment-bar {
+  width: 46.4%;
+  height: 27.9%;
+  border: none;
+
+  background: url("../../assets/exp/EXP_0.png") no-repeat;
+  background-size: contain;
+
+  position: relative;
+  left: 5%;
 }

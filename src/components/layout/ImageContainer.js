@@ -7,8 +7,12 @@ import Characters from "../common/Characters";
 const ImageContainer = () => {
   return (
     <div className={classes["image-container"]}>
-      <ExperimentBar />
-      <Characters />
+      <div className={classes["background"]}>
+        <ExperimentBar />
+        <Characters />
+      </div>
+
+      <div className={classes["ground"]}></div>
     </div>
   );
 };
