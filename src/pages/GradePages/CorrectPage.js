@@ -1,6 +1,6 @@
 //css
 import classes from "./CorrectPage.module.css";
-import Image1 from "../../assets/images/start-button.png";
+import Image1 from "../../assets/button/start-button.png";
 
 //imports
 import AnswerContainer from "../../components/common/layout/AnswerContainer";

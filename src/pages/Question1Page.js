@@ -1,6 +1,6 @@
 //css
 import classes from "./Question1Page.module.css";
-import Image1 from "../assets/images/start-button.png";
+import Image1 from "../assets/button/start-button.png";
 
 //imports
 import QuestionContainer from "../components/common/layout/QuestionContainer";
