@@ -16,7 +16,7 @@
   box-shadow: 0px 12px 0px black; */
 
   background: url("../../assets/button/button_default.png") no-repeat;
-  background-size: auto;
+  background-size: contain;
   border: none;
 
   position: relative;

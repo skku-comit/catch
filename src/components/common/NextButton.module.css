@@ -1,0 +1,13 @@
+.button {
+  padding: 0;
+  width: 320px;
+  height: 80px;
+
+  background: url("../../assets/button/button_continue.png") no-repeat;
+  background-size: contain;
+  border: none;
+
+  position: relative;
+  left: 7%;
+  bottom: 60%;
+}
