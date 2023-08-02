@@ -11,20 +11,28 @@
 .image1 {
   width: 331px;
   height: 256px;
-  background-color: white;
+
+  /* background-color: white;
   border: 3px solid black;
-  border-radius: 12px;
+  border-radius: 12px; */
+
+  background: url("../../assets/box/box_image.png") no-repeat;
+  background-size: contain;
 
   position: relative;
-  right: 3.5%;
+  right: 4.3%;
 }
 
 .image2 {
   width: 331px;
   height: 256px;
-  background-color: white;
+
+  /* background-color: white;
   border: 3px solid black;
-  border-radius: 12px;
+  border-radius: 12px; */
+
+  background: url("../../assets/box/box_image.png") no-repeat;
+  background-size: contain;
 
   position: relative;
   left: 3.5%;

@@ -1,9 +1,13 @@
 .QuestionNumber {
   width: 124px;
   height: 124px;
-  border: 2px solid black;
+
+  /* border: 2px solid black;
   background-color: black;
-  border-radius: 12px;
+  border-radius: 12px; */
+
+  background: url("../../assets/box/box_level.png") no-repeat;
+  background-size: contain;
   color: white;
   text-align: center;
   line-height: 65px;
@@ -12,6 +16,7 @@
   left: 7%;
 }
 
+/* 
 .question-border {
   position: absolute;
   right: -11%;
@@ -20,4 +25,4 @@
   height: 124%;
   border: 4px dashed white;
   border-radius: 24px;
-}
+} */
