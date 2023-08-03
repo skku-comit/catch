@@ -1,5 +1,6 @@
 // components
 import QuestionNumber from "../common/QuestionNumber";
+import TextLineBreaker from "../common/TextLineBreaker";
 import QuestionImage from "../common/QuestionImage";
 import QuestionButton from "../common/QuestionButton";
 
@@ -11,7 +12,8 @@ const QuestionContainer = ({ Number, Problem, Image1, Image2 }) => {
     <div className={classes["question-container"]}>
       <div className={classes["question-problem"]}>
         <QuestionNumber Number={Number} />
-        <div className={classes["question-problem__text"]}>{Problem}</div>
+        <TextLineBreaker Problem={Problem} />
+        {/* <div className={classes["question-problem__text"]}>{Problem}</div> */}
       </div>
 
       <QuestionImage Image1={Image1} Image2={Image2} />

@@ -13,7 +13,9 @@ const Question1Page = () => {
 
       <QuestionContainer
         Number={1}
-        Problem={"안녕 캐치, 부동산이 너무 많아"}
+        Problem={
+          "안녕 캐치, 난 유투브 편집자야.\n어떤 자막을 사용해야 구독자들이\n더 편하게 볼 수 있을까?"
+        }
         Image1={Image1}
         Image2={Image1}
       />
