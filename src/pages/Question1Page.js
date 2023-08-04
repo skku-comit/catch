@@ -10,15 +10,13 @@ import ImageContainer from "../components/layout/ImageContainer";
 import questionData from "../data/data.json";
 
 const Question1Page = () => {
-  const [isCorrect, setIsCorrect] = useState();
+  const [isCorrect, setIsCorrect] = useState("");
 
   const answerHandler = (userAnswer) => {
     if (questionData.questions[0].answer === userAnswer) {
       setIsCorrect("true");
-      console.log(isCorrect);
     } else {
       setIsCorrect("false");
-      console.log(isCorrect);
     }
   };
 

@@ -20,22 +20,19 @@ const QuestionContainer = ({
   const checkAnswerHandler = (userAnswer) => {
     onGetAnswer(userAnswer);
   };
-  console.log("checkWrong" + checkWrong);
-
+  console.log(checkWrong);
   return (
     <div className={classes["question-container"]}>
       <div
         className={`${classes["question-problem"]} ${
-          typeof checkWrong === "undefined"
+          checkWrong === ""
             ? ""
             : checkWrong === "true"
             ? classes.correct
             : classes.wrong
         }`}
       >
-        {typeof checkWrong === "undefined" && (
-          <div className={classes["triangle"]}></div>
-        )}
+        {checkWrong === "" && <div className={classes["triangle"]}></div>}
         <QuestionNumber Number={Number} />
         <TextLineBreaker Problem={Problem} />
       </div>

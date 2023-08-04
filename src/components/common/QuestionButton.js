@@ -1,6 +1,6 @@
 //imports
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 //css
 import classes from "./QuestionButton.module.css";
 
@@ -8,19 +8,17 @@ const QuestionButton = ({ onCheckAnswer }) => {
   // const correctLink = "./ans";
   // const wrongLink = "./wrg";
 
-  const [userAnswer, setUserAnswer] = useState("intial");
+  const [userAnswer, setUserAnswer] = useState("initial");
+  useEffect(() => {
+    if (userAnswer !== "initial") onCheckAnswer(userAnswer);
+  }, [userAnswer]);
 
   const AclickHandler = () => {
     setUserAnswer("A");
-    onCheckAnswer(userAnswer);
-    alert("Clicked A");
   };
   const BclickHandler = () => {
     setUserAnswer("B");
-    onCheckAnswer(userAnswer);
-    alert("Clicked B");
   };
-  console.log(userAnswer);
 
   return (
     // 해설화면 확인하기 : 나중에 Timer로 구현예정
