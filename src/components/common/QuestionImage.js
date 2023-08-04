@@ -7,14 +7,14 @@ const QuestionImage = ({ Image1, Image2, answer, checkDone }) => {
       <img
         src={""}
         alt="Image 1"
-        className={`${classes["image1"]} ${
+        className={`${classes["image"]} ${classes["image1"]} ${
           answer === "B" && checkDone !== "" && classes.done
         }`}
       />
       <img
         src={""}
         alt="Image 2"
-        className={`${classes["image2"]} ${
+        className={`${classes["image"]} ${classes["image2"]} ${
           answer === "A" && checkDone !== "" && classes.done
         }`}
       />

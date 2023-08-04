@@ -23,8 +23,14 @@ const QuestionButton = ({ onCheckAnswer }) => {
   return (
     // 해설화면 확인하기 : 나중에 Timer로 구현예정
     <div className={classes["button-container"]}>
-      <button className={classes["correct-link"]} onClick={AclickHandler} />
-      <button className={classes["wrong-link"]} onClick={BclickHandler} />
+      <button
+        className={`${classes.link} ${classes["correct-link"]} `}
+        onClick={AclickHandler}
+      />
+      <button
+        className={`${classes.link} ${classes["wrong-link"]}`}
+        onClick={BclickHandler}
+      />
 
       {/* <Link to={correctLink} className={classes["correct-link"]}>
         <button className={classes['correct-button']}/>

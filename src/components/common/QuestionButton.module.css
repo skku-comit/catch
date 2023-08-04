@@ -9,35 +9,31 @@
   top: 40%;
 }
 
-.correct-link {
+.link {
   padding: 0;
-  width: 27.26%;
-  height: 24.5%;
+  width: 28.6%;
+  height: 25%;
 
+  border: none;
+  position: relative;
+  bottom: 60%;
+}
+
+.correct-link {
   background: url("../../assets/button/buttonA/button_A_default.png") center
     center/contain no-repeat;
-  border: none;
 
-  position: relative;
   right: 8%;
-  bottom: 60%;
 }
 
 .wrong-link {
-  padding: 0;
-  width: 27.26%;
-  height: 24.5%;
-
   background: url("../../assets/button/buttonB/button_B_default.png") center
     center/contain no-repeat;
-  border: none;
 
-  position: relative;
   left: 8%;
-  bottom: 60%;
 }
 
-
-.correct-button, .wrong-button{
+.correct-button,
+.wrong-button {
   border: none;
 }

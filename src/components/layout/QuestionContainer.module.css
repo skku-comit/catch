@@ -1,8 +1,8 @@
 .question-container {
-  width: 86%;
-  height: 47%;
-  margin: auto 184px;
-  margin-top: 0;
+  width: 82.04%;
+  height: 44.66%;
+  margin: 0px 92px;
+  margin-top: 4px;
   background: url("../../assets/box/box_main.png") center center/contain
     no-repeat transparent;
 
@@ -15,14 +15,14 @@
 }
 
 .question-problem {
-  width: 81%;
+  width: 83.33%;
   height: 40%;
   background: url("../../assets/box/box_content_default.png") center
     center/contain no-repeat transparent;
 
   position: absolute;
   z-index: 1;
-  top: -15%;
+  top: -12.4%;
 
   display: flex;
   flex-direction: row;
@@ -31,11 +31,11 @@
 }
 
 .triangle {
-  width: 25%;
-  height: 16%;
+  width: 28%;
+  height: 18%;
   position: absolute;
-  left: 84.34646%;
-  bottom: 89.835%;
+  left: 82.5%;
+  bottom: 91%;
 
   background: url("../../assets/box/box_content_default_triangle.png") center
     center/contain no-repeat;
