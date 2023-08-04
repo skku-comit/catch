@@ -5,23 +5,25 @@
   margin: auto 184px;
   margin-top: 0;
 
-  background: url("../../assets/box/box_main.png") no-repeat;
-  background-size: contain;
+  background: url("../../assets/box/box_main.png") center center/contain
+    no-repeat;
+
+  position: relative;
   z-index: 1;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
 }
 .answer-text {
   width: 81%;
   height: 40%;
 
-  background: url("../../assets/box/box_content_results.png") no-repeat;
-  background-size: contain;
+  background: url("../../assets/box/box_content_results.png") center
+    center/contain no-repeat transparent;
 
-  position: relative;
+  position: absolute;
   z-index: 1;
   top: -15%;
 }

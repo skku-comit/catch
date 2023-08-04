@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 // components
 import QuestionNumber from "../common/QuestionNumber";
 import TextLineBreaker from "../common/TextLineBreaker";
@@ -17,6 +18,10 @@ const QuestionContainer = ({ Number, Problem, Image1, Image2 }) => {
 
       <QuestionImage Image1={Image1} Image2={Image2} />
       <QuestionButton />
+      {/* 임시버튼 */}
+      <Link to={"./ans"}>
+        <button></button>
+      </Link>
     </div>
   );
 };
