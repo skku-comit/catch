@@ -9,8 +9,12 @@ const QuestionButton = () => {
   return (
     // 해설화면 확인하기 : 나중에 Timer로 구현예정
     <div className={classes["button-container"]}>
-      <button className={classes["button1"]} />
-      <button className={classes["button2"]} />
+      <Link to={correctLink} className={classes["correct-link"]}>
+        <button className={classes['correct-button']}/>
+      </Link>
+      <Link to={correctLink} className={classes["wrong-link"]}>
+        <button className={classes['wrong-button']}/>
+      </Link>
     </div>
   );
 };

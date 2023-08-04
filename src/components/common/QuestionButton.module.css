@@ -9,7 +9,7 @@
   top: 40%;
 }
 
-.button1 {
+.correct-link {
   padding: 0;
   width: 27.26%;
   height: 24.5%;
@@ -23,7 +23,7 @@
   bottom: 60%;
 }
 
-.button2 {
+.wrong-link {
   padding: 0;
   width: 27.26%;
   height: 24.5%;
@@ -35,4 +35,9 @@
   position: relative;
   left: 8%;
   bottom: 60%;
+}
+
+
+.correct-button, .wrong-button{
+  border: none;
 }
