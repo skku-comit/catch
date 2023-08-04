@@ -15,8 +15,8 @@
 .question-problem {
   width: 83.1%;
   height: 45%;
-  background: url("../../assets/box/box_content_default.png") center center/contain
-    no-repeat transparent;
+  background: url("../../assets/box/box_content_default.png") center
+    center/contain no-repeat transparent;
   position: relative;
   z-index: 1;
   top: -15%;
@@ -25,13 +25,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-
-.question-problem__text {
-  position: relative;
-  right: 40%;
-  text-align: start;
-  /* text style created after font received*/
 }
 
 .question-select {

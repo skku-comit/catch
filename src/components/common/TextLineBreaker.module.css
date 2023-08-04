@@ -1,12 +1,13 @@
-.Problem-text {
+.problem-text {
   position: relative;
-  left: 7%;
+  right: 10%;
   text-align: start;
 
   font-family: MapleStoryBold;
-  font-size: 34pt;
+  font-size: 34px;
   letter-spacing: 0px;
+  color: transparent;
   color: #f3ebd6;
-  -webkit-text-stroke: 4pt black;
-  text-shadow: 0px 4pt 0px black;
+  -webkit-text-stroke: 4px black;
+  text-shadow: 0px 4px 0px black;
 }

@@ -13,11 +13,10 @@ const QuestionContainer = ({ Number, Problem, Image1, Image2 }) => {
       <div className={classes["question-problem"]}>
         <QuestionNumber Number={Number} />
         <TextLineBreaker Problem={Problem} />
-        {/* <div className={classes["question-problem__text"]}>{Problem}</div> */}
       </div>
 
       <QuestionImage Image1={Image1} Image2={Image2} />
-      <QuestionButton />
+      <QuestionButton Image1={Image1} Image2={Image2} />
     </div>
   );
 };

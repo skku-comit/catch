@@ -7,10 +7,11 @@ const QuestionButton = () => {
   const correctLink = "./ans";
   const wrongLink = "./wrg";
   return (
-    <Link to={"./ans"} className={classes["button-container"]}>
+    // 해설화면 확인하기 : 나중에 Timer로 구현예정
+    <div className={classes["button-container"]}>
       <button className={classes["button1"]} />
       <button className={classes["button2"]} />
-    </Link>
+    </div>
   );
 };
 
