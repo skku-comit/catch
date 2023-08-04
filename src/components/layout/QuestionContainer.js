@@ -16,7 +16,7 @@ const QuestionContainer = ({ Number, Problem, Image1, Image2 }) => {
       </div>
 
       <QuestionImage Image1={Image1} Image2={Image2} />
-      <QuestionButton Image1={Image1} Image2={Image2} />
+      <QuestionButton />
     </div>
   );
 };

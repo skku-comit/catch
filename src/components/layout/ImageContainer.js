@@ -4,12 +4,12 @@ import classes from "./ImageContainer.module.css";
 import ExperimentBar from "../common/ExperimentBar";
 import Characters from "../common/Characters";
 
-const ImageContainer = () => {
+const ImageContainer = ({ Citizen }) => {
   return (
     <div className={classes["image-container"]}>
       <div className={classes["background"]}>
         <ExperimentBar />
-        <Characters />
+        <Characters CitizenImage={Citizen} />
       </div>
 
       <div className={classes["ground"]}></div>
