@@ -11,3 +11,7 @@
   -webkit-text-stroke: 4px black;
   text-shadow: 0px 4px 0px black;
 }
+
+.done {
+  display: none;
+}

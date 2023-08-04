@@ -1,9 +1,13 @@
 //css
 import classes from "./QuestionNumber.module.css";
 
-const QuestionNumber = ({ Number }) => {
+const QuestionNumber = ({ Number, checkDone }) => {
   return (
-    <div className={classes["QuestionNumber"]}>
+    <div
+      className={`${classes["QuestionNumber"]} ${
+        checkDone !== "" && classes.done
+      }`}
+    >
       <h1>{Number}</h1>
     </div>
   );

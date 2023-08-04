@@ -20,7 +20,7 @@ const QuestionContainer = ({
   const checkAnswerHandler = (userAnswer) => {
     onGetAnswer(userAnswer);
   };
-  console.log(checkWrong);
+
   return (
     <div className={classes["question-container"]}>
       <div
@@ -33,8 +33,8 @@ const QuestionContainer = ({
         }`}
       >
         {checkWrong === "" && <div className={classes["triangle"]}></div>}
-        <QuestionNumber Number={Number} />
-        <TextLineBreaker Problem={Problem} />
+        <QuestionNumber Number={Number} checkDone={checkWrong} />
+        <TextLineBreaker Problem={Problem} checkDone={checkWrong} />
       </div>
 
       <QuestionImage Image1={Image1} Image2={Image2} />
