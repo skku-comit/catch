@@ -29,3 +29,14 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.triangle {
+  width: 25%;
+  height: 16%;
+  position: absolute;
+  left: 84.34646%;
+  bottom: 89.835%;
+
+  background: url("../../assets/box/box_content_default_triangle.png") center
+    center/contain no-repeat;
+}

@@ -12,6 +12,7 @@ const QuestionContainer = ({ Number, Problem, Image1, Image2 }) => {
   return (
     <div className={classes["question-container"]}>
       <div className={classes["question-problem"]}>
+        <div className={classes["triangle"]}></div>
         <QuestionNumber Number={Number} />
         <TextLineBreaker Problem={Problem} />
       </div>
