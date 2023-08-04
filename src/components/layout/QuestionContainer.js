@@ -20,7 +20,7 @@ const QuestionContainer = ({ Number, Problem, Image1, Image2 }) => {
       <QuestionImage Image1={Image1} Image2={Image2} />
       <QuestionButton />
       {/* 임시버튼 */}
-      <Link to={"./ans"}>
+      <Link to={"./q1/ans"}>
         <button></button>
       </Link>
     </div>

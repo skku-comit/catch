@@ -1,0 +1,8 @@
+.experiment-bar {
+  width: 44.83%;
+  height: 20.67%;
+  border: none;
+  background: url("../../../public/images/exp/EXP_0.png") center center/contain
+    no-repeat transparent;
+  position: relative;
+}
