@@ -28,6 +28,7 @@ const Question1Page = () => {
         Problem={questionData.questions[0].problem}
         Image1={questionData.questions[0].image1}
         Image2={questionData.questions[0].image2}
+        answer={questionData.questions[0].answer}
         checkWrong={isCorrect}
         onGetAnswer={answerHandler}
       />

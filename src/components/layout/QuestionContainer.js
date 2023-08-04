@@ -14,6 +14,7 @@ const QuestionContainer = ({
   Problem,
   Image1,
   Image2,
+  answer,
   checkWrong,
   onGetAnswer,
 }) => {
@@ -37,7 +38,12 @@ const QuestionContainer = ({
         <TextLineBreaker Problem={Problem} checkDone={checkWrong} />
       </div>
 
-      <QuestionImage Image1={Image1} Image2={Image2} />
+      <QuestionImage
+        Image1={Image1}
+        Image2={Image2}
+        answer={answer}
+        checkDone={checkWrong}
+      />
       <QuestionButton onCheckAnswer={checkAnswerHandler} />
     </div>
   );
