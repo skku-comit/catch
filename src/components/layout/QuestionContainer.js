@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 // components
 import QuestionNumber from "../common/QuestionNumber";
-import TextLineBreaker from "../common/TextLineBreaker";
+import QuestionText from "../common/QuestionText";
 import QuestionImage from "../common/QuestionImage";
 import QuestionButton from "../common/QuestionButton";
 
@@ -35,7 +35,7 @@ const QuestionContainer = ({
       >
         {checkWrong === "" && <div className={classes["triangle"]}></div>}
         <QuestionNumber Number={Number} checkDone={checkWrong} />
-        <TextLineBreaker Problem={Problem} checkDone={checkWrong} />
+        <QuestionText Problem={Problem} checkDone={checkWrong} />
       </div>
 
       <QuestionImage

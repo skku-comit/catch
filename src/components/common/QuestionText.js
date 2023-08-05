@@ -1,9 +1,9 @@
 //css
-import classes from "./TextLineBreaker.module.css";
+import classes from "./QuestionText.module.css";
 //imports
 import React, { useState, useEffect } from "react";
 
-const TextLineBreaker = ({ Problem, checkDone }) => {
+const QuestionText = ({ Problem, checkDone }) => {
   const lines = Problem.split("\n");
   return (
     <div
@@ -21,4 +21,4 @@ const TextLineBreaker = ({ Problem, checkDone }) => {
   );
 };
 
-export default TextLineBreaker;
+export default QuestionText;
