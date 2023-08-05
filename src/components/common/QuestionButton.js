@@ -5,9 +5,6 @@ import { useState, useEffect } from "react";
 import classes from "./QuestionButton.module.css";
 
 const QuestionButton = ({ onCheckAnswer }) => {
-  // const correctLink = "./ans";
-  // const wrongLink = "./wrg";
-
   const [userAnswer, setUserAnswer] = useState("initial");
   useEffect(() => {
     if (userAnswer !== "initial") onCheckAnswer(userAnswer);
@@ -31,13 +28,6 @@ const QuestionButton = ({ onCheckAnswer }) => {
         className={`${classes.link} ${classes["wrong-link"]}`}
         onClick={BclickHandler}
       />
-
-      {/* <Link to={correctLink} className={classes["correct-link"]}>
-        <button className={classes['correct-button']}/>
-      </Link>
-      <Link to={correctLink} className={classes["wrong-link"]}>
-        <button className={classes['wrong-button']}/>
-      </Link> */}
     </div>
   );
 };

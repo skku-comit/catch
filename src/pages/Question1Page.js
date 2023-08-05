@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 //css
 import classes from "./Question1Page.module.css";
 
@@ -19,7 +19,7 @@ const Question1Page = () => {
       setIsCorrect("false");
     }
   };
-
+  const correctLink = "./ans";
   return (
     <div className={classes["page"]}>
       <ImageContainer Citizen={questionData.questions[0].characterPath} />
@@ -32,6 +32,10 @@ const Question1Page = () => {
         checkWrong={isCorrect}
         onGetAnswer={answerHandler}
       />
+      {/* 임시버튼 */}
+      <Link to={correctLink} className={classes["temp"]}>
+        <button className={classes["temp-button"]} />
+      </Link>
     </div>
   );
 };
