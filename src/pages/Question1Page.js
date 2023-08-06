@@ -12,6 +12,7 @@ import questionData from "../data/data.json";
 
 const Question1Page = () => {
   const [isCorrect, setIsCorrect] = useState("");
+  const [openAnswerpage, setOpenAnswerPage] = useState(false);
 
   const answerHandler = (userAnswer) => {
     if (questionData.questions[0].answer === userAnswer) {
@@ -20,32 +21,30 @@ const Question1Page = () => {
       setIsCorrect("false");
     }
   };
-  const correctLink = "./ans";
+
+  const pageHandler = () => {
+    setOpenAnswerPage(true);
+  };
+
   return (
     <div className={classes["page"]}>
       <ImageContainer Citizen={questionData.questions[0].characterImage} />
       <QuestionContainer
         Number={questionData.questions[0].id}
         Problem={questionData.questions[0].problem}
+        Explain={questionData.questions[0].explanation}
         Image1={questionData.questions[0].image1}
         Image2={questionData.questions[0].image2}
         answer={questionData.questions[0].answer}
         checkWrong={isCorrect}
+        checkFinished={openAnswerpage}
         onGetAnswer={answerHandler}
       />
       {isCorrect !== "" && (
-        <ThrowFish
-          Citizen={questionData.questions[0].characterImage}
-          Explain={questionData.questions[0].explanation}
-          Image1={questionData.questions[0].image1}
-          Image2={questionData.questions[0].image2}
-          checkWrong={isCorrect}
-        />
+        <ThrowFish checkWrong={isCorrect} onChangePage={pageHandler} />
       )}
-      {/* 임시버튼 */}
-      <Link to={correctLink} className={classes["temp"]}>
-        <button className={classes["temp-button"]} />
-      </Link>
+
+      {openAnswerpage && <div className={classes["backdrop"]} />}
     </div>
   );
 };

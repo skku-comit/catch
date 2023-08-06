@@ -33,6 +33,7 @@
   left: 8%;
 }
 
-.clicked {
+.correct-button,
+.wrong-button {
   border: none;
 }
