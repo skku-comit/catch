@@ -12,12 +12,6 @@ const QuestionText = ({ Problem, checkDone }) => {
       }`}
     >
       <TypingText text={Problem} />
-      {/* {lines.map((line, index) => (
-        <React.Fragment key={index}>
-          {line}
-          <br />
-        </React.Fragment>
-      ))} */}
     </div>
   );
 };

@@ -6,6 +6,7 @@ import classes from "./Question1Page.module.css";
 // components
 import QuestionContainer from "../components/layout/QuestionContainer";
 import ImageContainer from "../components/layout/ImageContainer";
+import ThrowFish from "../components/dynamic/ThrowFish";
 //data
 import questionData from "../data/data.json";
 
@@ -32,6 +33,7 @@ const Question1Page = () => {
         checkWrong={isCorrect}
         onGetAnswer={answerHandler}
       />
+      {isCorrect !== "" && <ThrowFish checkWrong={isCorrect} />}
       {/* 임시버튼 */}
       <Link to={correctLink} className={classes["temp"]}>
         <button className={classes["temp-button"]} />

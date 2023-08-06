@@ -18,7 +18,6 @@ const QuestionButton = ({ onCheckAnswer }) => {
   };
 
   return (
-    // 해설화면 확인하기 : 나중에 Timer로 구현예정
     <div className={classes["button-container"]}>
       <button
         className={`${classes.link} ${classes["correct-link"]} `}
