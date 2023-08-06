@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const NextButton = () => {
   return (
-    <Link to={"../"} className={classes["button-container"]}>
+    <Link to={"/q1/q2"} className={classes["button-container"]}>
       <button className={classes["button"]} />
     </Link>
   );
