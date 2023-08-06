@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 //css
 import classes from "./Question1Page.module.css";
 
