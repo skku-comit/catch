@@ -7,5 +7,12 @@
 }
 
 .done {
+  left: 12%;
+  top: 15%;
   display: none;
+}
+
+.answer {
+  display: block;
+  color: #f3ebd6;
 }

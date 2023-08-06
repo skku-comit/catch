@@ -9,7 +9,7 @@ import ThrowFish from "../components/dynamic/ThrowFish";
 //data
 import questionData from "../data/data.json";
 
-const Question1Page = () => {
+const Question2Page = () => {
   const [isCorrect, setIsCorrect] = useState("");
   const [openAnswerpage, setOpenAnswerPage] = useState(false);
 
@@ -27,14 +27,14 @@ const Question1Page = () => {
 
   return (
     <div className={classes["page"]}>
-      <ImageContainer Citizen={questionData.questions[0].characterImage} />
+      <ImageContainer Citizen={questionData.questions[1].characterImage} />
       <QuestionContainer
-        Number={questionData.questions[0].id}
-        Problem={questionData.questions[0].problem}
-        Explain={questionData.questions[0].explanation}
-        Image1={questionData.questions[0].image1}
-        Image2={questionData.questions[0].image2}
-        answer={questionData.questions[0].answer}
+        Number={questionData.questions[1].id}
+        Problem={questionData.questions[1].problem}
+        Explain={questionData.questions[1].explanation}
+        Image1={questionData.questions[1].image1}
+        Image2={questionData.questions[1].image2}
+        answer={questionData.questions[1].answer}
         checkWrong={isCorrect}
         checkFinished={openAnswerpage}
         onGetAnswer={answerHandler}
@@ -48,4 +48,4 @@ const Question1Page = () => {
   );
 };
 
-export default Question1Page;
+export default Question2Page;

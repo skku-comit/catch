@@ -7,6 +7,7 @@
     no-repeat transparent;
 
   position: relative;
+  z-index: 2;
 
   display: flex;
   flex-direction: column;
@@ -21,13 +22,24 @@
     center/contain no-repeat transparent;
 
   position: absolute;
-  z-index: 1;
   top: -12.4%;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.correct {
+  background-image: url("../../assets/box/box_true.png");
+}
+
+.wrong {
+  background-image: url("../../assets/box/box_false.png");
+}
+
+.done {
+  background-image: url("../../../src/assets/box/box_content_results.png");
 }
 
 .triangle {
@@ -39,12 +51,4 @@
 
   background: url("../../assets/box/box_content_default_triangle.png") center
     center/contain no-repeat;
-}
-
-.correct {
-  background-image: url("../../assets/box/box_true.png");
-}
-
-.wrong {
-  background-image: url("../../assets/box/box_false.png");
 }

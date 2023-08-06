@@ -1,8 +1,18 @@
+import { useEffect, useState } from "react";
 //css
 import classes from "./ThrowFish.module.css";
 //imports
 
-const ThrowFish = ({ Citizen, Explain, Image1, Image2, checkWrong }) => {
+const ThrowFish = ({ checkWrong, onChangePage }) => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      onChangePage();
+    }, 2000);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <>
       {checkWrong === "true" ? (

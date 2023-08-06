@@ -8,14 +8,17 @@ import QuestionButton from "../common/QuestionButton";
 
 // css
 import classes from "./QuestionContainer.module.css";
+import NextButton from "../common/NextButton";
 
 const QuestionContainer = ({
   Number,
   Problem,
+  Explain,
   Image1,
   Image2,
   answer,
   checkWrong,
+  checkFinished,
   onGetAnswer,
 }) => {
   const checkAnswerHandler = (userAnswer) => {
@@ -31,11 +34,16 @@ const QuestionContainer = ({
             : checkWrong === "true"
             ? classes.correct
             : classes.wrong
-        }`}
+        } ${checkFinished && classes.done}`}
       >
         {checkWrong === "" && <div className={classes["triangle"]}></div>}
         <QuestionNumber Number={Number} checkDone={checkWrong} />
-        <QuestionText Problem={Problem} checkDone={checkWrong} />
+        <QuestionText
+          Problem={Problem}
+          Explain={Explain}
+          checkDone={checkWrong}
+          checkFinished={checkFinished}
+        />
       </div>
 
       <QuestionImage
@@ -44,7 +52,11 @@ const QuestionContainer = ({
         answer={answer}
         checkDone={checkWrong}
       />
-      <QuestionButton onCheckAnswer={checkAnswerHandler} />
+      {!checkFinished ? (
+        <QuestionButton onCheckAnswer={checkAnswerHandler} />
+      ) : (
+        <NextButton />
+      )}
     </div>
   );
 };
