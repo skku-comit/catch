@@ -3,10 +3,11 @@
     {
       "id": 1,
       "problem": "안녕 캐치, 우리 학원의 수업정보를\n학생들이 잘 알아보게 하려면\n어떤 디자인을 해야 할까?",
-      "characterPath": "/images/character/actor.png",
+      "explanation": "대상이 선명하게 보 이려면, 적절한 수준의\n대비를 주었는지 확인해야 합니다.",
+      "answer": "A",
+      "characterImage": "/images/character/actor.png",
       "image1": "/images/problems/1-1.png",
-      "image2": "/images/problems/1-2.png",
-      "answer": "A"
+      "image2": "/images/problems/1-2.png"
     }
   ]
 }

@@ -23,9 +23,9 @@ const Question1Page = () => {
   const correctLink = "./ans";
   return (
     <div className={classes["page"]}>
-      <ImageContainer Citizen={questionData.questions[0].characterPath} />
+      <ImageContainer Citizen={questionData.questions[0].characterImage} />
       <QuestionContainer
-        Number={1}
+        Number={questionData.questions[0].id}
         Problem={questionData.questions[0].problem}
         Image1={questionData.questions[0].image1}
         Image2={questionData.questions[0].image2}
@@ -33,7 +33,15 @@ const Question1Page = () => {
         checkWrong={isCorrect}
         onGetAnswer={answerHandler}
       />
-      {isCorrect !== "" && <ThrowFish checkWrong={isCorrect} />}
+      {isCorrect !== "" && (
+        <ThrowFish
+          Citizen={questionData.questions[0].characterImage}
+          Explain={questionData.questions[0].explanation}
+          Image1={questionData.questions[0].image1}
+          Image2={questionData.questions[0].image2}
+          checkWrong={isCorrect}
+        />
+      )}
       {/* 임시버튼 */}
       <Link to={correctLink} className={classes["temp"]}>
         <button className={classes["temp-button"]} />

@@ -2,7 +2,7 @@
 import classes from "./ThrowFish.module.css";
 //imports
 
-const ThrowFish = ({ checkWrong }) => {
+const ThrowFish = ({ Citizen, Explain, Image1, Image2, checkWrong }) => {
   return (
     <>
       {checkWrong === "true" ? (

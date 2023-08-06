@@ -11,7 +11,7 @@ const TypingText = ({ text }) => {
     const count = setInterval(() => {
       setDisplayText(displayText + text[currentIndex]);
       setCurrentIndex(currentIndex + 1);
-    }, 100);
+    }, 50);
     if (currentIndex === text.length) {
       clearInterval(count);
     }
@@ -22,35 +22,3 @@ const TypingText = ({ text }) => {
 };
 
 export default TypingText;
-
-//
-// const lines = text.split("\n");
-// const [currentLineIndex, setCurrentLineIndex] = useState(0);
-// const [currentCharIndex, setCurrentCharIndex] = useState(0);
-
-// useEffect(() => {
-//   const timer = setTimeout(() => {
-//     if (currentCharIndex < lines[currentLineIndex].length) {
-//       setCurrentCharIndex(currentCharIndex + 1);
-//     } else if (currentLineIndex < lines.length - 1) {
-//       setCurrentLineIndex(currentLineIndex + 1);
-//       setCurrentCharIndex(0);
-//     }
-//   }, 100); // 100ms마다 한 글자씩 출력
-
-//   return () => clearTimeout(timer);
-// }, [currentLineIndex, currentCharIndex]);
-
-// const displayedText = lines
-//   .slice(0, currentLineIndex + 1)
-//   .map((line, index) => {
-//     if (index < currentLineIndex) {
-//       return line;
-//     } else if (index === currentLineIndex) {
-//       return line.substring(0, currentCharIndex);
-//     }
-//     return "";
-//   })
-//   .join("\n");
-
-// return <div className={classes["text"]}>{displayedText}</div>;
