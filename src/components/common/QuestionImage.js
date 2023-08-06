@@ -5,14 +5,14 @@ const QuestionImage = ({ Image1, Image2, answer, checkDone }) => {
   return (
     <div className={classes["image-container"]}>
       <img
-        src={""}
+        src={Image1}
         alt="Image 1"
         className={`${classes["image"]} ${classes["image1"]} ${
           answer === "B" && checkDone !== "" && classes.done
         }`}
       />
       <img
-        src={""}
+        src={Image2}
         alt="Image 2"
         className={`${classes["image"]} ${classes["image2"]} ${
           answer === "A" && checkDone !== "" && classes.done

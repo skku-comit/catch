@@ -2,10 +2,10 @@
   "questions": [
     {
       "id": 1,
-      "problem": "안녕 캐치, 난 근육을 강조하는.\n보디빌더야. 바디프로필을 찍어야하는데,\n어떤 사진관에서 찍어야할까?",
+      "problem": "안녕 캐치, 우리 학원의 수업정보를\n학생들이 잘 알아보게 하려면\n어떤 디자인을 해야 할까?",
       "characterPath": "/images/character/actor.png",
-      "image1": "",
-      "image2": "",
+      "image1": "/images/problems/1-1.png",
+      "image2": "/images/problems/1-2.png",
       "answer": "A"
     }
   ]
