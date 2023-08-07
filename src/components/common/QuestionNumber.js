@@ -3,10 +3,8 @@ import classes from "./QuestionNumber.module.css";
 
 const QuestionNumber = ({ Number, checkDone }) => {
   return (
-    <div
-      className={`${classes["QuestionNumber"]} ${checkDone && classes.done}`}
-    >
-      <div>{Number}</div>
+    <div className={`${classes["number"]} ${checkDone && classes.done}`}>
+      <div className={classes["number-text"]}>{Number}</div>
     </div>
   );
 };
