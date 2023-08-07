@@ -1,12 +1,14 @@
 .QuestionNumber {
-  width: 15.71%;
-  height: 43.63%;
+  width: 16%;
+  height: 45.9%;
 
   background: url("../../assets/box/box_level.png") no-repeat;
   background-size: contain;
+  font-family: MapleStoryBold;
   color: white;
+  font-size: 64px;
   text-align: center;
-  line-height: 65px;
+  line-height: 112px;
 
   position: relative;
   left: 7%;

@@ -6,7 +6,7 @@ const QuestionNumber = ({ Number, checkDone }) => {
     <div
       className={`${classes["QuestionNumber"]} ${checkDone && classes.done}`}
     >
-      <h1>{Number}</h1>
+      <div>{Number}</div>
     </div>
   );
 };
