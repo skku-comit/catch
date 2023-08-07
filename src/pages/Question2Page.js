@@ -14,7 +14,7 @@ const Question2Page = () => {
   const [openAnswerpage, setOpenAnswerPage] = useState(false);
 
   const answerHandler = (userAnswer) => {
-    if (questionData.questions[0].answer === userAnswer) {
+    if (questionData.questions[1].answer === userAnswer) {
       setIsCorrect("true");
     } else {
       setIsCorrect("false");
