@@ -11,7 +11,7 @@ const TypingAnswer = ({ text }) => {
     const count = setInterval(() => {
       setDisplayText(displayText + text[currentIndex]);
       setCurrentIndex(currentIndex + 1);
-    }, 50);
+    }, 30);
     if (currentIndex === text.length) {
       clearInterval(count);
     }

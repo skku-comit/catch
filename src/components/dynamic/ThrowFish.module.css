@@ -262,5 +262,6 @@
   100% {
     transform: translate(-450px, -2px) scale(1) rotateX(0deg) rotateY(0deg)
       rotateZ(0deg);
+    display: none;
   }
 }
