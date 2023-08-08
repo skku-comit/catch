@@ -14,7 +14,7 @@
   justify-content: flex-end;
   align-items: center;
 
-  animation: slideUp 1s forwards;
+  animation: slideUp 1s ease-out;
 }
 
 @keyframes slideUp {
