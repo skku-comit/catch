@@ -6,7 +6,7 @@ const Characters = ({ Number, CitizenImage }) => {
     <div className={classes["character-container"]}>
       <div className={classes["catch"]}></div>
       <div
-        className={classes["citizen"]}
+        className={`${classes["citizen"]} ${classes["floating"]}`}
         style={{
           backgroundImage: `url(${CitizenImage})`,
         }}
