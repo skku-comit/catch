@@ -13,14 +13,14 @@
       "id": 2,
       "problem": "우리 학원의 수업정보를\n학생들이 잘 알아보게 하려면\n어떤 디자인을 해야 할까?",
       "explanation": "내가 선명하게 보이려면, 적절한 수준의\n대비를 주었는지 확인해야 합니다.",
-      "answer": "B",
-      "characterImage": "/images/character/actor.png",
-      "image1": "/images/problems/1-1.png",
-      "image2": "/images/problems/1-2.png"
+      "answer": "A",
+      "characterImage": "",
+      "image1": "",
+      "image2": ""
     },
     {
       "id": 3,
-      "problem": "문제초안3?",
+      "problem": "문제초안3",
       "explanation": "설명초안3",
       "answer": "A",
       "characterImage": "",
@@ -29,7 +29,7 @@
     },
     {
       "id": 4,
-      "problem": "문제초안4?",
+      "problem": "문제초안4",
       "explanation": "설명초안4",
       "answer": "A",
       "characterImage": "",
@@ -38,7 +38,7 @@
     },
     {
       "id": 5,
-      "problem": "문제초안5?",
+      "problem": "문제초안5",
       "explanation": "설명초안5",
       "answer": "A",
       "characterImage": "",
@@ -47,7 +47,7 @@
     },
     {
       "id": 6,
-      "problem": "문제초안6?",
+      "problem": "문제초안6",
       "explanation": "설명초안6",
       "answer": "A",
       "characterImage": "",
@@ -56,7 +56,7 @@
     },
     {
       "id": 7,
-      "problem": "문제초안7?",
+      "problem": "문제초안7",
       "explanation": "설명초안7",
       "answer": "A",
       "characterImage": "",
@@ -65,7 +65,7 @@
     },
     {
       "id": 8,
-      "problem": "문제초안8?",
+      "problem": "문제초안8",
       "explanation": "설명초안8",
       "answer": "A",
       "characterImage": "",
@@ -74,7 +74,7 @@
     },
     {
       "id": 9,
-      "problem": "문제초안9?",
+      "problem": "문제초안9",
       "explanation": "설명초안9",
       "answer": "A",
       "characterImage": "",
@@ -83,7 +83,7 @@
     },
     {
       "id": 10,
-      "problem": "문제초안10?",
+      "problem": "문제초안10",
       "explanation": "설명초안10",
       "answer": "A",
       "characterImage": "",
@@ -92,7 +92,7 @@
     },
     {
       "id": 11,
-      "problem": "문제초안11?",
+      "problem": "문제초안11",
       "explanation": "설명초안11",
       "answer": "A",
       "characterImage": "",
@@ -101,7 +101,7 @@
     },
     {
       "id": 12,
-      "problem": "문제초안12?",
+      "problem": "문제초안12",
       "explanation": "설명초안12",
       "answer": "A",
       "characterImage": "",
