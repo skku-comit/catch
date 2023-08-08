@@ -26,4 +26,25 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
+
+  position: relative;
+}
+
+.kid {
+  display: none;
+}
+
+.kidOn {
+  display: block;
+  width: 75%;
+  height: 60%;
+
+  position: absolute;
+  top: -40%;
+  right: 50%;
+
+  z-index: 10;
+
+  background: url("../../assets/kid_02.png") no-repeat;
+  background-size: contain;
 }
