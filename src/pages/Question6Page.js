@@ -1,6 +1,6 @@
 import { useState } from "react";
 //css
-import classes from "./Question1Page.module.css";
+import classes from "./QuestionPage.module.css";
 
 // components
 import QuestionContainer from "../components/layout/QuestionContainer";
