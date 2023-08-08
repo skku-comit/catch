@@ -11,23 +11,19 @@
 }
 
 .catch {
-  width: 27.7%;
+  width: 32%;
   height: 90%;
 
   background-repeat: no-repeat;
   background-size: contain;
-
-  position: relative;
-  left: 10%;
+  background-position: left;
 }
 
 .citizen {
-  width: 27.7%;
+  width: 32%;
   height: 90%;
 
   background-repeat: no-repeat;
   background-size: contain;
-
-  position: relative;
-  left: 12%;
+  background-position: right;
 }
