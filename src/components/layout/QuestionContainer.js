@@ -59,7 +59,7 @@ const QuestionContainer = ({
           onCheckAnswer={checkAnswerHandler}
         />
       ) : (
-        <NextButton />
+        <NextButton Number={Number} />
       )}
     </div>
   );
