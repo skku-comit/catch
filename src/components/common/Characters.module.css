@@ -11,23 +11,54 @@
 }
 
 .catch {
-  width: 27.7%;
+  width: 32%;
   height: 90%;
 
   background-repeat: no-repeat;
   background-size: contain;
-
-  position: relative;
-  left: 10%;
+  background-position: left;
 }
 
 .citizen {
-  width: 27.7%;
+  width: 32%;
   height: 90%;
 
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: right;
 
   position: relative;
-  left: 12%;
+
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0%, -1%);
+  }
+  50% {
+    transform: translate(0%, 6%);
+  }
+  100% {
+    transform: translate(0%, -1%);
+  }
+}
+
+.kid {
+  display: none;
+}
+
+.kidOn {
+  display: block;
+  width: 75%;
+  height: 60%;
+
+  position: absolute;
+  top: -40%;
+  right: 50%;
+
+  z-index: 1;
+
+  background: url("../../assets/kid_02.png") no-repeat;
+  background-size: contain;
 }

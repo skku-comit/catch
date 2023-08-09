@@ -8,7 +8,7 @@
   top: 40%;
 }
 
-.link {
+.button {
   padding: 0;
   width: 28.6%;
   height: 25%;
@@ -17,19 +17,19 @@
   bottom: 60%;
 }
 
-.correct-link {
+.defaultA-button {
   background: url("../../assets/button/buttonA/button_A_default.png") center
     center/contain no-repeat;
   right: 8%;
 }
 
-.wrong-link {
+.defaultB-button {
   background: url("../../assets/button/buttonB/button_B_default.png") center
     center/contain no-repeat;
   left: 8%;
 }
 
-.correct-button,
-.wrong-button {
-  border: none;
+.done {
+  opacity: 0.5;
+  pointer-events: none;
 }

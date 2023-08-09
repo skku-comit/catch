@@ -1,14 +1,13 @@
 .problem-text {
   width: 80%;
-  height: 64%;
+  height: 100%;
   position: relative;
   left: 5%;
-  top: 10.4%;
+  text-align: center;
 }
 
 .done {
   left: 12%;
-  top: 15%;
   display: none;
 }
 

@@ -3,8 +3,9 @@
   position: fixed;
   right: 23%;
   top: 28%;
-  width: 80px;
-  height: 80px;
+  width: 17.7%;
+  height: 11%;
+  background: url("../../assets/temp_fish.png") center center/cover no-repeat;
 
   animation-name: fish-moving-keyframes;
   animation-duration: 1800ms;
@@ -12,9 +13,6 @@
   animation-fill-mode: forwards;
   animation-timing-function: linear;
   animation-iteration-count: 1;
-
-  background: rgb(145, 105, 145);
-  border: 4px solid black;
 }
 
 .not-moving {
@@ -264,5 +262,6 @@
   100% {
     transform: translate(-450px, -2px) scale(1) rotateX(0deg) rotateY(0deg)
       rotateZ(0deg);
+    display: none;
   }
 }

@@ -1,15 +1,25 @@
-.QuestionNumber {
-  width: 15.71%;
-  height: 43.63%;
+.number {
+  width: 15.47%;
+  height: 50%;
 
   background: url("../../assets/box/box_level.png") no-repeat;
   background-size: contain;
-  color: white;
-  text-align: center;
-  line-height: 65px;
 
   position: relative;
-  left: 7%;
+  left: 5%;
+}
+
+.number-text {
+  font-size: 64px;
+  line-height: 112px;
+  font-family: MapleStoryBold;
+  color: white;
+  text-align: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .done {

@@ -1,10 +1,9 @@
 //imports
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 //css
 import classes from "./QuestionButton.module.css";
 
-const QuestionButton = ({ onCheckAnswer }) => {
+const QuestionButton = ({ answer, checkDone, onCheckAnswer }) => {
   const [userAnswer, setUserAnswer] = useState("initial");
   useEffect(() => {
     if (userAnswer !== "initial") onCheckAnswer(userAnswer);
@@ -20,11 +19,15 @@ const QuestionButton = ({ onCheckAnswer }) => {
   return (
     <div className={classes["button-container"]}>
       <button
-        className={`${classes.link} ${classes["correct-link"]} `}
+        className={`${classes.button} ${classes["defaultA-button"]} ${
+          answer === "B" && checkDone !== "" && classes.done
+        }`}
         onClick={AclickHandler}
       />
       <button
-        className={`${classes.link} ${classes["wrong-link"]}`}
+        className={`${classes.button} ${classes["defaultB-button"]} ${
+          answer === "A" && checkDone !== "" && classes.done
+        }`}
         onClick={BclickHandler}
       />
     </div>

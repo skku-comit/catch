@@ -13,16 +13,29 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+
+  animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .question-problem {
-  width: 83.33%;
-  height: 40%;
+  width: 86.183%;
+  height: 36.72%;
   background: url("../../assets/box/box_content_default.png") center
     center/contain no-repeat transparent;
 
   position: absolute;
-  top: -12.4%;
+  top: -10.5%;
 
   display: flex;
   flex-direction: row;
@@ -43,11 +56,11 @@
 }
 
 .triangle {
-  width: 28%;
-  height: 18%;
+  width: 34%;
+  height: 20%;
   position: absolute;
-  left: 82.5%;
-  bottom: 91%;
+  left: 79.5%;
+  bottom: 96%;
 
   background: url("../../assets/box/box_content_default_triangle.png") center
     center/contain no-repeat;

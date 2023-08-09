@@ -1,6 +1,6 @@
 import { useState } from "react";
 //css
-import classes from "./Question1Page.module.css";
+import classes from "./QuestionPage.module.css";
 
 // components
 import QuestionContainer from "../components/layout/QuestionContainer";
@@ -27,7 +27,10 @@ const Question1Page = () => {
 
   return (
     <div className={classes["page"]}>
-      <ImageContainer Citizen={questionData.questions[0].characterImage} />
+      <ImageContainer
+        Number={questionData.questions[0].id}
+        Citizen={questionData.questions[0].characterImage}
+      />
       <QuestionContainer
         Number={questionData.questions[0].id}
         Problem={questionData.questions[0].problem}

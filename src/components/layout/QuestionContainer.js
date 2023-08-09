@@ -53,9 +53,13 @@ const QuestionContainer = ({
         checkDone={checkWrong}
       />
       {!checkFinished ? (
-        <QuestionButton onCheckAnswer={checkAnswerHandler} />
+        <QuestionButton
+          answer={answer}
+          checkDone={checkWrong}
+          onCheckAnswer={checkAnswerHandler}
+        />
       ) : (
-        <NextButton />
+        <NextButton Number={Number} />
       )}
     </div>
   );

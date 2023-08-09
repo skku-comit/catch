@@ -9,12 +9,12 @@ import ThrowFish from "../components/dynamic/ThrowFish";
 //data
 import questionData from "../data/data.json";
 
-const Question2Page = () => {
+const Question11Page = () => {
   const [isCorrect, setIsCorrect] = useState("");
   const [openAnswerpage, setOpenAnswerPage] = useState(false);
 
   const answerHandler = (userAnswer) => {
-    if (questionData.questions[1].answer === userAnswer) {
+    if (questionData.questions[10].answer === userAnswer) {
       setIsCorrect("true");
     } else {
       setIsCorrect("false");
@@ -27,14 +27,14 @@ const Question2Page = () => {
 
   return (
     <div className={classes["page"]}>
-      <ImageContainer Citizen={questionData.questions[1].characterImage} />
+      <ImageContainer Citizen={questionData.questions[10].characterImage} />
       <QuestionContainer
-        Number={questionData.questions[1].id}
-        Problem={questionData.questions[1].problem}
-        Explain={questionData.questions[1].explanation}
-        Image1={questionData.questions[1].image1}
-        Image2={questionData.questions[1].image2}
-        answer={questionData.questions[1].answer}
+        Number={questionData.questions[10].id}
+        Problem={questionData.questions[10].problem}
+        Explain={questionData.questions[10].explanation}
+        Image1={questionData.questions[10].image1}
+        Image2={questionData.questions[10].image2}
+        answer={questionData.questions[10].answer}
         checkWrong={isCorrect}
         checkFinished={openAnswerpage}
         onGetAnswer={answerHandler}
@@ -48,4 +48,4 @@ const Question2Page = () => {
   );
 };
 
-export default Question2Page;
+export default Question11Page;
