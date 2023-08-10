@@ -11,9 +11,8 @@ const Characters = ({ Number, CitizenImage }) => {
           backgroundImage: `url(${CitizenImage})`,
         }}
       >
-        {/* Number === ? 은 kid문제번호 정해지면 바꾸기 */}
         <div
-          className={`${classes["kid"]} ${Number === 1 && classes.kidOn}`}
+          className={`${classes["kidOff"]} ${Number === 4 && classes.kidOn}`}
         ></div>
       </div>
     </div>

@@ -14,10 +14,11 @@ const QuestionImage = ({ Image1, Image2, answer, checkDone }) => {
       },
     },
   };
+  // <img src={require('./assets/myImage.jpg').default} />
   return (
     <div className={classes["image-container"]} variants={imageVariant}>
       <motion.img
-        src={Image1}
+        src={process.env.PUBLIC_URL + Image1}
         alt="Image 1"
         className={`${classes["image"]} ${classes["image1"]} ${
           answer === "B" && checkDone !== "" && classes.done
@@ -25,7 +26,7 @@ const QuestionImage = ({ Image1, Image2, answer, checkDone }) => {
         variants={imageVariant}
       />
       <motion.img
-        src={Image2}
+        src={process.env.PUBLIC_URL + Image2}
         alt="Image 2"
         className={`${classes["image"]} ${classes["image2"]} ${
           answer === "A" && checkDone !== "" && classes.done

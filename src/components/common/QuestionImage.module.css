@@ -13,7 +13,7 @@
   width: 331px;
   height: 256px;
 
-  background-color: white;
+  /* background-color: white; */
   border: 3px solid black;
   border-radius: 12px;
 
@@ -22,14 +22,10 @@
 }
 
 .image1 {
-  background: url("../../assets/box/box_image.png") no-repeat;
-  background-size: contain;
   right: 2.8%;
 }
 
 .image2 {
-  background: url("../../assets/box/box_image.png") no-repeat;
-  background-size: contain;
   left: 2.8%;
 }
 

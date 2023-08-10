@@ -29,7 +29,7 @@
 
   position: relative;
 
-  /* animation: floating 3s ease-in-out infinite; */
+  animation: floating 3s ease-in-out infinite;
 }
 
 @keyframes floating {
@@ -44,7 +44,7 @@
   }
 }
 
-.kid {
+.kidOff {
   display: none;
 }
 

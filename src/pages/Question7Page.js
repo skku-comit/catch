@@ -27,7 +27,10 @@ const Question7Page = () => {
 
   return (
     <div className={classes["page"]}>
-      <ImageContainer Citizen={questionData.questions[6].characterImage} />
+      <ImageContainer
+        Number={questionData.questions[6].id}
+        Citizen={questionData.questions[6].characterImage}
+      />
       <QuestionContainer
         Number={questionData.questions[6].id}
         Problem={questionData.questions[6].problem}
