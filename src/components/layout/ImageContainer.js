@@ -1,14 +1,14 @@
 //css
-import classes from "./ImageContainer.module.css";
+import classes from './ImageContainer.module.css';
 //imports
-import ExpBar from "../common/ExpBar";
-import Characters from "../common/Characters";
+import ExpBar from '../common/ExpBar';
+import Characters from '../common/Characters';
 
-const ImageContainer = ({ Citizen }) => {
+const ImageContainer = ({ isStart, Citizen }) => {
   return (
-    <div className={classes["image-container"]}>
-      <div className={classes["background"]}>
-        <ExpBar />
+    <div className={classes['image-container']}>
+      <div className={classes['background']}>
+        <ExpBar isStart={isStart} />
         <Characters CitizenImage={Citizen} />
       </div>
     </div>

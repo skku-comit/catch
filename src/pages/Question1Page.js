@@ -1,24 +1,35 @@
-import { useState } from "react";
+import { useContext, useState, useEffect } from 'react';
 //css
-import classes from "./QuestionPage.module.css";
+import classes from './QuestionPage.module.css';
 
 // components
-import QuestionContainer from "../components/layout/QuestionContainer";
-import ImageContainer from "../components/layout/ImageContainer";
-import ThrowFish from "../components/dynamic/ThrowFish";
+import QuestionContainer from '../components/layout/QuestionContainer';
+import ImageContainer from '../components/layout/ImageContainer';
+import ThrowFish from '../components/dynamic/ThrowFish';
 //data
-import questionData from "../data/data.json";
+import questionData from '../data/data.json';
+import Timer from '../components/common/Timer';
+import Level from '../data/level';
 
 const Question1Page = () => {
-  const [isCorrect, setIsCorrect] = useState("");
+  const [isCorrect, setIsCorrect] = useState('');
   const [openAnswerpage, setOpenAnswerPage] = useState(false);
+  const curExpContext = useContext(Level);
+  const [isQuestionStart, setIsQuestionStart] = useState(false);
+  const setCurExpIncrease = () => {
+    curExpContext.setExp((current) => {
+      return current + 1;
+    });
+  };
 
   const answerHandler = (userAnswer) => {
     if (questionData.questions[0].answer === userAnswer) {
-      setIsCorrect("true");
+      setIsCorrect('true');
+      setCurExpIncrease();
     } else {
-      setIsCorrect("false");
+      setIsCorrect('false');
     }
+    setIsQuestionStart(true);
   };
 
   const pageHandler = () => {
@@ -26,8 +37,12 @@ const Question1Page = () => {
   };
 
   return (
-    <div className={classes["page"]}>
-      <ImageContainer Citizen={questionData.questions[0].characterImage} />
+    <div className={classes['page']}>
+      <Timer></Timer>
+      <ImageContainer
+        isStart={isQuestionStart}
+        Citizen={questionData.questions[0].characterImage}
+      />
       <QuestionContainer
         Number={questionData.questions[0].id}
         Problem={questionData.questions[0].problem}
@@ -39,11 +54,11 @@ const Question1Page = () => {
         checkFinished={openAnswerpage}
         onGetAnswer={answerHandler}
       />
-      {isCorrect !== "" && (
+      {isCorrect !== '' && (
         <ThrowFish checkWrong={isCorrect} onChangePage={pageHandler} />
       )}
 
-      {openAnswerpage && <div className={classes["backdrop"]} />}
+      {openAnswerpage && <div className={classes['backdrop']} />}
     </div>
   );
 };

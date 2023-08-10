@@ -2,8 +2,75 @@
   width: 44.83%;
   height: 20.67%;
   border: none;
-  background: url("../../../public/images/exp/EXP_0.png") center center/contain
-    no-repeat transparent;
   position: relative;
   bottom: 12%;
+}
+
+.exp-container {
+  position: absolute;
+  width: 100%;
+  position: absolute;
+}
+
+.level-img {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  z-index: 1;
+}
+
+.container {
+  position: absolute;
+  display: flex;
+  top: 25.5%;
+  left: 32%;
+  height: 60%;
+  width: 70%;
+}
+
+.img-container {
+  height: 100%;
+  margin-right: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.exp {
+  width: 100%;
+  height: 100%;
+}
+
+.fill {
+  animation: fill-div 1s ease-in-out; /* 0.5초 후에 애니메이션 시작 */
+}
+
+@keyframes fill-div {
+  from {
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.disappear {
+  animation: shrink-div 1s ease-in-out;
+}
+
+@keyframes shrink-div {
+  from {
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+  }
+  to {
+    height: 0;
+    width: 0;
+  }
 }
