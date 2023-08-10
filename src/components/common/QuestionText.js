@@ -6,6 +6,16 @@ import TypingText from "../dynamic/TypingText";
 import TypingAnswer from "../dynamic/TypingAnswer";
 
 const QuestionText = ({ Problem, Explain, checkDone, checkFinished }) => {
+  const [delay, setDelay] = useState(false);
+
+  useEffect(() => {
+    const delay = setTimeout(() => {
+      setDelay(true);
+    }, 1300);
+
+    return () => clearTimeout(delay);
+  }, []);
+
   return (
     <div
       className={`${classes["problem-text"]} ${
@@ -13,10 +23,14 @@ const QuestionText = ({ Problem, Explain, checkDone, checkFinished }) => {
       } ${checkFinished && classes.answer}
       }`}
     >
-      {!checkFinished ? (
-        <TypingText text={Problem} />
-      ) : (
-        <TypingAnswer text={Explain} />
+      {delay && (
+        <>
+          {!checkFinished ? (
+            <TypingText text={Problem} />
+          ) : (
+            <TypingAnswer text={Explain} />
+          )}
+        </>
       )}
     </div>
   );

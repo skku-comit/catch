@@ -4,12 +4,12 @@ import classes from './ImageContainer.module.css';
 import ExpBar from '../common/ExpBar';
 import Characters from '../common/Characters';
 
-const ImageContainer = ({ isStart, Citizen }) => {
+const ImageContainer = ({ isStart, Number, Citizen }) => {
   return (
     <div className={classes['image-container']}>
       <div className={classes['background']}>
         <ExpBar isStart={isStart} />
-        <Characters CitizenImage={Citizen} />
+        <Characters Number={Number} CitizenImage={Citizen} />
       </div>
     </div>
   );

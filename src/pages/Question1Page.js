@@ -38,9 +38,9 @@ const Question1Page = () => {
 
   return (
     <div className={classes['page']}>
-      <Timer></Timer>
       <ImageContainer
         isStart={isQuestionStart}
+        Number={questionData.questions[0].id}
         Citizen={questionData.questions[0].characterImage}
       />
       <QuestionContainer
