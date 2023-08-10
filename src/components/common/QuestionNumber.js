@@ -1,11 +1,27 @@
+import { motion } from "framer-motion";
 //css
 import classes from "./QuestionNumber.module.css";
 
 const QuestionNumber = ({ Number, checkDone }) => {
+  const numberVariant = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.65,
+        duration: 0.2,
+      },
+    },
+  };
   return (
-    <div className={`${classes["number"]} ${checkDone && classes.done}`}>
-      <div className={classes["number-text"]}>{Number}</div>
-    </div>
+    <motion.div
+      className={`${classes["number"]} ${checkDone && classes.done}`}
+      variants={numberVariant}
+    >
+      <motion.div className={classes["number-text"]} variants={numberVariant}>
+        {Number}
+      </motion.div>
+    </motion.div>
   );
 };
 

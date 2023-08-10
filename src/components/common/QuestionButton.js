@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 //imports
 import { useState, useEffect } from "react";
 //css
@@ -16,19 +17,33 @@ const QuestionButton = ({ answer, checkDone, onCheckAnswer }) => {
     setUserAnswer("B");
   };
 
+  //animation variant
+  const buttonVariant = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.15,
+        delay: 0.25,
+      },
+    },
+  };
+
   return (
     <div className={classes["button-container"]}>
-      <button
+      <motion.button
         className={`${classes.button} ${classes["defaultA-button"]} ${
           answer === "B" && checkDone !== "" && classes.done
         }`}
         onClick={AclickHandler}
+        variants={buttonVariant}
       />
-      <button
+      <motion.button
         className={`${classes.button} ${classes["defaultB-button"]} ${
           answer === "A" && checkDone !== "" && classes.done
         }`}
         onClick={BclickHandler}
+        variants={buttonVariant}
       />
     </div>
   );

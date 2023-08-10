@@ -11,7 +11,7 @@ const QuestionText = ({ Problem, Explain, checkDone, checkFinished }) => {
   useEffect(() => {
     const delay = setTimeout(() => {
       setDelay(true);
-    }, 1300);
+    }, 1400);
 
     return () => clearTimeout(delay);
   }, []);
