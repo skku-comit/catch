@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 //imports
 import { useState, useEffect } from "react";
 //css
-import classes from "./QuestionButton.module.css";
+import classes from './QuestionButton.module.css';
 
 const QuestionButton = ({ answer, checkDone, onCheckAnswer }) => {
   const [userAnswer, setUserAnswer] = useState("initial");

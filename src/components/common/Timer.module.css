@@ -1,0 +1,15 @@
+.bar-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 5vh;
+  background-color: aqua;
+}
+
+.bar {
+  margin: 0;
+  width: 100vw;
+  height: 5vh;
+  background-color: black;
+}
