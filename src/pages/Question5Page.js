@@ -15,26 +15,24 @@ import Level from "../data/level";
 const Question5Page = () => {
   const [isCorrect, setIsCorrect] = useState("");
   const [openAnswerpage, setOpenAnswerPage] = useState(false);
+  const [isQuestionStart, setIsQuestionStart] = useState();
+
   const curExpContext = useContext(Level);
-  const [isQuestionStart, setIsQuestionStart] = useState(false);
   const setCurExpIncrease = () => {
     curExpContext.setExp((current) => {
       return current + 1;
     });
   };
 
-  useEffect(() => {
-    setIsQuestionStart(true);
-  }, []);
-
   const answerHandler = (userAnswer) => {
     if (questionData.questions[4].answer === userAnswer) {
       setIsCorrect("true");
       setCurExpIncrease();
+      setIsQuestionStart(true);
     } else {
       setIsCorrect("false");
+      setIsQuestionStart(false);
     }
-    setIsQuestionStart(false);
   };
 
   const pageHandler = () => {

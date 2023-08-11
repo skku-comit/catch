@@ -1,76 +1,157 @@
 .experiment-bar {
-  width: 44.83%;
-  height: 20.67%;
-  border: none;
+  width: 410px;
+  height: 133px;
+
   position: relative;
-  bottom: 12%;
-}
+  bottom: 2%;
 
-.exp-container {
-  position: absolute;
-  width: 100%;
-  position: absolute;
-}
-
-.level-img {
-  position: absolute;
-  top: 3%;
-  left: 3%;
-  z-index: 1;
-}
-
-.container {
-  position: absolute;
   display: flex;
-  top: 25.5%;
-  left: 32%;
-  height: 60%;
-  width: 70%;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-.img-container {
-  height: 100%;
-  margin-right: 2%;
+.experiment-bar_level {
+  width: 138.347px;
+  height: 132.614px;
+
+  background: url("../../assets/exp-bar/level_box_default\ .png") 50% 50% /
+    cover no-repeat;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+
+  position: absolute;
+  left: 0%;
+  z-index: 1;
+}
+
+.level-text {
+  width: 100px;
+  height: 100px;
+}
+.level1 {
+  background: url("../../assets/exp-bar/level-1.png") center center/contain
+    no-repeat;
+}
+.level2 {
+  background: url("../../assets/exp-bar/level-2.png") center center/contain
+    no-repeat;
+}
+.level2Up {
+  background: url("../../assets/exp-bar/level-2.png") center center/contain
+    no-repeat;
+  animation: 0.2s level-Up cubic-bezier(0, 0, 0, 1);
+}
+
+.level3 {
+  background: url("../../assets/exp-bar/level-3.png") center center/contain
+    no-repeat;
+}
+.level3Up {
+  background: url("../../assets/exp-bar/level-3.png") center center/contain
+    no-repeat;
+  animation: 0.2s level-Up cubic-bezier(0, 0, 0, 1);
+}
+
+.level4 {
+  background: url("../../assets/exp-bar/level-4.png") center center/contain
+    no-repeat;
+}
+.level4Up {
+  background: url("../../assets/exp-bar/level-4.png") center center/contain
+    no-repeat;
+  animation: 0.2s level-Up cubic-bezier(0, 0, 0, 1);
+}
+
+@keyframes level-Up {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+  50% {
+    scale: 1.05;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.experiment-bar_exp_container {
+  width: 352px;
+  height: 111.8px;
+
+  background: url("../../assets/exp-bar/exp_container.png") center
+    center/contain no-repeat;
+
+  position: relative;
+  left: 7%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .exp {
-  width: 100%;
-  height: 100%;
+  width: 74.3px;
+  height: 70.8px;
+
+  background: url("../../assets/exp-bar/exp_default.png") 50% 50% / cover
+    no-repeat;
+}
+
+.exp1 {
+  position: absolute;
+  left: 25%;
+}
+.exp2 {
+  position: absolute;
+  left: 48%;
+}
+.exp3 {
+  position: absolute;
+  left: 71%;
+}
+
+.filled {
+  background: url("../../assets/exp-bar/exp_fill.png") center center/ cover
+    no-repeat;
 }
 
 .fill {
-  animation: fill-div 1s ease-in-out; /* 0.5초 후에 애니메이션 시작 */
+  animation: 0.35s fill-div ease-in-out;
 }
 
 @keyframes fill-div {
-  from {
-    opacity: 0;
-    height: 0;
-    width: 0;
+  0% {
+    scale: 0;
   }
-  to {
-    opacity: 1;
-    height: 100%;
-    width: 100%;
+  70% {
+    scale: 1.05;
+  }
+  100% {
+    scale: 1;
   }
 }
 
 .disappear {
-  animation: shrink-div 1s ease-in-out;
+  animation: 0.4s shrink-div ease-in-out;
+  animation-delay: 0.2;
 }
 
 @keyframes shrink-div {
-  from {
+  0% {
     opacity: 1;
-    height: 100%;
-    width: 100%;
+    scale: 1;
   }
-  to {
-    height: 0;
-    width: 0;
+  25% {
+    opacity: 1;
+    scale: 1.05;
+  }
+  100% {
+    opacity: 0;
+    scale: 0;
   }
 }

@@ -1,22 +1,23 @@
-import { useState, useContext, useEffect } from 'react';
+import { useState, useContext, useEffect } from "react";
 //css
-import classes from './QuestionPage.module.css';
+import classes from "./QuestionPage.module.css";
 
 // components
-import QuestionContainer from '../components/layout/QuestionContainer';
-import ImageContainer from '../components/layout/ImageContainer';
-import ThrowFish from '../components/dynamic/ThrowFish';
+import QuestionContainer from "../components/layout/QuestionContainer";
+import ImageContainer from "../components/layout/ImageContainer";
+import ThrowFish from "../components/dynamic/ThrowFish";
 //data
-import questionData from '../data/data.json';
+import questionData from "../data/data.json";
 
 //context
-import Level from '../data/level';
+import Level from "../data/level";
 
 const Question2Page = () => {
-  const [isCorrect, setIsCorrect] = useState('');
+  const [isCorrect, setIsCorrect] = useState("");
   const [openAnswerpage, setOpenAnswerPage] = useState(false);
+  const [isQuestionStart, setIsQuestionStart] = useState();
+
   const curExpContext = useContext(Level);
-  const [isQuestionStart, setIsQuestionStart] = useState(false);
   const setCurExpIncrease = () => {
     curExpContext.setExp((current) => {
       return current + 1;
@@ -25,12 +26,13 @@ const Question2Page = () => {
 
   const answerHandler = (userAnswer) => {
     if (questionData.questions[1].answer === userAnswer) {
-      setIsCorrect('true');
+      setIsCorrect("true");
       setCurExpIncrease();
+      setIsQuestionStart(true);
     } else {
-      setIsCorrect('false');
+      setIsCorrect("false");
+      setIsQuestionStart(false);
     }
-    setIsQuestionStart(true);
   };
 
   const pageHandler = () => {
@@ -39,7 +41,7 @@ const Question2Page = () => {
 
   return (
     <div className={classes["page"]}>
-      <ImageContainer Citizen={questionData.questions[1].characterImage} />
+      <ImageContainer
         isStart={isQuestionStart}
         Number={questionData.questions[1].id}
         Citizen={questionData.questions[1].characterImage}
@@ -55,11 +57,11 @@ const Question2Page = () => {
         checkFinished={openAnswerpage}
         onGetAnswer={answerHandler}
       />
-      {isCorrect !== '' && (
+      {isCorrect !== "" && (
         <ThrowFish checkWrong={isCorrect} onChangePage={pageHandler} />
       )}
 
-      {openAnswerpage && <div className={classes['backdrop']} />}
+      {openAnswerpage && <div className={classes["backdrop"]} />}
     </div>
   );
 };
