@@ -1,15 +1,39 @@
+.time-container {
+  position: absolute;
+  top: 1vh;
+  left: 1vw;
+  width: 95.21vw;
+  height: 5.73vh;
+}
+
+.bar-full {
+  position: absolute;
+  top: 20%;
+  left: 1%;
+  margin: 0;
+  height: 100%;
+}
+
 .bar-container {
+  position: absolute;
+  width: 96.72%;
+  height: 40.83%;
+  top: 20%;
+  left: 3%;
+}
+
+.bar-none {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 5vh;
-  background-color: aqua;
+  margin: 0;
+  width: 100%;
 }
 
-.bar {
-  margin: 0;
-  width: 100vw;
-  height: 5vh;
-  background-color: black;
+.timer-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 3;
 }

@@ -6,7 +6,7 @@
   right: 150px;
 
   z-index: 3;
-  background: url("../../assets/box/box_content_default_triangle.png") center
+  background: url('../../assets/box/box_content_default_triangle.png') center
     center/contain no-repeat;
 
   animation: 0.1s linear normal forwards running Triangle-popup;
@@ -24,7 +24,7 @@
 .question-problem {
   width: 708px;
   height: 208px;
-  background: url("../../assets/box/box_content_default_temp.png") center
+  background: url('../../assets/box/box_content_default_temp.png') center
     center/auto no-repeat transparent;
 
   border-radius: 12px;
@@ -33,7 +33,7 @@
 
   position: absolute;
   bottom: 530px;
-  z-index: 3;
+  z-index: 5;
 
   display: flex;
   flex-direction: row;
@@ -58,11 +58,11 @@
   height: 44.66%;
   margin: 0px 92px;
   margin-top: 4px;
-  background: url("../../assets/box/box_main.png") center center/contain
+  background: url('../../assets/box/box_main.png') center center/contain
     no-repeat transparent;
 
   position: static;
-  z-index: 2;
+  z-index: 6;
 
   display: flex;
   flex-direction: column;
@@ -71,13 +71,13 @@
 }
 
 .correct {
-  background-image: url("../../assets/box/box_true_temp.png");
+  background-image: url('../../assets/box/box_true_temp.png');
 }
 
 .wrong {
-  background-image: url("../../assets/box/box_false_temp.png");
+  background-image: url('../../assets/box/box_false_temp.png');
 }
 
 .done {
-  background-image: url("../../../src/assets/box/box_content_results_temp.png");
+  background-image: url('../../../src/assets/box/box_content_results_temp.png');
 }

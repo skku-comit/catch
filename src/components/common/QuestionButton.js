@@ -1,20 +1,20 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 //imports
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 //css
 import classes from './QuestionButton.module.css';
 
 const QuestionButton = ({ answer, checkDone, onCheckAnswer }) => {
-  const [userAnswer, setUserAnswer] = useState("initial");
+  const [userAnswer, setUserAnswer] = useState('initial');
   useEffect(() => {
-    if (userAnswer !== "initial") onCheckAnswer(userAnswer);
+    if (userAnswer !== 'initial') onCheckAnswer(userAnswer);
   }, [userAnswer]);
 
   const AclickHandler = () => {
-    setUserAnswer("A");
+    setUserAnswer('A');
   };
   const BclickHandler = () => {
-    setUserAnswer("B");
+    setUserAnswer('B');
   };
 
   //animation variant
@@ -30,17 +30,17 @@ const QuestionButton = ({ answer, checkDone, onCheckAnswer }) => {
   };
 
   return (
-    <div className={classes["button-container"]}>
+    <div className={classes['button-container']}>
       <motion.button
-        className={`${classes.button} ${classes["defaultA-button"]} ${
-          answer === "B" && checkDone !== "" && classes.done
+        className={`${classes.button} ${classes['defaultA-button']} ${
+          answer === 'B' && checkDone !== '' && classes.done
         }`}
         onClick={AclickHandler}
         variants={buttonVariant}
       />
       <motion.button
-        className={`${classes.button} ${classes["defaultB-button"]} ${
-          answer === "A" && checkDone !== "" && classes.done
+        className={`${classes.button} ${classes['defaultB-button']} ${
+          answer === 'A' && checkDone !== '' && classes.done
         }`}
         onClick={BclickHandler}
         variants={buttonVariant}
