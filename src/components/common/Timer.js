@@ -1,6 +1,6 @@
-import gsap from 'gsap';
-import classes from './Timer.module.css';
-import { useEffect, useRef } from 'react';
+import gsap from "gsap";
+import classes from "./Timer.module.css";
+import { useEffect, useRef } from "react";
 
 const Timer = (props) => {
   const barRef = useRef(null);
@@ -9,7 +9,7 @@ const Timer = (props) => {
     const timerAnimation = gsap.fromTo(
       barRef.current,
       { scaleX: 1 },
-      { scaleX: 0, duration: 30, ease: 'none', transformOrigin: 'left' }
+      { scaleX: 0, duration: 30, ease: "none", transformOrigin: "left" }
     );
 
     return () => {
@@ -18,8 +18,8 @@ const Timer = (props) => {
   }, []);
 
   return (
-    <div className={classes['bar-container']}>
-      <div ref={barRef} className={classes['bar']}></div>
+    <div className={classes["bar-container"]}>
+      <div ref={barRef} className={classes["bar"]}></div>
     </div>
   );
 };

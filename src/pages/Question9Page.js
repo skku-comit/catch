@@ -1,19 +1,19 @@
-import { useState, useContext, useEffect } from 'react';
+import { useState, useContext, useEffect } from "react";
 //css
-import classes from './QuestionPage.module.css';
+import classes from "./QuestionPage.module.css";
 
 // components
-import QuestionContainer from '../components/layout/QuestionContainer';
-import ImageContainer from '../components/layout/ImageContainer';
-import ThrowFish from '../components/dynamic/ThrowFish';
+import QuestionContainer from "../components/layout/QuestionContainer";
+import ImageContainer from "../components/layout/ImageContainer";
+import ThrowFish from "../components/dynamic/ThrowFish";
 //data
-import questionData from '../data/data.json';
+import questionData from "../data/data.json";
 
 //context
-import Level from '../data/level';
+import Level from "../data/level";
 
 const Question9Page = () => {
-  const [isCorrect, setIsCorrect] = useState('');
+  const [isCorrect, setIsCorrect] = useState("");
   const [openAnswerpage, setOpenAnswerPage] = useState(false);
   const curExpContext = useContext(Level);
   const [isQuestionStart, setIsQuestionStart] = useState(false);
@@ -29,10 +29,10 @@ const Question9Page = () => {
 
   const answerHandler = (userAnswer) => {
     if (questionData.questions[8].answer === userAnswer) {
-      setIsCorrect('true');
+      setIsCorrect("true");
       setCurExpIncrease();
     } else {
-      setIsCorrect('false');
+      setIsCorrect("false");
     }
     setIsQuestionStart(false);
   };
@@ -43,7 +43,7 @@ const Question9Page = () => {
 
   return (
     <div className={classes["page"]}>
-      <ImageContainer Citizen={questionData.questions[8].characterImage} />
+      <ImageContainer
         isStart={isQuestionStart}
         Number={questionData.questions[8].id}
         Citizen={questionData.questions[8].characterImage}
@@ -59,11 +59,11 @@ const Question9Page = () => {
         checkFinished={openAnswerpage}
         onGetAnswer={answerHandler}
       />
-      {isCorrect !== '' && (
+      {isCorrect !== "" && (
         <ThrowFish checkWrong={isCorrect} onChangePage={pageHandler} />
       )}
 
-      {openAnswerpage && <div className={classes['backdrop']} />}
+      {openAnswerpage && <div className={classes["backdrop"]} />}
     </div>
   );
 };
