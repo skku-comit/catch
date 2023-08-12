@@ -1,13 +1,13 @@
-import { motion, useAnimation } from "framer-motion";
 // hooks
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { motion, useAnimation } from "framer-motion";
 
 // css
 import classes from "./StartPage.module.css";
-import { useState } from "react";
 
 const StartPage = () => {
-  const controls = useAnimation();
+  const controls = useAnimation(); // drag up
   const [backdropOpacity, setBackdropOpacity] = useState(0);
 
   const updateBackdropOpacity = (y) => {
@@ -19,6 +19,7 @@ const StartPage = () => {
     await controls.start({ y: -1170 });
     setBackdropOpacity(0.5);
   };
+
   const closeBox = async () => {
     await controls.start({ y: 0 });
     setBackdropOpacity(0);
@@ -31,7 +32,6 @@ const StartPage = () => {
         style={{ opacity: backdropOpacity }}
       />
       <div className={classes["start-page-logo"]}>Logo</div>
-
       <motion.div
         className={classes["drag-container"]}
         drag="y"
