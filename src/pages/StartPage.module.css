@@ -7,6 +7,10 @@
   align-items: center;
   /* background changes to img later */
   background: transparent;
+
+  position: relative;
+
+  overflow: hidden;
 }
 
 .start-page-logo {
@@ -15,13 +19,54 @@
   height: 15%;
   /* temp logo changes to img later */
   background: transparent;
+
+  position: absolute;
+  bottom: 65%;
+}
+.drag-container {
+  width: 903px;
+  height: 1399px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  position: absolute;
+  top: 92%;
+}
+
+.image {
+  width: 903px;
+  height: 60px;
+
+  background: url("../assets/box/box-drag-arrow.png") center center/contain
+    no-repeat;
+}
+
+.text {
+  width: 903px;
+  height: 1299px;
+  background: url("../assets/box/box_drag-page.png") center center/contain
+    no-repeat;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+
+  position: relative;
 }
 
 .start-link {
-  background: url("../assets/button/start-button.png") center center/contain
+  background: url("../assets/button/button-start.png") center center/contain
     no-repeat transparent;
-  width: 50%;
-  height: 10%;
+  width: 390px;
+  height: 134px;
+
+  position: absolute;
+  bottom: 7.4%;
+  right: 28.1%;
 }
 
 .start-link:active {
