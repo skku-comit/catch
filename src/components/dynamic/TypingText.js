@@ -18,7 +18,11 @@ const TypingText = ({ text }) => {
     return () => clearInterval(count);
   }, [displayText]);
 
-  return <div className={classes["text"]}>{displayText}</div>;
+  return (
+    <div className={`${classes["text"]} ${classes["question"]}`}>
+      {displayText}
+    </div>
+  );
 };
 
 export default TypingText;

@@ -1,22 +1,35 @@
 .text {
   width: 550px;
-  height: 200px;
+  height: 160px;
 
   white-space: pre-line;
   text-align: left;
   vertical-align: middle;
 
-  color: #f3ebd6;
-  text-shadow: 0px 2px 0px black;
-  font-family: MapleStoryBold;
-  font-size: 26pt;
-  font-weight: 700;
-  letter-spacing: 0px;
-  word-spacing: 0px;
-  -webkit-text-stroke: 4px black;
+  /* text-shadow: 0px 2px 0px black; */
+  /* font-weight: 700; */
+  /* word-spacing: 0px; */
+
+  /* -webkit-text-stroke: 4px black; */
 
   position: absolute;
   top: 50%;
   right: 5%;
   transform: translate(0, -50%);
+}
+
+.question {
+  font-family: MapleStoryBold;
+  font-size: 30px;
+  line-height: 1.2;
+  letter-spacing: 0px;
+  color: #702c16;
+}
+
+.answer {
+  font-family: MapleStoryBold;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: 0px;
+  color: #46550b;
 }

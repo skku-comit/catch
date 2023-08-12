@@ -39,8 +39,6 @@ const StartPage = () => {
         dragElastic={0.3}
         dragMomentum={false}
         onDrag={(event, info) => {
-          // console.log(info.point.y);
-          console.log((1300 + -1 * info.point.y) / 2500);
           updateBackdropOpacity(info.point.y);
         }}
         onDragEnd={(event, info) => {
