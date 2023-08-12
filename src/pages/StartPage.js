@@ -4,31 +4,47 @@ import { Link } from "react-router-dom";
 
 // css
 import classes from "./StartPage.module.css";
+import { useState } from "react";
 
 const StartPage = () => {
   const controls = useAnimation();
+  const [backdropOpacity, setBackdropOpacity] = useState(0);
+
+  const updateBackdropOpacity = (y) => {
+    const opacity = (1300 + -1 * y) / 2400;
+    setBackdropOpacity(opacity);
+  };
 
   const openBox = async () => {
     await controls.start({ y: -1170 });
+    setBackdropOpacity(0.5);
   };
   const closeBox = async () => {
     await controls.start({ y: 0 });
-    controls.set({ opacity: 1 });
+    setBackdropOpacity(0);
   };
+
   return (
     <div className={classes["start-page"]}>
+      <motion.div
+        className={classes["backdrop"]}
+        style={{ opacity: backdropOpacity }}
+      />
       <div className={classes["start-page-logo"]}>Logo</div>
 
       <motion.div
         className={classes["drag-container"]}
         drag="y"
-        dragConstraints={{ top: -1000, bottom: 0 }}
-        dragElastic={0}
+        dragConstraints={{ top: -1170, bottom: 0 }}
+        dragElastic={0.3}
         dragMomentum={false}
-        // dragSnapToOrigin={"true"}
+        onDrag={(event, info) => {
+          // console.log(info.point.y);
+          console.log((1300 + -1 * info.point.y) / 2500);
+          updateBackdropOpacity(info.point.y);
+        }}
         onDragEnd={(event, info) => {
-          console.log("정보 : " + info.offset.y);
-          if (info.offset.y < -500) {
+          if (info.offset.y < -350) {
             openBox();
           } else {
             closeBox();

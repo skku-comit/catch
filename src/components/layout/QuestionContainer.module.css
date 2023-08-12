@@ -1,11 +1,12 @@
 .triangle {
   width: 45px;
   height: 52px;
+
   position: absolute;
   bottom: 720px;
-  right: 150px;
+  right: 151px;
 
-  z-index: 3;
+  z-index: 7;
   background: url("../../assets/box/box_content_default_triangle.png") center
     center/contain no-repeat;
 

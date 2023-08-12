@@ -13,6 +13,17 @@
   overflow: hidden;
 }
 
+.backdrop {
+  width: 100vw;
+  height: 200vh;
+
+  background-color: black;
+  opacity: 1;
+
+  position: fixed;
+  z-index: 2;
+}
+
 .start-page-logo {
   border: 1px solid black;
   width: 80%;
@@ -34,6 +45,7 @@
 
   position: absolute;
   top: 92%;
+  z-index: 3;
 }
 
 .image {

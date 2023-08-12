@@ -3,16 +3,11 @@
   position: fixed;
   right: 23%;
   top: 28%;
-  width: 17.7%;
-  height: 11%;
-  background: url("../../assets/temp_fish.png") center center/cover no-repeat;
+  width: 207px;
+  height: 147px;
+  background: url("../../assets/fish.png") center center/cover no-repeat;
 
-  animation-name: fish-moving-keyframes;
-  animation-duration: 1800ms;
-  animation-delay: 0ms;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
+  animation: 1800ms fish-moving-keyframes linear forwards;
 }
 
 .not-moving {
