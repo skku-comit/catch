@@ -16,6 +16,7 @@ const Question12Page = () => {
   const [isCorrect, setIsCorrect] = useState('');
   const [openAnswerpage, setOpenAnswerPage] = useState(false);
   const [isQuestionStart, setIsQuestionStart] = useState();
+  const [isAnswered, setIsAnswered] = useState(false);
 
   const curExpContext = useContext(Level);
   const setCurExpIncrease = () => {
@@ -25,6 +26,7 @@ const Question12Page = () => {
   };
 
   const answerHandler = (userAnswer) => {
+    setIsAnswered(true);
     if (questionData.questions[11].answer === userAnswer) {
       setIsCorrect('true');
       setCurExpIncrease();
@@ -42,6 +44,7 @@ const Question12Page = () => {
   return (
     <div className={classes['page']}>
       <ImageContainer
+        isAnswered={isAnswered}
         isStart={isQuestionStart}
         Number={questionData.questions[11].id}
         Citizen={questionData.questions[11].characterImage}

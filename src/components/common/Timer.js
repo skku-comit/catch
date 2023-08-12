@@ -9,30 +9,43 @@ import timer from '../../assets/timer/timer.svg';
 
 const Timer = (props) => {
   const barRef = useRef(null);
+  const isAnswered = props.isAnswered;
 
   const setWhenTimeEndHandler = () => {
     props.setIsTimeEnd(true);
   };
 
   useEffect(() => {
-    const timerAnimation = gsap.fromTo(
-      barRef.current,
-      { scaleX: 0.99 },
-      {
-        scaleX: 0,
-        duration: 10,
-        ease: 'none',
-        transformOrigin: 'left',
-        onComplete: () => {
-          setWhenTimeEndHandler();
-        },
-      }
-    );
+    let timerAnimation = null;
+
+    if (!isAnswered) {
+      timerAnimation = gsap.fromTo(
+        barRef.current,
+        { scaleX: 0.99 },
+        {
+          scaleX: 0,
+          duration: 10,
+          ease: 'none',
+          transformOrigin: 'left',
+          onComplete: () => {
+            setWhenTimeEndHandler();
+          },
+          onUpdate: () => {
+            if (isAnswered) {
+              console.log(isAnswered);
+              timerAnimation.kill();
+            }
+          },
+        }
+      );
+    }
 
     return () => {
-      timerAnimation.kill();
+      if (timerAnimation) {
+        timerAnimation.kill();
+      }
     };
-  }, []);
+  }, [isAnswered]);
 
   return (
     <div className={classes['time-container']}>
