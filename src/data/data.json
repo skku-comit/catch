@@ -2,7 +2,7 @@
   "questions": [
     {
       "id": 1,
-      "problem": "안녕 캐치!\n우리 학원의 수업정보를 학생들이 잘 알아보게 하려면\n어떤 디자인을 해야 할까?",
+      "problem": "안녕 캐치! 우리 학원의 수업정보를\n학생들이 잘 알아보게 하려면\n어떤 디자인을 해야 할까?",
       "explanation": "사진과 텍스트가 겹치는 경우,\n인식이 잘 되지 않을 수 있어요. 영역을 분리하여\n인식이 쉽도록 디자인 해야 해요.",
       "answer": "B",
       "characterImage": "/images/character/academy-teacher.png",
@@ -11,7 +11,7 @@
     },
     {
       "id": 2,
-      "problem": "반갑구나, 캐치야.\n요즘 부동산이 너무 많아 우리 부동산이\n가장 눈에 들어오게 하려면 어떤 배너를 사용해야 할까?",
+      "problem": "반갑구나, 캐치야. 요즘 부동산이 너무 많아\n 우리 부동산이 가장 눈에 들어오게 하려면\n어떤 배너를 사용해야 할까?",
       "explanation": "밝은 글자를 사용할 때는,\n어두운 배경을 사용해서\n가독성을 높이는 디자인이 좋아요.",
       "answer": "B",
       "characterImage": "/images/character/estate-agent.png",
@@ -20,8 +20,8 @@
     },
     {
       "id": 3,
-      "problem": "어서와~ 캐치\n카페에 키오스크를 만드려고 하는데,\n어떻게 아이콘을 배치해야 사람들이 누르기 편할까?",
-      "explanation": "적당한 여백이 있는 경우에 요소를 잘 구분할 수 있어요.\n아이콘과 설명을 떼어 놓았기에\n보기 편한 디자인이 되었죠.",
+      "problem": "어서와~ 캐치\n카페에 키오스크를 만드려고 하는데, 어떻게\n아이콘을 배치해야 사람들이 누르기 편할까?",
+      "explanation": "적당한 여백이 있는 경우에\n요소를 잘 구분할 수 있어요.아이콘과 설명을\n떼어 놓았기에 보기 편한 디자인이 되었죠.",
       "answer": "A",
       "characterImage": "/images/character/cafe-owner.png",
       "image1": "/images/problems/cafe-owner_correct.png",
@@ -29,7 +29,7 @@
     },
     {
       "id": 4,
-      "problem": "우와~캐치다!\n내 장난감의 반대쪽이 부숴졌어! ㅠㅠ\n내가 들고 있는 장난감이랑 같은 모양의 완성품을 찾아 줘!",
+      "problem": "우와~캐치다! 내 장난감의\n반대쪽이 부숴졌어! ㅠㅠ 내가 들고 있는\n장난감이랑 같은 모양의 완성품을 찾아 줘!",
       "explanation": "디자이너는 색이나 장식에 휘둘리지 않고\n오직 실루엣만 보고도 모양을 예상하는 능력이\n필요하지!",
       "answer": "A",
       "characterImage": "/images/character/kid_01.png",
@@ -38,7 +38,7 @@
     },
     {
       "id": 5,
-      "problem": "유하~\n나는 유튜브 편집자야.\n어떤 자막을 사용해야 구독자들이 더 편하게 볼 수 있을까?",
+      "problem": "유하~ 나는 유튜브 편집자야.\n어떤 자막을 사용해야 구독자들이\n더 편하게 볼 수 있을까?",
       "explanation": "화면과 자막이 잘 보이려면 Drop Shadow\n등의 효과를 넣어서 시각적으로\n더 잘 보일 수 있게 해야 해요.",
       "answer": "B",
       "characterImage": "/images/character/youtuber.png",
@@ -47,7 +47,7 @@
     },
     {
       "id": 6,
-      "problem": "안녕하세요 캐치.\n저는 기자입니다. 인터뷰를 기사로 써야하는데,\n시각적으로 더 효과적인 기사는 뭘까요?",
+      "problem": "안녕하세요 캐치. 저는 기자입니다.\n인터뷰를 기사로 써야하는데, 시각적으로\n더 효과적인 기사는 뭘까요?",
       "explanation": "질문글과 답변글은 최소 두 단계 이상의\n굵기차이를 주어야 글의 성격 차이를\n잘 전달 할 수 있어요.",
       "answer": "A",
       "characterImage": "/images/character/reporter.png",
@@ -56,7 +56,7 @@
     },
     {
       "id": 7,
-      "problem": "안녕 캐치! (멍!)\n반려견 유치원 사이트를 운영중이야.\n어떤 디자인이 더 보기 좋은 디자인이니? (멍멍!)",
+      "problem": "안녕 캐치! (멍멍!)\n반려견 유치원 사이트를 운영중이야.\n어떤 디자인이 더 보기 좋은 디자인이니?",
       "explanation": "홈페이지를 구성하는 배경의 형태와\n버튼의 형태에 규칙을 주어야\n디자인의 통일성을 느끼게 할 수 있죠.",
       "answer": "B",
       "characterImage": "/images/character/dog-owner.png",
@@ -65,7 +65,7 @@
     },
     {
       "id": 8,
-      "problem": "반갑습니다, 캐치님.\n저는 상담사입니다. 사람들이 상담 신청을 많이 해줬으면\n좋겠어요! 어떤 디자인이 효과적일까요?",
+      "problem": "반갑습니다, 캐치님. 저는 상담사입니다.\n사람들이 상담 신청을 많이 해줬으면\n좋겠어요! 어떤 디자인이 효과적일까요?",
       "explanation": "클릭을 유도하는 디자인을 하기 위해서는\n단순 텍스트보단 버튼 디자인을\n사용하여 강조해보세요.",
       "answer": "A",
       "characterImage": "/images/character/counsellor.png",
@@ -74,7 +74,7 @@
     },
     {
       "id": 9,
-      "problem": "안녕 캐치~!\n난 행사장 삐에로야, 나와 소통할 수 있는 SNS로\n향하는 효율적인 버튼을 디자인해줘!",
+      "problem": "안녕 캐치~! 난 행사장 삐에로야,\n나와 소통할 수 있는 SNS로\n향하는 효율적인 버튼을 디자인해줘!",
       "explanation": "인지도가 있는 로고의 경우,\n로고만 사용해도 의미전달이 충분해요\n영문 텍스트로만 된 버튼은 전달력이 떨어져요.",
       "answer": "A",
       "characterImage": "/images/character/pierrot.png",
@@ -92,7 +92,7 @@
     },
     {
       "id": 11,
-      "problem": "캐치 안녕?\n나는 연극 주인공이야.\n어떤 옷을 입어야 내가 좀 더 주인공 같을까?",
+      "problem": "캐치 안녕?\n나는 연극 주인공이야. 어떤 옷을 입어야\n내가 좀 더 주인공 같을까?",
       "explanation": "주변 배우들이 차가운 한색의 옷을 입고 있네요.\n눈에 띄려면 . 색상대비를 이용하여\n보색계열의 옷을 입어주세요!",
       "answer": "B",
       "characterImage": "/images/character/actor.png",
@@ -101,7 +101,7 @@
     },
     {
       "id": 12,
-      "problem": "안녕…\n나는 석사과정의 대학원생이야 논문을 제출해야할 때가 왔어.(하..)\n나의 학술적인 연구를 어떻게 써볼까…?",
+      "problem": "안녕… 나는 석사과정의 대학원생이야\n논문을 제출해야할 때가 왔어.(하..)\n나의 학술적인 연구를 어떻게 써볼까…?",
       "explanation": "연구논문과 같은 학술적인 내용의 텍스트는\n세련되고 강한 느낌인 고딕체를 사용하여\n가독성을 높여주세요. (힘내..)",
       "answer": "A",
       "characterImage": "/images/character/graduate-student.png",
