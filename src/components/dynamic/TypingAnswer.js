@@ -18,7 +18,11 @@ const TypingAnswer = ({ text }) => {
     return () => clearInterval(count);
   }, [displayText]);
 
-  return <div className={classes["text"]}>{displayText}</div>;
+  return (
+    <div className={`${classes["text"]} ${classes["answer"]}`}>
+      {displayText}
+    </div>
+  );
 };
 
 export default TypingAnswer;
