@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 //css
 import classes from "./QuestionNumber.module.css";
 
-const QuestionNumber = ({ Number, checkDone }) => {
+const QuestionNumber = ({ Number, checkAnswer }) => {
   const numberVariant = {
     hidden: { opacity: 0 },
     visible: {
@@ -15,7 +15,7 @@ const QuestionNumber = ({ Number, checkDone }) => {
   };
   return (
     <motion.div
-      className={`${classes["number"]} ${checkDone && classes.done}`}
+      className={`${classes["number"]} ${checkAnswer && classes.done}`}
       variants={numberVariant}
     >
       <motion.div className={classes["number-text"]} variants={numberVariant}>

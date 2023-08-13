@@ -16,7 +16,7 @@ const QuestionContainer = ({
   Image1,
   Image2,
   answer,
-  checkWrong,
+  checkAnswer,
   checkFinished,
   onGetAnswer,
 }) => {
@@ -52,12 +52,12 @@ const QuestionContainer = ({
 
   return (
     <>
-      {checkWrong === "" && <div className={classes["triangle"]}></div>}
+      {checkAnswer === "" && <div className={classes["triangle"]}></div>}
       <motion.div
         className={`${classes["question-problem"]} ${
-          checkWrong === ""
+          checkAnswer === ""
             ? ""
-            : checkWrong === "true"
+            : checkAnswer === "true"
             ? classes.correct
             : classes.wrong
         } ${checkFinished && classes.done}`}
@@ -65,11 +65,11 @@ const QuestionContainer = ({
         initial="hidden"
         animate="visible"
       >
-        <QuestionNumber Number={Number} checkDone={checkWrong} />
+        <QuestionNumber Number={Number} checkAnswer={checkAnswer} />
         <QuestionText
           Problem={Problem}
           Explain={Explain}
-          checkDone={checkWrong}
+          checkAnswer={checkAnswer}
           checkFinished={checkFinished}
         />
       </motion.div>
@@ -84,12 +84,11 @@ const QuestionContainer = ({
           Image1={Image1}
           Image2={Image2}
           answer={answer}
-          checkDone={checkWrong}
+          checkAnswer={checkAnswer}
         />
         {!checkFinished ? (
           <QuestionButton
-            answer={answer}
-            checkDone={checkWrong}
+            checkAnswer={checkAnswer}
             onCheckAnswer={checkAnswerHandler}
           />
         ) : (

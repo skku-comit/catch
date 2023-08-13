@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 //css
 import classes from "./QuestionImage.module.css";
+import { useEffect, useState } from "react";
 
-const QuestionImage = ({ Image1, Image2, answer, checkDone }) => {
+const QuestionImage = ({ Image1, Image2, answer, checkAnswer }) => {
+  const [aniFinished, setAniFinished] = useState(false);
   //animation variant
   const imageVariant = {
     hidden: { opacity: 0, y: 100 },
@@ -13,24 +15,33 @@ const QuestionImage = ({ Image1, Image2, answer, checkDone }) => {
         duration: 0.25,
       },
     },
+    done: {
+      opacity: 0.5,
+    },
   };
-  // <img src={require('./assets/myImage.jpg').default} />
+
+  useEffect(() => {
+    if (checkAnswer !== "") {
+      setAniFinished(true);
+    }
+  }, [checkAnswer]);
+
   return (
     <div className={classes["image-container"]} variants={imageVariant}>
       <motion.img
         src={process.env.PUBLIC_URL + Image1}
         alt="Image 1"
-        className={`${classes["image"]} ${classes["image1"]} ${
-          answer === "B" && checkDone !== "" && classes.done
-        }`}
+        className={`${classes["image"]} ${classes["image1"]}`}
+        initial={!aniFinished ? "hidden" : answer === "B" ? "done" : "visible"}
+        animate={!aniFinished ? "visible" : answer === "B" ? "done" : "visible"}
         variants={imageVariant}
       />
       <motion.img
         src={process.env.PUBLIC_URL + Image2}
         alt="Image 2"
-        className={`${classes["image"]} ${classes["image2"]} ${
-          answer === "A" && checkDone !== "" && classes.done
-        }`}
+        className={`${classes["image"]} ${classes["image2"]}}`}
+        initial={!aniFinished ? "hidden" : answer === "A" ? "done" : "visible"}
+        animate={!aniFinished ? "visible" : answer === "A" ? "done" : "visible"}
         variants={imageVariant}
       />
     </div>

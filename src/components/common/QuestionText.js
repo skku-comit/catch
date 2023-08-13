@@ -5,7 +5,7 @@ import classes from "./QuestionText.module.css";
 import TypingText from "../dynamic/TypingText";
 import TypingAnswer from "../dynamic/TypingAnswer";
 
-const QuestionText = ({ Problem, Explain, checkDone, checkFinished }) => {
+const QuestionText = ({ Problem, Explain, checkAnswer, checkFinished }) => {
   const [delay, setDelay] = useState(false);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const QuestionText = ({ Problem, Explain, checkDone, checkFinished }) => {
   return (
     <div
       className={`${classes["problem-text"]} ${
-        checkDone !== "" && classes.done
+        checkAnswer !== "" && classes.done
       } ${checkFinished && classes.answer}
       }`}
     >

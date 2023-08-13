@@ -29,7 +29,33 @@
   left: 8%;
 }
 
+/* 정답확인 후 이미지 변경 */
+.ACorrect {
+  background: url("../../assets/button/buttonA/button_A_true.png") center
+    center/contain no-repeat;
+  /* pointer-events: none; */
+}
+.AWrong {
+  background: url("../../assets/button/buttonA/button_A_false.png") center
+    center/contain no-repeat;
+}
+.AShade {
+  background: url("../../assets/button/buttonA/button_A_inactive.png") center
+    center/contain no-repeat;
+}
+
+.BCorrect {
+  background: url("../../assets/button/buttonB/button_B_true.png") center
+    center/contain no-repeat;
+}
+.BWrong {
+  background: url("../../assets/button/buttonB/button_B_false.png") center
+    center/contain no-repeat;
+}
+.BShade {
+  background: url("../../assets/button/buttonB/button_B_inactive.png") center
+    center/contain no-repeat;
+}
 .done {
-  opacity: 0.5;
   pointer-events: none;
 }

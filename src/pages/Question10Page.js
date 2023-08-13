@@ -1,23 +1,26 @@
-import { useState, useContext, useEffect } from 'react';
-//css
-import classes from './QuestionPage.module.css';
+// hooks
+import { useState, useContext } from "react";
+
+// css
+import classes from "./QuestionPage.module.css";
 
 // components
-import QuestionContainer from '../components/layout/QuestionContainer';
-import ImageContainer from '../components/layout/ImageContainer';
-import ThrowFish from '../components/dynamic/ThrowFish';
-//data
-import questionData from '../data/data.json';
+import QuestionContainer from "../components/layout/QuestionContainer";
+import ImageContainer from "../components/layout/ImageContainer";
+import ThrowFish from "../components/dynamic/ThrowFish";
+// data
+import questionData from "../data/data.json";
 
-//context
-import Level from '../data/level';
+// context
+import Level from "../data/level";
 
 const Question10Page = () => {
-  const [isCorrect, setIsCorrect] = useState('');
-  const [openAnswerpage, setOpenAnswerPage] = useState(false);
+  const [isCorrect, setIsCorrect] = useState("");
   const [isQuestionStart, setIsQuestionStart] = useState();
   const [isAnswered, setIsAnswered] = useState(false);
+  const [openAnswerpage, setOpenAnswerPage] = useState(false); // answer page
 
+  // level context
   const curExpContext = useContext(Level);
   const setCurExpIncrease = () => {
     curExpContext.setExp((current) => {
@@ -28,11 +31,11 @@ const Question10Page = () => {
   const answerHandler = (userAnswer) => {
     setIsAnswered(true);
     if (questionData.questions[9].answer === userAnswer) {
-      setIsCorrect('true');
+      setIsCorrect("true");
       setCurExpIncrease();
       setIsQuestionStart(true);
     } else {
-      setIsCorrect('false');
+      setIsCorrect("false");
       setIsQuestionStart(false);
     }
   };
@@ -42,13 +45,13 @@ const Question10Page = () => {
   };
 
   return (
-    <div className={classes['page']}>
+    <div className={classes["page"]}>
       <ImageContainer
         isAnswered={isAnswered}
         isStart={isQuestionStart}
+        setOpenAnswerPage={setOpenAnswerPage}
         Number={questionData.questions[9].id}
         Citizen={questionData.questions[9].characterImage}
-        setOpenAnswerPage={setOpenAnswerPage}
       />
       <QuestionContainer
         Number={questionData.questions[9].id}
@@ -57,15 +60,15 @@ const Question10Page = () => {
         Image1={questionData.questions[9].image1}
         Image2={questionData.questions[9].image2}
         answer={questionData.questions[9].answer}
-        checkWrong={isCorrect}
+        checkAnswer={isCorrect}
         checkFinished={openAnswerpage}
         onGetAnswer={answerHandler}
       />
-      {isCorrect !== '' && (
-        <ThrowFish checkWrong={isCorrect} onChangePage={pageHandler} />
+      {isCorrect !== "" && (
+        <ThrowFish checkAnswer={isCorrect} onChangePage={pageHandler} />
       )}
 
-      {openAnswerpage && <div className={classes['backdrop']} />}
+      {openAnswerpage && <div className={classes["backdrop"]} />}
     </div>
   );
 };
