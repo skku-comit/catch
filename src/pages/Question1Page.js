@@ -1,23 +1,26 @@
-import { useState, useContext, useEffect } from 'react';
-//css
+// hooks
+import { useState, useContext } from 'react';
+
+// css
 import classes from './QuestionPage.module.css';
 
 // components
 import QuestionContainer from '../components/layout/QuestionContainer';
 import ImageContainer from '../components/layout/ImageContainer';
 import ThrowFish from '../components/dynamic/ThrowFish';
-//data
+// data
 import questionData from '../data/data.json';
 
-//context
+// context
 import Level from '../data/level';
 
 const Question1Page = () => {
   const [isCorrect, setIsCorrect] = useState('');
-  const [openAnswerpage, setOpenAnswerPage] = useState(false);
   const [isQuestionStart, setIsQuestionStart] = useState();
   const [isAnswered, setIsAnswered] = useState(false);
+  const [openAnswerpage, setOpenAnswerPage] = useState(false); // answer page
 
+  // level context
   const curExpContext = useContext(Level);
   const setCurExpIncrease = () => {
     curExpContext.setExp((current) => {

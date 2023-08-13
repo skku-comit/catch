@@ -13,7 +13,7 @@ import questionData from '../data/data.json';
 import Level from '../data/level';
 
 const Question2Page = () => {
-  const [isCorrect, setIsCorrect] = useState('');
+  const [isCorrect, setIsCorrect] = useState(''); 
   const [openAnswerpage, setOpenAnswerPage] = useState(false);
   const [isQuestionStart, setIsQuestionStart] = useState();
   const [isAnswered, setIsAnswered] = useState(false);
