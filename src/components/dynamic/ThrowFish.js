@@ -15,11 +15,16 @@ const ThrowFish = ({ checkWrong, onChangePage }) => {
   }, []);
 
   const fishVariant = {
-    hidden: {},
-    visible: {},
+    hidden: { scale: 0 },
+    visible: {
+      x: [],
+      y: [],
+      scale: [],
+      rotate: [],
+    },
     transition: {
       duration: 1.55,
-      times: [],
+      times: [0],
     },
   };
   return (
