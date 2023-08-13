@@ -1,3 +1,20 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+
+  position: absolute;
+  background: url("../../../public/images/background/1-6.png") center
+    center/cover;
+  z-index: -1;
+}
+.background1 {
+  background: url("../../../public/images/background/1-6.png") center
+    center/cover;
+}
+.background2 {
+  background: url("../../../public/images/background/7-12.png") center
+    center/cover;
+}
 .triangle {
   width: 45px;
   height: 52px;

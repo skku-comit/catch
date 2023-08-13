@@ -10,7 +10,6 @@ import ImageContainer from "../components/layout/ImageContainer";
 import ThrowFish from "../components/dynamic/ThrowFish";
 // data
 import questionData from "../data/data.json";
-
 // context
 import Level from "../data/level";
 

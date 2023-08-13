@@ -52,6 +52,11 @@ const QuestionContainer = ({
 
   return (
     <>
+      <div
+        className={`${classes["background"]} ${
+          Number <= 6 ? classes.background1 : classes.background2
+        }`}
+      />
       {checkAnswer === "" && !checkFinished && (
         <div className={classes["triangle"]}></div>
       )}
