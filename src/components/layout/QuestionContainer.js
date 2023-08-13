@@ -52,7 +52,9 @@ const QuestionContainer = ({
 
   return (
     <>
-      {checkAnswer === "" && <div className={classes["triangle"]}></div>}
+      {checkAnswer === "" && !checkFinished && (
+        <div className={classes["triangle"]}></div>
+      )}
       <motion.div
         className={`${classes["question-problem"]} ${
           checkAnswer === ""

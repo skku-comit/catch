@@ -31,9 +31,6 @@ const ExpBar = ({ isStart }) => {
     }
   }, [curExp, isStart]);
 
-  console.log("level : " + level);
-  console.log("levelUp" + levelUp);
-
   return (
     <div className={classes["experiment-bar"]}>
       <div className={classes["experiment-bar_level"]}>
