@@ -11,7 +11,7 @@ const StartPage = () => {
   const [backdropOpacity, setBackdropOpacity] = useState(0);
 
   const updateBackdropOpacity = (y) => {
-    const opacity = (1300 + -1 * y) / 2400;
+    const opacity = Math.min((1300 + -1 * y) / 2400, 0.5);
     setBackdropOpacity(opacity);
   };
 
