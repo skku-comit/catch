@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import classes from "./ThrowFish.module.css";
 //imports
 
-const ThrowFish = ({ checkWrong, onChangePage }) => {
+const ThrowFish = ({ checkAnswer, onChangePage }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       onChangePage();
@@ -17,22 +17,25 @@ const ThrowFish = ({ checkWrong, onChangePage }) => {
   const fishVariant = {
     hidden: { scale: 0 },
     visible: {
-      x: [],
-      y: [],
-      scale: [],
-      rotate: [],
-    },
-    transition: {
-      duration: 1.55,
-      times: [0],
+      x: [0],
+      y: [0],
+      scale: [0],
+      rotate: [0],
+      transition: {
+        duration: 1.55,
+        times: [0, 0.25],
+      },
     },
   };
   return (
     <>
-      {checkWrong === "true" ? (
-        <div className={classes["fish-moving"]} />
+      {checkAnswer === "true" ? (
+        <div className={classes["fish-moving"]} variants={fishVariant} />
       ) : (
-        <div className={`${classes["fish-moving"]} ${classes["not-moving"]}`} />
+        <div
+          className={`${classes["fish-moving"]} ${classes["not-moving"]}`}
+          variants={fishVariant}
+        />
       )}
     </>
   );
