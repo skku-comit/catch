@@ -46,6 +46,15 @@
   height: 60px;
   background: url("../assets/box/box-drag-arrow.png") center center/contain
     no-repeat;
+  animation: 1s flash infinite alternate;
+}
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .text {
@@ -71,8 +80,7 @@
 }
 
 .start-link:active {
-  margin-left: 50px;
-  margin-top: 50px;
+  height: 120px;
 }
 
 .start-button {
