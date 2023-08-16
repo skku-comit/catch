@@ -9,14 +9,30 @@
   position: relative;
   bottom: 7.8%;
 }
-
 .catch {
-  width: 32%;
-  height: 90%;
+  animation: floating 3s ease-in-out infinite;
+  position: relative;
+}
+.catch12 {
+  width: 200px;
+  height: 280px;
+  left: 5px;
+}
+.catch3 {
+  width: 260px;
+  height: 310px;
 
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left;
+  right: 16px;
+}
+.catch4 {
+  width: 260px;
+  height: 360px;
+  right: 16px;
+}
+.catch5 {
+  width: 290px;
+  height: 380px;
+  right: 37px;
 }
 
 .citizen {
@@ -26,8 +42,6 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
-
-  position: relative;
 
   animation: floating 3s ease-in-out infinite;
 }

@@ -30,11 +30,18 @@ const Characters = ({ Number, CitizenImage }) => {
   };
   return (
     <div className={classes["character-container"]}>
-      <div
-        className={classes["catch"]}
-        style={{
-          backgroundImage: `url(${selectCatchImage(level)})`,
-        }}
+      <img
+        className={`${classes.catch} ${
+          level === 3
+            ? classes["catch3"]
+            : level === 4
+            ? classes["catch4"]
+            : level === 5
+            ? classes["catch5"]
+            : classes["catch12"]
+        } ${classes["floating"]}`}
+        src={selectCatchImage(level)}
+        alt="catch"
       />
 
       <div
