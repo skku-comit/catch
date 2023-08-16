@@ -23,6 +23,7 @@ const QuestionContainer = ({
   const checkAnswerHandler = (userAnswer) => {
     onGetAnswer(userAnswer);
   };
+
   //animation variant
   const problemVariant = {
     hidden: {},
