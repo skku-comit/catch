@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useState, useContext, useEffect } from "react";
 // css
 import classes from "./Characters.module.css";
@@ -56,7 +57,7 @@ const Characters = ({ Number, CitizenImage }) => {
   };
   return (
     <div className={classes["character-container"]}>
-      <img
+      <motion.img
         className={`${classes.catch} ${
           level === 3
             ? classes.catch3
@@ -70,6 +71,13 @@ const Characters = ({ Number, CitizenImage }) => {
         ${levelUpDone && classes.appearCatch}`}
         src={selectCatchImage(level)}
         alt="catch"
+        animate={{
+          y: [-10, 10, -10],
+        }}
+        transition={{
+          duration: 3,
+          repeat: Infinity,
+        }}
       />
       <img
         className={`${classes.catch} ${
@@ -87,16 +95,23 @@ const Characters = ({ Number, CitizenImage }) => {
         src={selectWhiteCatchImage(level)}
         alt="WhiteCatch"
       />
-      <div
+      <motion.div
         className={`${classes["citizen"]} ${classes["floating"]}`}
         style={{
           backgroundImage: `url(${CitizenImage})`,
+        }}
+        animate={{
+          y: [-10, 10, -10],
+        }}
+        transition={{
+          duration: 3,
+          repeat: Infinity,
         }}
       >
         <div
           className={`${classes["kidOff"]} ${Number === 4 && classes.kidOn}`}
         ></div>
-      </div>
+      </motion.div>
     </div>
   );
 };

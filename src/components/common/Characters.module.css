@@ -13,6 +13,7 @@
   width: 200px;
   height: 280px;
   left: 5px;
+  top: 30px;
 }
 .catch3 {
   width: 279px;
@@ -128,19 +129,6 @@
 
   position: absolute;
   right: 15px;
-  animation: floating 3s ease-in-out infinite;
-}
-
-@keyframes floating {
-  0% {
-    transform: translateY(-1%);
-  }
-  50% {
-    transform: translateY(6%);
-  }
-  100% {
-    transform: translateY(-1%);
-  }
 }
 
 .kidOff {
