@@ -24,7 +24,7 @@ const Characters = ({ Number, CitizenImage }) => {
     if (levelUp) {
       setLevelUpDone(true);
     }
-  }, [curExp]);
+  }, [curExp, levelUp]);
 
   const selectCatchImage = (level) => {
     switch (level) {
@@ -66,7 +66,7 @@ const Characters = ({ Number, CitizenImage }) => {
             ? classes.catch5
             : classes.catch12
         }        
-        ${levelUp && classes.disappearCatch}
+        ${levelUp && !levelUpDone && classes.disappearCatch}        
         ${levelUpDone && classes.appearCatch}`}
         src={selectCatchImage(level)}
         alt="catch"
@@ -82,7 +82,7 @@ const Characters = ({ Number, CitizenImage }) => {
             : classes.catch12
         }        
         ${classes.whiteCatch}
-        ${levelUp && classes.disappearWhiteCatch}
+        ${levelUp && !levelUpDone && classes.disappearWhiteCatch}
         ${levelUpDone && classes.appearWhiteCatch}`}
         src={selectWhiteCatchImage(level)}
         alt="WhiteCatch"

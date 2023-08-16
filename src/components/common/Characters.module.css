@@ -45,6 +45,7 @@
   }
   100% {
     scale: 0;
+    opacity: 1;
   }
 }
 .disappearWhiteCatch {
@@ -72,7 +73,7 @@
 
 .appearCatch {
   transform-origin: 50% 100%;
-  animation: 0.8s appear cubic-bezier(0, 0, 0, 1) forwards;
+  animation: 0.8s appear cubic-bezier(0, 0, 0, 1) both;
 }
 
 @keyframes appear {
@@ -96,7 +97,7 @@
 
 .appearWhiteCatch {
   transform-origin: 50% 100%;
-  animation: 0.8s appearWhite cubic-bezier(0, 0, 0, 1) forwards;
+  animation: 0.8s appearWhite cubic-bezier(0, 0, 0, 1) both;
 }
 
 @keyframes appearWhite {

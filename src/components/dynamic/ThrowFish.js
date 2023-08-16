@@ -8,7 +8,7 @@ const ThrowFish = ({ checkAnswer, onChangePage }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       onChangePage();
-    }, 4000);
+    }, 5000);
     return () => {
       clearTimeout(timer);
     };
