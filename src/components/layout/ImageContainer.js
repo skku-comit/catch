@@ -1,9 +1,10 @@
 //css
-import classes from './ImageContainer.module.css';
+import classes from "./ImageContainer.module.css";
 //imports
-import ExpBar from '../common/ExpBar';
-import Characters from '../common/Characters';
-import Timer from '../common/Timer';
+import ExpBar from "../common/ExpBar";
+import Characters from "../common/Characters";
+import Timer from "../common/Timer";
+import { useState } from "react";
 
 const ImageContainer = ({
   isAnswered,
@@ -13,8 +14,8 @@ const ImageContainer = ({
   Citizen,
 }) => {
   return (
-    <div className={classes['image-container']}>
-      <div className={classes['background']}>
+    <div className={classes["image-container"]}>
+      <div className={classes["background"]}>
         <Timer setIsTimeEnd={setOpenAnswerPage} isAnswered={isAnswered}></Timer>
         <ExpBar isStart={isStart} />
         <Characters Number={Number} CitizenImage={Citizen} />

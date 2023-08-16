@@ -24,7 +24,7 @@ const ExpBar = ({ isStart }) => {
       time = setTimeout(() => {
         setLevelUp(true);
         increaseCurExp();
-      }, 2000);
+      }, 2350);
       return () => {
         clearTimeout(time);
       };
@@ -41,7 +41,8 @@ const ExpBar = ({ isStart }) => {
               level === 2 && (levelUp ? classes.level2Up : classes.level2)
             }             
             ${level === 3 && (levelUp ? classes.level3Up : classes.level3)}
-            ${level === 4 && (levelUp ? classes.level4Up : classes.level4)}`}
+            ${level === 4 && (levelUp ? classes.level4Up : classes.level4)}
+            ${level === 5 && (levelUp ? classes.level5Up : classes.level5)}`}
         />
       </div>
 

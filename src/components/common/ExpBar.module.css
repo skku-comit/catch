@@ -64,6 +64,16 @@
   animation: 0.2s level-Up cubic-bezier(0, 0, 0, 1);
 }
 
+.level5 {
+  background: url("../../assets/exp-bar/level-4.png") center center/contain
+    no-repeat;
+}
+.level5Up {
+  background: url("../../assets/exp-bar/level-5.png") center center/contain
+    no-repeat;
+  animation: 0.2s level-Up cubic-bezier(0, 0, 0, 1);
+}
+
 @keyframes level-Up {
   0% {
     opacity: 0;

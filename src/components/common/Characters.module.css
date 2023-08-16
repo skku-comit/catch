@@ -2,16 +2,12 @@
   width: 70.514%;
   height: 54.23%;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   position: relative;
   bottom: 7.8%;
 }
 .catch {
   animation: floating 3s ease-in-out infinite;
-  position: relative;
+  position: absolute;
 }
 .catch12 {
   width: 200px;
@@ -19,22 +15,108 @@
   left: 5px;
 }
 .catch3 {
-  width: 260px;
+  width: 279px;
   height: 310px;
 
-  right: 16px;
+  left: -20px;
 }
 .catch4 {
-  width: 260px;
-  height: 360px;
-  right: 16px;
+  width: 250px;
+  height: 340px;
+  left: -20px;
 }
 .catch5 {
-  width: 290px;
-  height: 380px;
-  right: 37px;
+  width: 300px;
+  height: 360px;
+  left: -30px;
+}
+.whiteCatch {
+  opacity: 0;
+  z-index: 2;
 }
 
+.disappearCatch {
+  transform-origin: 50% 100%;
+  animation: 0.3s disappear 0.5s cubic-bezier(0, 0, 0, 1) forwards;
+}
+@keyframes disappear {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 0;
+  }
+}
+.disappearWhiteCatch {
+  transform-origin: 50% 100%;
+  animation: 0.8s disappearWhite cubic-bezier(0, 0, 0, 1) forwards;
+}
+@keyframes disappearWhite {
+  0% {
+    opacity: 0;
+    scale: 1;
+  }
+  37.5% {
+    opacity: 1;
+    scale: 1;
+  }
+  62.5% {
+    opacity: 1;
+    scale: 1;
+  }
+  100% {
+    opacity: 1;
+    scale: 0;
+  }
+}
+
+.appearCatch {
+  transform-origin: 50% 100%;
+  animation: 0.8s appear cubic-bezier(0, 0, 0, 1) forwards;
+}
+
+@keyframes appear {
+  0% {
+    scale: 0;
+    opacity: 0;
+  }
+  37.5% {
+    scale: 1;
+    opacity: 0;
+  }
+  62.5% {
+    scale: 1;
+    opacity: 0;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+.appearWhiteCatch {
+  transform-origin: 50% 100%;
+  animation: 0.8s appearWhite cubic-bezier(0, 0, 0, 1) forwards;
+}
+
+@keyframes appearWhite {
+  0% {
+    scale: 0;
+    opacity: 1;
+  }
+  37.5% {
+    scale: 1;
+    opacity: 1;
+  }
+  62.5% {
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    scale: 1;
+    opacity: 0;
+  }
+}
 .citizen {
   width: 32%;
   height: 90%;
@@ -43,18 +125,20 @@
   background-size: contain;
   background-position: right;
 
+  position: absolute;
+  right: 15px;
   animation: floating 3s ease-in-out infinite;
 }
 
 @keyframes floating {
   0% {
-    transform: translate(0%, -1%);
+    transform: translateY(-1%);
   }
   50% {
-    transform: translate(0%, 6%);
+    transform: translateY(6%);
   }
   100% {
-    transform: translate(0%, -1%);
+    transform: translateY(-1%);
   }
 }
 
