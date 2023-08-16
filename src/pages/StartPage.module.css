@@ -6,7 +6,8 @@
   justify-content: space-around;
   align-items: center;
   /* background changes to img later */
-  background: transparent;
+  background: url("../../public/images/background/start_page.png") center
+    center/contain no-repeat;
   position: relative;
   overflow: hidden;
 }
@@ -18,16 +19,6 @@
   opacity: 1;
   position: fixed;
   z-index: 2;
-}
-
-.start-page-logo {
-  border: 1px solid black;
-  width: 80%;
-  height: 15%;
-  /* temp logo changes to img later */
-  background: transparent;
-  position: absolute;
-  bottom: 65%;
 }
 .drag-container {
   width: 903px;

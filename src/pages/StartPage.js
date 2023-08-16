@@ -31,7 +31,6 @@ const StartPage = () => {
         className={classes["backdrop"]}
         style={{ opacity: backdropOpacity }}
       />
-      <div className={classes["start-page-logo"]}>Logo</div>
       <motion.div
         className={classes["drag-container"]}
         drag="y"
