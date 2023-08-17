@@ -1,0 +1,69 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+  background: center center/cover no-repeat;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  position: relative;
+  animation: 0.5 backgroundAni cubic-bezier(0, 0, 0, 1) forwards;
+}
+@keyframes backgroundAni {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.particle {
+  height: 965px;
+  width: 1025px;
+
+  background: center center/cover no-repeat;
+  position: absolute;
+  top: 0%;
+  z-index: 1;
+
+  animation: 0.5s particleAni 1s cubic-bezier(0, 0, 0, 1) both;
+}
+
+@keyframes particleAni {
+  0% {
+    scale: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+.expResult {
+  position: relative;
+  z-index: 2;
+}
+.button {
+  width: 510px;
+  height: 140px;
+  background: url("../../src/assets/button/button_again.png") center
+    center/contain no-repeat;
+  border: none;
+  animation: 0.5s againButton 1.5s cubic-bezier(0, 0, 0, 1) both;
+}
+@keyframes againButton {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

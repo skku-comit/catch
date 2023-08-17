@@ -17,6 +17,7 @@ import Question9Page from "./pages/Question9Page";
 import Question10Page from "./pages/Question10Page";
 import Question11Page from "./pages/Question11Page";
 import Question12Page from "./pages/Question12Page";
+import ResultPage from "./pages/ResultPage";
 import Level from "./data/level";
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
           <Route path="/q10" element={<Question10Page />} />
           <Route path="/q11" element={<Question11Page />} />
           <Route path="/q12" element={<Question12Page />} />
+          <Route path="/q13" element={<ResultPage />} />
         </Routes>
       </AnimatePresence>
     </Level.Provider>
