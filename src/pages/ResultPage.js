@@ -49,29 +49,29 @@ const ResultPage = () => {
   const selectResultImage = (level) => {
     switch (level) {
       case 1:
-        return "/images/exp/resultpage/exp_level_1.png";
+        return "/images/resultpage/exp_level_1.png";
       case 2:
-        return "/images/exp/resultpage/exp_level_2.png";
+        return "/images/resultpage/exp_level_2.png";
       case 3:
-        return "/images/exp/resultpage/exp_level_3.png";
+        return "/images/resultpage/exp_level_3.png";
       case 4:
-        return "/images/exp/resultpage/exp_level_4.png";
+        return "/images/resultpage/exp_level_4.png";
       case 5:
-        return "/images/exp/resultpage/exp_level_5.png";
+        return "/images/resultpage/exp_level_5.png";
     }
   };
   const selectParticleImage = (level) => {
     switch (level) {
       case 1:
-        return "/images/etc/particle_1.png";
+        return "/images/resultpage/particle_1.png";
       case 2:
-        return "/images/etc/particle_2.png";
+        return "/images/resultpage/particle_2.png";
       case 3:
-        return "/images/etc/particle_3.png";
+        return "/images/resultpage/particle_3.png";
       case 4:
-        return "/images/etc/particle_4.png";
+        return "/images/resultpage/particle_4.png";
       case 5:
-        return "/images/etc/particle_5.png";
+        return "/images/resultpage/particle_5.png";
     }
   };
 
