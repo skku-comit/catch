@@ -52,13 +52,40 @@
   position: relative;
   z-index: 2;
 }
+
+.score-container {
+  width: 233px;
+  height: 83px;
+  background-color: black;
+  border-radius: 48px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  z-index: 2;
+}
+.score {
+  margin: 13px;
+  color: white;
+  text-align: center;
+  font-family: MapleStoryBold;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
 .button {
   width: 510px;
   height: 140px;
   background: url("../../src/assets/button/button_again.png") center
     center/contain no-repeat;
   border: none;
-  animation: 0.5s againButton 1.5s cubic-bezier(0, 0, 0, 1) both;
+  position: relative;
+  z-index: 2;
+  animation: 0.5s againButton 1.7s cubic-bezier(0, 0, 0, 1) both;
 }
 @keyframes againButton {
   0% {
