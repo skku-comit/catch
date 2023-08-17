@@ -27,6 +27,7 @@
   width: 1025px;
 
   background: center center/cover no-repeat;
+  border-radius: 50%;
   position: absolute;
   top: 0%;
   z-index: 1;
