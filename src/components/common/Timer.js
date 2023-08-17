@@ -24,7 +24,7 @@ const Timer = (props) => {
           { scaleX: 0.99 },
           {
             scaleX: 0,
-            duration: 10.3,
+            duration: 20.3,
             ease: "none",
             transformOrigin: "left",
             onComplete: () => {
