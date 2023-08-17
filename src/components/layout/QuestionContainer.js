@@ -19,11 +19,14 @@ const QuestionContainer = ({
   checkAnswer,
   checkFinished,
   onGetAnswer,
+  onSetTimerDone,
 }) => {
   const checkAnswerHandler = (userAnswer) => {
     onGetAnswer(userAnswer);
   };
-
+  const checkTimerHandler = () => {
+    onSetTimerDone();
+  };
   //animation variant
   const problemVariant = {
     hidden: {},
@@ -79,6 +82,7 @@ const QuestionContainer = ({
           Explain={Explain}
           checkAnswer={checkAnswer}
           checkFinished={checkFinished}
+          onSetTimerDone={checkTimerHandler}
         />
       </motion.div>
 

@@ -6,7 +6,6 @@ import { useEffect, useRef } from "react";
 import timeFullImg from "../../assets/timer/time-full.svg";
 import timeContainerImg from "../../assets/timer/time-none.svg";
 import timer from "../../assets/timer/timer.svg";
-import { delay } from "framer-motion";
 
 const Timer = (props) => {
   const barRef = useRef(null);
@@ -18,26 +17,27 @@ const Timer = (props) => {
 
   useEffect(() => {
     let timerAnimation = null;
-
-    if (!isAnswered) {
-      timerAnimation = gsap.fromTo(
-        barRef.current,
-        { scaleX: 0.99 },
-        {
-          scaleX: 0,
-          duration: 10.3,
-          ease: "none",
-          transformOrigin: "left",
-          onComplete: () => {
-            setWhenTimeEndHandler();
-          },
-          onUpdate: () => {
-            if (isAnswered) {
-              timerAnimation.kill();
-            }
-          },
-        }
-      );
+    if (props.isTyped) {
+      if (!isAnswered) {
+        timerAnimation = gsap.fromTo(
+          barRef.current,
+          { scaleX: 0.99 },
+          {
+            scaleX: 0,
+            duration: 10.3,
+            ease: "none",
+            transformOrigin: "left",
+            onComplete: () => {
+              setWhenTimeEndHandler();
+            },
+            onUpdate: () => {
+              if (isAnswered) {
+                timerAnimation.kill();
+              }
+            },
+          }
+        );
+      }
     }
 
     return () => {
@@ -45,7 +45,7 @@ const Timer = (props) => {
         timerAnimation.kill();
       }
     };
-  }, [isAnswered]);
+  }, [isAnswered, props.isTyped]);
 
   return (
     <div className={classes["time-container"]}>
@@ -53,19 +53,19 @@ const Timer = (props) => {
         src={timer}
         className={classes["timer-container"]}
         alt="timer-container"
-      ></img>
+      />
       <div className={classes["bar-container"]}>
         <img
           src={timeContainerImg}
           className={classes["bar-none"]}
           alt="time-container"
-        ></img>
+        />
         <img
           ref={barRef}
           src={timeFullImg}
           className={classes["bar-full"]}
           alt="time-bar"
-        ></img>
+        />
       </div>
     </div>
   );

@@ -12,11 +12,16 @@ const ImageContainer = ({
   isStart,
   Number,
   Citizen,
+  checkTypingFinished,
 }) => {
   return (
     <div className={classes["image-container"]}>
       <div className={classes["background"]}>
-        <Timer setIsTimeEnd={setOpenAnswerPage} isAnswered={isAnswered}></Timer>
+        <Timer
+          setIsTimeEnd={setOpenAnswerPage}
+          isAnswered={isAnswered}
+          isTyped={checkTypingFinished}
+        ></Timer>
         <ExpBar isStart={isStart} />
         <Characters Number={Number} CitizenImage={Citizen} />
       </div>

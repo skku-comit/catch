@@ -5,8 +5,18 @@ import classes from "./QuestionText.module.css";
 import TypingText from "../dynamic/TypingText";
 import TypingAnswer from "../dynamic/TypingAnswer";
 
-const QuestionText = ({ Problem, Explain, checkAnswer, checkFinished }) => {
+const QuestionText = ({
+  Problem,
+  Explain,
+  checkAnswer,
+  checkFinished,
+  onSetTimerDone,
+}) => {
   const [delay, setDelay] = useState(false);
+
+  const checkTimerHandler = () => {
+    onSetTimerDone();
+  };
 
   useEffect(() => {
     const delay = setTimeout(() => {
@@ -26,7 +36,7 @@ const QuestionText = ({ Problem, Explain, checkAnswer, checkFinished }) => {
       {delay && (
         <>
           {!checkFinished ? (
-            <TypingText text={Problem} />
+            <TypingText text={Problem} onSetTimerDone={checkTimerHandler} />
           ) : (
             <TypingAnswer text={Explain} />
           )}

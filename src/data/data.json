@@ -93,7 +93,7 @@
     {
       "id": 11,
       "problem": "캐치 안녕?\n나는 연극 주인공이야. 어떤 옷을 입어야\n내가 좀 더 주인공 같을까?",
-      "explanation": "주변 배우들이 차가운 한색의 옷을 입고 있네요.\n눈에 띄려면 . 색상대비를 이용하여\n보색계열의 옷을 입어주세요!",
+      "explanation": "주변 배우들이 차가운 한색의 옷을 입고 있네요.\n눈에 띄려면 색상대비를 이용하여\n보색계열의 옷을 입어주세요!",
       "answer": "B",
       "characterImage": "/images/character/actor.png",
       "image1": "/images/problems/actor_wrong.png",

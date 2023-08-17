@@ -11,7 +11,6 @@ import ImageContainer from "../components/layout/ImageContainer";
 import ThrowFish from "../components/dynamic/ThrowFish";
 // data
 import questionData from "../data/data.json";
-
 // context
 import Level from "../data/level";
 
@@ -20,7 +19,7 @@ const Question6Page = () => {
   const [isQuestionStart, setIsQuestionStart] = useState();
   const [isAnswered, setIsAnswered] = useState(false);
   const [openAnswerpage, setOpenAnswerPage] = useState(false); // answer page
-
+  const [isTyped, setIsTyped] = useState(false); //typing done
   // level context
   const curExpContext = useContext(Level);
   const setCurExpIncrease = () => {
@@ -45,6 +44,9 @@ const Question6Page = () => {
     setOpenAnswerPage(true);
   };
 
+  const timerHandler = () => {
+    setIsTyped(true);
+  };
   return (
     <motion.div
       className={classes["page"]}
@@ -59,6 +61,7 @@ const Question6Page = () => {
         setOpenAnswerPage={setOpenAnswerPage}
         Number={questionData.questions[5].id}
         Citizen={questionData.questions[5].characterImage}
+        checkTypingFinished={isTyped}
       />
       <QuestionContainer
         Number={questionData.questions[5].id}
@@ -70,6 +73,7 @@ const Question6Page = () => {
         checkAnswer={isCorrect}
         checkFinished={openAnswerpage}
         onGetAnswer={answerHandler}
+        onSetTimerDone={timerHandler}
       />
       {isCorrect !== "" && (
         <ThrowFish checkAnswer={isCorrect} onChangePage={pageHandler} />
