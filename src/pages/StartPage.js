@@ -26,7 +26,13 @@ const StartPage = () => {
   };
 
   return (
-    <div className={classes["start-page"]}>
+    <motion.div
+      className={classes["start-page"]}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
+      exit={{ opacity: 0 }}
+    >
       <motion.div
         className={classes["backdrop"]}
         style={{ opacity: backdropOpacity }}
@@ -58,11 +64,15 @@ const StartPage = () => {
         />
         <div className={classes["text"]}>
           <Link to={"./q1"} className={classes["start-link"]}>
-            <button className={classes["start-button"]} />
+            <motion.button
+              className={classes["start-button"]}
+              key="button"
+              exit={{ scale: 0.5 }}
+            />
           </Link>
         </div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 

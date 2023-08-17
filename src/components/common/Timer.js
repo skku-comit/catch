@@ -1,11 +1,12 @@
-import gsap from 'gsap';
-import classes from './Timer.module.css';
-import { useEffect, useRef } from 'react';
+import gsap from "gsap";
+import classes from "./Timer.module.css";
+import { useEffect, useRef } from "react";
 
 //img
-import timeFullImg from '../../assets/timer/time-full.svg';
-import timeContainerImg from '../../assets/timer/time-none.svg';
-import timer from '../../assets/timer/timer.svg';
+import timeFullImg from "../../assets/timer/time-full.svg";
+import timeContainerImg from "../../assets/timer/time-none.svg";
+import timer from "../../assets/timer/timer.svg";
+import { delay } from "framer-motion";
 
 const Timer = (props) => {
   const barRef = useRef(null);
@@ -24,15 +25,14 @@ const Timer = (props) => {
         { scaleX: 0.99 },
         {
           scaleX: 0,
-          duration: 10,
-          ease: 'none',
-          transformOrigin: 'left',
+          duration: 10.3,
+          ease: "none",
+          transformOrigin: "left",
           onComplete: () => {
             setWhenTimeEndHandler();
           },
           onUpdate: () => {
             if (isAnswered) {
-              console.log(isAnswered);
               timerAnimation.kill();
             }
           },
@@ -48,22 +48,22 @@ const Timer = (props) => {
   }, [isAnswered]);
 
   return (
-    <div className={classes['time-container']}>
+    <div className={classes["time-container"]}>
       <img
         src={timer}
-        className={classes['timer-container']}
+        className={classes["timer-container"]}
         alt="timer-container"
       ></img>
-      <div className={classes['bar-container']}>
+      <div className={classes["bar-container"]}>
         <img
           src={timeContainerImg}
-          className={classes['bar-none']}
+          className={classes["bar-none"]}
           alt="time-container"
         ></img>
         <img
           ref={barRef}
           src={timeFullImg}
-          className={classes['bar-full']}
+          className={classes["bar-full"]}
           alt="time-bar"
         ></img>
       </div>

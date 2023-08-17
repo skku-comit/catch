@@ -8,6 +8,7 @@
 .catch {
   animation: floating 3s ease-in-out infinite;
   position: absolute;
+  z-index: 5;
 }
 .catch12 {
   width: 200px;

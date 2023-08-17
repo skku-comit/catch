@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 // hooks
 import { useState, useContext } from "react";
 
@@ -45,7 +46,13 @@ const Question5Page = () => {
   };
 
   return (
-    <div className={classes["page"]}>
+    <motion.div
+      className={classes["page"]}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.2 }}
+      exit={{ opacity: 0 }}
+    >
       <ImageContainer
         isAnswered={isAnswered}
         isStart={isQuestionStart}
@@ -69,7 +76,7 @@ const Question5Page = () => {
       )}
 
       {openAnswerpage && <div className={classes["backdrop"]} />}
-    </div>
+    </motion.div>
   );
 };
 
