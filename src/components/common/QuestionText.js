@@ -28,9 +28,10 @@ const QuestionText = ({
 
   return (
     <div
-      className={`${classes["problem-text"]} ${
-        checkAnswer !== "" && classes.done
-      } ${checkFinished && classes.answer}
+      className={`${classes["problem-text"]} 
+      ${checkAnswer !== "" && classes.done}
+      ${checkAnswer === "" && checkFinished && classes.done}
+      ${checkFinished && classes.answer}
       }`}
     >
       {delay && (

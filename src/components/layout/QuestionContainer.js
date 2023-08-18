@@ -77,7 +77,11 @@ const QuestionContainer = ({
         initial="hidden"
         animate="visible"
       >
-        <QuestionNumber Number={Number} checkAnswer={checkAnswer} />
+        <QuestionNumber
+          Number={Number}
+          checkAnswer={checkAnswer}
+          checkFinished={checkFinished}
+        />
         <QuestionText
           Problem={Problem}
           Explain={Explain}
