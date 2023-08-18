@@ -7,12 +7,12 @@
   height: 5.73vh;
 }
 
-.bar-full {
+.timer-container {
   position: absolute;
-  top: 20%;
-  left: 1%;
-  margin: 0;
+  top: 0;
+  left: 0;
   height: 100%;
+  z-index: 3;
 }
 
 .bar-container {
@@ -22,7 +22,6 @@
   top: 20%;
   left: 3%;
 }
-
 .bar-none {
   position: absolute;
   top: 0;
@@ -30,11 +29,11 @@
   margin: 0;
   width: 100%;
 }
-
-.timer-container {
+.bar-full {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 20%;
+  left: 1%;
+  margin: 0;
   height: 100%;
-  z-index: 3;
+  width: 110%;
 }
