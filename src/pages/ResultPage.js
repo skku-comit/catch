@@ -43,7 +43,7 @@ const ResultPage = () => {
       case 4:
         return "/images/background/resultpage/level4.png";
       case 5:
-        return "/images/background/resultpage/level5.png";
+        return "/images/background/resultpage/level5-1.png";
     }
   };
   const selectResultImage = (level) => {

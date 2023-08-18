@@ -12,6 +12,8 @@
 
   position: relative;
   animation: 0.5 backgroundAni cubic-bezier(0, 0, 0, 1) forwards;
+
+  overflow: hidden;
 }
 @keyframes backgroundAni {
   0% {
