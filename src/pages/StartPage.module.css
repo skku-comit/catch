@@ -79,6 +79,9 @@
   background-color: transparent;
   cursor: pointer;
 }
+.start-button:focus {
+  outline: none;
+}
 
 .area {
   width: 903px;

@@ -14,7 +14,7 @@
   width: 40.34%;
   height: 25%;
 
-  background: url('../../assets/button/button_continue.png') no-repeat;
+  background: url("../../assets/button/button_continue.png") no-repeat;
   background-size: contain;
   border: none;
 
@@ -22,4 +22,7 @@
   left: 3%;
   bottom: 61%;
   z-index: 100;
+}
+.button:focus {
+  outline: none;
 }

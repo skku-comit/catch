@@ -16,6 +16,9 @@
   position: relative;
   bottom: 60%;
 }
+.button:focus {
+  outline: none;
+}
 
 .defaultA-button {
   background: url("../../assets/button/buttonA/button_A_default.png") center
