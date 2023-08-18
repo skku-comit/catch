@@ -56,6 +56,13 @@ const StartPage = () => {
         animate={controls}
       >
         <motion.div
+          className={classes["area"]}
+          drag="y"
+          dragPropagation
+          whileDrag={{ opacity: 0 }}
+          animate={controls}
+        />
+        <motion.div
           className={classes["image"]}
           drag="y"
           dragPropagation

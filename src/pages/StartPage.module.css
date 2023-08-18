@@ -79,3 +79,11 @@
   background-color: transparent;
   cursor: pointer;
 }
+
+.area {
+  width: 903px;
+  height: 200px;
+
+  position: absolute;
+  top: -150px;
+}
