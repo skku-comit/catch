@@ -22,6 +22,7 @@
   top: 20%;
   left: 3%;
 }
+
 .bar-none {
   position: absolute;
   top: 0;
@@ -29,9 +30,11 @@
   margin: 0;
   width: 100%;
 }
+
 .bar-full {
   position: absolute;
   top: 20%;
   left: 1%;
   margin: 0;
+  height: 100%;
 }
