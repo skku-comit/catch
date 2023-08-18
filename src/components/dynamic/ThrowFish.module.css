@@ -6,7 +6,7 @@
   width: 207px;
   height: 147px;
   background: url("../../assets/fish.png") center center/cover no-repeat;
-
+  border-radius: 20px;
   animation: 1550ms stylie-keyframes linear forwards;
 }
 /* fish-moving-keyframe */
