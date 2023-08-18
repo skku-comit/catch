@@ -7,7 +7,7 @@
   align-items: center;
   /* background changes to img later */
   background: url("../../public/images/background/start_page.png") center
-    center/contain no-repeat;
+    center/cover no-repeat;
   position: relative;
   overflow: hidden;
 }
