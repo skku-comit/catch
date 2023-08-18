@@ -11,6 +11,12 @@
 
   position: relative;
   animation: 0.5 backgroundAni cubic-bezier(0, 0, 0, 1) forwards;
+
+  overflow: hidden;
+
+  image-rendering: -webkit-optimize-contrast;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 @keyframes backgroundAni {
@@ -49,6 +55,8 @@
   }
 }
 .expResult {
+  width: auto;
+  height: auto;
   position: relative;
   z-index: 2;
 }
