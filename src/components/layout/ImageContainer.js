@@ -17,11 +17,11 @@ const ImageContainer = ({
   return (
     <div className={classes["image-container"]}>
       <div className={classes["background"]}>
-        <Timer
+        {/* <Timer
           setIsTimeEnd={setOpenAnswerPage}
           isAnswered={isAnswered}
           isTyped={checkTypingFinished}
-        ></Timer>
+        ></Timer> */}
         <ExpBar isStart={isStart} />
         <Characters Number={Number} CitizenImage={Citizen} />
       </div>

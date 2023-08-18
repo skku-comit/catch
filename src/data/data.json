@@ -30,7 +30,7 @@
     {
       "id": 4,
       "problem": "우와~캐치다! 내 장난감의\n반대쪽이 부숴졌어! ㅠㅠ 내가 들고 있는\n장난감이랑 같은 모양의 완성품을 찾아 줘!",
-      "explanation": "디자이너는 색이나 장식에 휘둘리지 않고\n오직 실루엣만 보고도 모양을 예상하는 능력이\n필요하지!",
+      "explanation": "디자이너는 색이나 장식에 휘둘리지 않고\n오직 실루엣만 보고도 모양을 예상하는\n능력이 필요하지!",
       "answer": "A",
       "characterImage": "/images/character/kid_01.png",
       "image1": "/images/problems/kid_correct.png",
