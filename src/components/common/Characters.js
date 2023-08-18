@@ -25,7 +25,11 @@ const Characters = ({ Number, CitizenImage }) => {
     if (levelUp) {
       setLevelUpDone(true);
     }
-  }, [curExp, levelUp]);
+    if (levelUpDone) {
+      const delay = setTimeout(() => {}, 3000);
+      return () => clearTimeout(delay);
+    }
+  }, [curExp, levelUp, levelUpDone]);
 
   const selectCatchImage = (level) => {
     switch (level) {
