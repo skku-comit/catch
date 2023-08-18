@@ -12,23 +12,6 @@ const ResultPage = () => {
   const curExp = parseInt(curExpContext.exp);
   const level = Math.floor(curExp / 4) + 1;
 
-  const [score, setScore] = useState(0);
-  console.log("맞춘개수 : ");
-  console.log(curExp - level + 1);
-
-  useEffect(() => {}, [score]);
-
-  const onAnimationComplete = () => {
-    console.log(score);
-    console.log("Occured!");
-    const interval = setTimeout(() => {
-      setScore((prevScore) => prevScore + 1);
-    }, 500);
-    return () => {
-      clearTimeout(interval);
-    };
-  };
-
   const resetExp = () => {
     curExpContext.setExp(0);
   };
@@ -103,18 +86,14 @@ const ResultPage = () => {
           delay: 1.5,
         }}
       >
-        {score < curExp - level + 1 ? (
-          <motion.div
-            className={classes["score"]}
-            animate={{ opacity: [1, 0, 0, 1], y: [0, -80, 0.1, 0] }}
-            transition={{ duration: 3, times: [0, 0.98, 0.99, 1] }}
-            onAnimationComplete={onAnimationComplete()}
-          >
-            {score}
-          </motion.div>
-        ) : (
-          <div className={classes["score"]}>{score}</div>
-        )}
+        <motion.div
+          className={classes["score"]}
+          initial={{ opacity: 0, y: -40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 1.5 }}
+        >
+          {curExp - level + 1}
+        </motion.div>
 
         <div className={classes["score"]}>/</div>
         <div className={classes["score"]}>12</div>
