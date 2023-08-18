@@ -3,17 +3,24 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 //css
 import classes from "./QuestionButton.module.css";
+//mp3
+import useEffectSound from "./useEffectSound";
+import effectSound from "../../assets/bgm/button-sound.mp3";
 
 const QuestionButton = ({ checkAnswer, onCheckAnswer }) => {
   const [userAnswer, setUserAnswer] = useState("initial");
+  const es = useEffectSound(effectSound, 1);
+
   useEffect(() => {
     if (userAnswer !== "initial") onCheckAnswer(userAnswer);
   }, [userAnswer]);
 
   const AclickHandler = () => {
+    es.play();
     setUserAnswer("A");
   };
   const BclickHandler = () => {
+    es.play();
     setUserAnswer("B");
   };
 

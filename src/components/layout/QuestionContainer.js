@@ -27,6 +27,7 @@ const QuestionContainer = ({
   const checkTimerHandler = () => {
     onSetTimerDone();
   };
+
   //animation variant
   const problemVariant = {
     hidden: {},
