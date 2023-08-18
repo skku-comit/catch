@@ -6,15 +6,36 @@ import Level from "../data/level";
 import { Link } from "react-router-dom";
 //css
 import classes from "./ResultPage.module.css";
-
+//mp3
+import useEffectSound from "../components/common/useEffectSound";
+import Level1Sound from "../assets/bgm/level1-sound.mp3";
+import Level2Sound from "../assets/bgm/level2-sound.mp3";
+import Level3Sound from "../assets/bgm/level3-sound.mp3";
+import Level4Sound from "../assets/bgm/level4-sound.mp3";
+import Level5Sound from "../assets/bgm/level5-sound.mp3";
 const ResultPage = () => {
   const curExpContext = useContext(Level);
   const curExp = parseInt(curExpContext.exp);
   const level = Math.floor(curExp / 4) + 1;
 
+  const sound1 = useEffectSound(Level1Sound, 1);
+  const sound2 = useEffectSound(Level2Sound, 1);
+  const sound3 = useEffectSound(Level3Sound, 1);
+  const sound4 = useEffectSound(Level4Sound, 1);
+  const sound5 = useEffectSound(Level5Sound, 1);
+
+  const playES = (level) => {
+    if (level === 1) sound1.play();
+    else if (level === 2) sound2.play();
+    else if (level === 3) sound3.play();
+    else if (level === 4) sound4.play();
+    else sound5.play();
+  };
+
   const resetExp = () => {
     curExpContext.setExp(0);
   };
+
   const selectBacgroundImage = (level) => {
     switch (level) {
       case 1:
@@ -76,6 +97,7 @@ const ResultPage = () => {
           duration: 0.5,
           ease: [0, 0, 0, 1],
         }}
+        onAnimationEnd={playES(level)}
       />
       <motion.div
         className={classes["score-container"]}
