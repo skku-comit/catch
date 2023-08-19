@@ -24,13 +24,13 @@ const ResultPage = () => {
   const sound4 = useEffectSound(Level4Sound, 1);
   const sound5 = useEffectSound(Level5Sound, 1);
 
-  const playES = (level) => {
-    if (level === 1) sound1.play();
-    else if (level === 2) sound2.play();
-    else if (level === 3) sound3.play();
-    else if (level === 4) sound4.play();
-    else sound5.play();
-  };
+  // const playES = (level) => {
+  //   if (level === 1) sound1.play();
+  //   else if (level === 2) sound2.play();
+  //   else if (level === 3) sound3.play();
+  //   else if (level === 4) sound4.play();
+  //   else sound5.play();
+  // };
 
   const resetExp = () => {
     curExpContext.setExp(0);
@@ -97,7 +97,7 @@ const ResultPage = () => {
           duration: 0.5,
           ease: [0, 0, 0, 1],
         }}
-        onAnimationEnd={playES(level)}
+        // onAnimationEnd={playES(level)}
       />
       <motion.div
         className={classes["score-container"]}
