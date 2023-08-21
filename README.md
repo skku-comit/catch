@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+<img src="https://capsule-render.vercel.app/api?type=Rounded&color=auto&height=300&section=header&text=CATch%20Mind&animation=fadeIn&fontSize=90&stroke=000000&strokeWidth=3&fontColor=ffffff" />
+<h1>Project Explanation</h1>
+2023 혜화역 차없는 거리 전시 / 2023 성균관대학교 예술대학 전시에 사용될 웹 UI/UX 게임 개발 프로젝트
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](https://github.com/skku-comit/catch/assets/110150963/4f178342-8b2a-4b92-94ea-de8be7663354)
 
-## Available Scripts
+<br>
+<br>
+<h1>About The Project</h1>
+<h3><strong>대학로에 디자이너들이 사라졌다!</strong></h3>
 
-In the project directory, you can run:
+이때, 나타난 디자인하는 고양이 "캐치"가 대학로에 나타났어요!
 
-### `npm start`
+대학로의 주민들은 디자인의 기본적인 센스가 부족해서 도움이 절실히 필요해요!<br>
+정말 고양이 손이라도 빌리고 싶은 심정이죠.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+여러분은 디자이너 캐치가 되어 대학로 주민들의 디자인을 도와주고,
+훌륭한 디자이너로 성장해야 해요!
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h3>디자인하는 고양이 캐치는 과연 얼마나 강한 디자이너가 될 수 있을까요?</h3>
+<br>
+<h1>CATch 마인드의 기술 스택</h1>
+<h3>UX/UI</h3>
+<ul>
+  <li>Adobe Photoshop</li>
+  <li>Adobe illustrator</li>
+  <li>Figma</li>
+</ul>
+<h3>Frontend</h3>
+<ul>
+  <li>React.js</li>
+  <li>Framer Motion</li>
+  <li>Howler</li>
+  <li>gsap</li>
+</ul>
+<h1>Game Outline</h1>
+<ul>
+  <li>12개의 디자인적 센스를 묻는 문제</li>
+  <li>맞힌 개수에 따라 성장하는 캐릭터 캐치</li>
+  <li>문제마다 풀이 시간을 제한</li>
+</ul>
+<br>
+<h1>Contribution</h1>
+UX/UI
+<ul>
+  <li>이동규</li>
+  <li>박준오</li>
+</ul>
+Frontend
+<ul>
+  <li>김지호</li>
+  <li>박태곤</li>
+  <li>박지환</li>
+</ul>
+Poster & Goods
+<ul>
+  <li>홍민재</li>
+</ul>
