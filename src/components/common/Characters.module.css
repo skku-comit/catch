@@ -40,7 +40,7 @@
 
 .disappearCatch {
   transform-origin: 50% 100%;
-  animation: 0.3s disappear 0.5s cubic-bezier(0, 0, 0, 1) both;
+  animation: 0.15s disappear 0.25s cubic-bezier(0, 0, 0, 1) both;
 }
 @keyframes disappear {
   0% {
@@ -62,7 +62,7 @@
 }
 .disappearWhiteCatch {
   transform-origin: 50% 100%;
-  animation: 0.8s disappearWhite cubic-bezier(0, 0, 0, 1) both;
+  animation: 0.4s disappearWhite cubic-bezier(0, 0, 0, 1) both;
 }
 @keyframes disappearWhite {
   0% {
@@ -85,7 +85,7 @@
 
 .appearCatch {
   transform-origin: 50% 100%;
-  animation: 0.4s appear 0.5s cubic-bezier(0, 0, 0, 1) both;
+  animation: 0.8s appear 0.5s cubic-bezier(0, 0, 0, 1) both;
 }
 
 @keyframes appear {
@@ -109,7 +109,7 @@
 
 .appearWhiteCatch {
   transform-origin: 50% 100%;
-  animation: 0.4s appearWhite 0.5s cubic-bezier(0, 0, 0, 1) both;
+  animation: 0.8s appearWhite 0.5s cubic-bezier(0, 0, 0, 1) both;
 }
 
 @keyframes appearWhite {

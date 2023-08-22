@@ -9,7 +9,7 @@ const ThrowFish = ({ checkAnswer, onChangePage }) => {
     if (checkAnswer === "true") {
       const timer = setTimeout(() => {
         onChangePage();
-      }, 5000);
+      }, 4000);
       return () => {
         clearTimeout(timer);
       };
@@ -31,7 +31,7 @@ const ThrowFish = ({ checkAnswer, onChangePage }) => {
       scale: [0],
       rotate: [0],
       transition: {
-        duration: 1.55,
+        duration: 1,
         times: [0, 0.25],
       },
     },
