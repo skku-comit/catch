@@ -6,12 +6,21 @@ import classes from "./ThrowFish.module.css";
 
 const ThrowFish = ({ checkAnswer, onChangePage }) => {
   useEffect(() => {
-    const timer = setTimeout(() => {
-      onChangePage();
-    }, 5000);
-    return () => {
-      clearTimeout(timer);
-    };
+    if (checkAnswer === "true") {
+      const timer = setTimeout(() => {
+        onChangePage();
+      }, 5000);
+      return () => {
+        clearTimeout(timer);
+      };
+    } else {
+      const timer = setTimeout(() => {
+        onChangePage();
+      }, 2500);
+      return () => {
+        clearTimeout(timer);
+      };
+    }
   }, []);
 
   const fishVariant = {

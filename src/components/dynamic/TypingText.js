@@ -3,7 +3,7 @@ import classes from "./TypingText.module.css";
 //imports
 import React, { useState, useEffect } from "react";
 
-const TypingText = ({ text, onSetTimerDone }) => {
+const TypingText = ({ text, onSetTypingDone }) => {
   const [displayText, setDisplayText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -14,7 +14,7 @@ const TypingText = ({ text, onSetTimerDone }) => {
     }, 30);
     if (currentIndex === text.length) {
       clearInterval(count);
-      onSetTimerDone();
+      onSetTypingDone();
     }
     return () => clearInterval(count);
   }, [displayText]);

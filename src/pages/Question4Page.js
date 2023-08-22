@@ -20,6 +20,7 @@ const Question4Page = () => {
   const [isAnswered, setIsAnswered] = useState(false);
   const [openAnswerpage, setOpenAnswerPage] = useState(false); // answer page
   const [isTyped, setIsTyped] = useState(false); //typing done
+  const [timeEnded, setTimeEnded] = useState(false); //timer end
   // level context
   const curExpContext = useContext(Level);
   const setCurExpIncrease = () => {
@@ -44,8 +45,12 @@ const Question4Page = () => {
     setOpenAnswerPage(true);
   };
 
-  const timerHandler = () => {
+  const typingHandler = () => {
     setIsTyped(true);
+  };
+
+  const setTimeEnd = () => {
+    setTimeEnded(true);
   };
   return (
     <motion.div
@@ -58,7 +63,7 @@ const Question4Page = () => {
       <ImageContainer
         isAnswered={isAnswered}
         isStart={isQuestionStart}
-        setOpenAnswerPage={setOpenAnswerPage}
+        setTimeEnd={setTimeEnd}
         Number={questionData.questions[3].id}
         Citizen={questionData.questions[3].characterImage}
         checkTypingFinished={isTyped}
@@ -72,10 +77,11 @@ const Question4Page = () => {
         answer={questionData.questions[3].answer}
         checkAnswer={isCorrect}
         checkFinished={openAnswerpage}
+        checkTimer={timeEnded}
         onGetAnswer={answerHandler}
-        onSetTimerDone={timerHandler}
+        onSetTypingDone={typingHandler}
       />
-      {isCorrect !== "" && (
+      {(isCorrect !== "" || timeEnded) && (
         <ThrowFish checkAnswer={isCorrect} onChangePage={pageHandler} />
       )}
 

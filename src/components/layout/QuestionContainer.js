@@ -18,14 +18,15 @@ const QuestionContainer = ({
   answer,
   checkAnswer,
   checkFinished,
+  checkTimer,
   onGetAnswer,
-  onSetTimerDone,
+  onSetTypingDone,
 }) => {
   const checkAnswerHandler = (userAnswer) => {
     onGetAnswer(userAnswer);
   };
-  const checkTimerHandler = () => {
-    onSetTimerDone();
+  const checkTypingDone = () => {
+    onSetTypingDone();
   };
 
   //animation variant
@@ -62,17 +63,21 @@ const QuestionContainer = ({
           Number <= 6 ? classes.background1 : classes.background2
         }`}
       />
-      {checkAnswer === "" && !checkFinished && (
+      {checkAnswer === "" && !checkFinished && !checkTimer && (
         <div className={classes["triangle"]}></div>
       )}
       <motion.div
-        className={`${classes["question-problem"]} ${
+        className={`${classes["question-problem"]} 
+        ${
           checkAnswer === ""
-            ? ""
+            ? checkTimer
+              ? classes.timeout
+              : ""
             : checkAnswer === "true"
             ? classes.correct
             : classes.wrong
-        } ${checkFinished && classes.done}`}
+        }         
+        ${checkFinished && classes.done}`}
         variants={problemVariant}
         initial="hidden"
         animate="visible"
@@ -80,17 +85,17 @@ const QuestionContainer = ({
         <QuestionNumber
           Number={Number}
           checkAnswer={checkAnswer}
-          checkFinished={checkFinished}
+          checkTimer={checkTimer}
         />
         <QuestionText
           Problem={Problem}
           Explain={Explain}
           checkAnswer={checkAnswer}
           checkFinished={checkFinished}
-          onSetTimerDone={checkTimerHandler}
+          onSetTypingDone={checkTypingDone}
+          checkTimer={checkTimer}
         />
       </motion.div>
-
       <motion.div
         className={classes["question-container"]}
         variants={mainVariant}
@@ -107,6 +112,7 @@ const QuestionContainer = ({
           <QuestionButton
             checkAnswer={checkAnswer}
             onCheckAnswer={checkAnswerHandler}
+            checkTimer={checkTimer}
           />
         ) : (
           <NextButton Number={Number} />

@@ -4,12 +4,11 @@ import classes from "./ImageContainer.module.css";
 import ExpBar from "../common/ExpBar";
 import Characters from "../common/Characters";
 import Timer from "../common/Timer";
-import { useState } from "react";
 
 const ImageContainer = ({
   isAnswered,
-  setOpenAnswerPage,
   isStart,
+  setTimeEnd,
   Number,
   Citizen,
   checkTypingFinished,
@@ -18,10 +17,10 @@ const ImageContainer = ({
     <div className={classes["image-container"]}>
       <div className={classes["background"]}>
         <Timer
-          setIsTimeEnd={setOpenAnswerPage}
+          setIsTimeEnd={setTimeEnd}
           isAnswered={isAnswered}
           isTyped={checkTypingFinished}
-        ></Timer>
+        />
         <ExpBar isStart={isStart} />
         <Characters Number={Number} CitizenImage={Citizen} />
       </div>

@@ -10,12 +10,13 @@ const QuestionText = ({
   Explain,
   checkAnswer,
   checkFinished,
-  onSetTimerDone,
+  onSetTypingDone,
+  checkTimer,
 }) => {
   const [delay, setDelay] = useState(false);
 
-  const checkTimerHandler = () => {
-    onSetTimerDone();
+  const checkTypingHandler = () => {
+    onSetTypingDone();
   };
 
   useEffect(() => {
@@ -30,14 +31,14 @@ const QuestionText = ({
     <div
       className={`${classes["problem-text"]} 
       ${checkAnswer !== "" && classes.done}
-      ${checkAnswer === "" && checkFinished && classes.done}
+      ${checkAnswer === "" && checkTimer && classes.done}
       ${checkFinished && classes.answer}
       }`}
     >
       {delay && (
         <>
           {!checkFinished ? (
-            <TypingText text={Problem} onSetTimerDone={checkTimerHandler} />
+            <TypingText text={Problem} onSetTypingDone={checkTypingHandler} />
           ) : (
             <TypingAnswer text={Explain} />
           )}

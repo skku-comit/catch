@@ -96,6 +96,9 @@
   background-image: url("../../assets/box/box_false.png");
 }
 
+.timeout {
+  background-image: url("../../../src/assets/box/box_timeout.png");
+}
 .done {
   background-image: url("../../../src/assets/box/box_content_results.png");
 }

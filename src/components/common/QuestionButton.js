@@ -7,7 +7,7 @@ import classes from "./QuestionButton.module.css";
 import useEffectSound from "./useEffectSound";
 import effectSound from "../../assets/bgm/button-sound.mp3";
 
-const QuestionButton = ({ checkAnswer, onCheckAnswer }) => {
+const QuestionButton = ({ checkAnswer, onCheckAnswer, checkTimer }) => {
   const [userAnswer, setUserAnswer] = useState("initial");
   const es = useEffectSound(effectSound, 1);
 
@@ -44,7 +44,8 @@ const QuestionButton = ({ checkAnswer, onCheckAnswer }) => {
         ${userAnswer === "B" && checkAnswer === "false" && classes.AWrong}
         ${userAnswer === "A" && checkAnswer === "false" && classes.AShade}
         ${userAnswer === "B" && checkAnswer === "true" && classes.AShade}
-        ${checkAnswer !== "" && classes.done}
+        ${userAnswer === "initial" && checkTimer && classes.AShade}
+        ${(checkAnswer !== "" || checkTimer) && classes.done}
         `}
         onClick={AclickHandler}
         variants={buttonVariant}
@@ -55,7 +56,8 @@ const QuestionButton = ({ checkAnswer, onCheckAnswer }) => {
         ${userAnswer === "A" && checkAnswer === "false" && classes.BWrong}
         ${userAnswer === "B" && checkAnswer === "false" && classes.BShade}
         ${userAnswer === "A" && checkAnswer === "true" && classes.BShade}
-        ${checkAnswer !== "" && classes.done}
+        ${userAnswer === "initial" && checkTimer && classes.BShade}
+        ${(checkAnswer !== "" || checkTimer) && classes.done}
         `}
         onClick={BclickHandler}
         variants={buttonVariant}
