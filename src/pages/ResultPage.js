@@ -24,7 +24,12 @@ const ResultPage = () => {
   };
   useEffect(() => {
     playES(level);
+    const timer = setTimeout(() => {
+      window.location.href = "/";
+    }, 60000);
+    return () => clearTimeout(timer);
   }, []);
+
   const resetExp = () => {
     curExpContext.setExp(0);
   };

@@ -2,6 +2,7 @@
 import classes from "./NextButton.module.css";
 //imports
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 //mp3
 import useEffectSound from "./useEffectSound";
 import effectSound from "../../assets/bgm/page-change.mp3";
@@ -12,6 +13,13 @@ const NextButton = ({ Number }) => {
   const playES = () => {
     es.play();
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      window.location.href = "/";
+    }, 60000);
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <Link to={link} className={classes["button-container"]}>
       <button className={classes["button"]} onClick={playES} />
