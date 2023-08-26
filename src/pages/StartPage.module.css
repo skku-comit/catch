@@ -34,10 +34,13 @@
 
 .image {
   width: 903px;
-  height: 60px;
+  height: 65px;
   background: url("../assets/box/box-drag-arrow.png") center center/contain
     no-repeat;
   animation: 1s flash infinite alternate;
+
+  position: relative;
+  bottom: 2.5%;
 }
 @keyframes flash {
   0% {
