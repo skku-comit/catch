@@ -7,7 +7,10 @@ import { useEffect } from "react";
 import useEffectSound from "./useEffectSound";
 import effectSound from "../../assets/bgm/page-change.mp3";
 const NextButton = ({ Number }) => {
-  const link = "/q" + String(Number + 1);
+  let link = "/q" + String(Number + 1);
+  if (Number === 12) {
+    link = "/result";
+  }
   const es = useEffectSound(effectSound, 1);
 
   const playES = () => {

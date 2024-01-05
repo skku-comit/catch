@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 // hooks
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 
 // css
 import classes from "./QuestionPage.module.css";
@@ -14,13 +14,15 @@ import questionData from "../data/data.json";
 // context
 import Level from "../data/level";
 
-const Question1Page = () => {
+const QuestionPage = (props) => {
   const [isCorrect, setIsCorrect] = useState("");
   const [isQuestionStart, setIsQuestionStart] = useState();
   const [isAnswered, setIsAnswered] = useState(false);
   const [openAnswerpage, setOpenAnswerPage] = useState(false); // answer page
   const [isTyped, setIsTyped] = useState(false); //typing done
   const [timeEnded, setTimeEnded] = useState(false); //timer end
+  // Page Number
+  const pageNumber = props.pageNumber - 1;
   // level context
   const curExpContext = useContext(Level);
   const setCurExpIncrease = () => {
@@ -31,7 +33,7 @@ const Question1Page = () => {
 
   const answerHandler = (userAnswer) => {
     setIsAnswered(true);
-    if (questionData.questions[0].answer === userAnswer) {
+    if (questionData.questions[pageNumber].answer === userAnswer) {
       setIsCorrect("true");
       setCurExpIncrease();
       setIsQuestionStart(true);
@@ -64,17 +66,17 @@ const Question1Page = () => {
         isAnswered={isAnswered}
         isStart={isQuestionStart}
         setTimeEnd={setTimeEnd}
-        Number={questionData.questions[0].id}
-        Citizen={questionData.questions[0].characterImage}
+        Number={questionData.questions[pageNumber].id}
+        Citizen={questionData.questions[pageNumber].characterImage}
         checkTypingFinished={isTyped}
       />
       <QuestionContainer
-        Number={questionData.questions[0].id}
-        Problem={questionData.questions[0].problem}
-        Explain={questionData.questions[0].explanation}
-        Image1={questionData.questions[0].image1}
-        Image2={questionData.questions[0].image2}
-        answer={questionData.questions[0].answer}
+        Number={questionData.questions[pageNumber].id}
+        Problem={questionData.questions[pageNumber].problem}
+        Explain={questionData.questions[pageNumber].explanation}
+        Image1={questionData.questions[pageNumber].image1}
+        Image2={questionData.questions[pageNumber].image2}
+        answer={questionData.questions[pageNumber].answer}
         checkAnswer={isCorrect}
         checkFinished={openAnswerpage}
         checkTimer={timeEnded}
@@ -90,4 +92,4 @@ const Question1Page = () => {
   );
 };
 
-export default Question1Page;
+export default QuestionPage;
