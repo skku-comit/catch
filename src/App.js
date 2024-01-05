@@ -1,6 +1,12 @@
+// Recoil
+import { media_version } from "./data/atom";
+import { useRecoilState } from "recoil";
+// React-Responsive
+import { useMediaQuery } from "react-responsive";
+// Framer-Motion
 import { AnimatePresence } from "framer-motion";
 // imports
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 
 // pages
@@ -12,6 +18,21 @@ import Level from "./data/level";
 function App() {
   const [curExp, setCurExp] = useState(0);
   const location = useLocation();
+  // React-Responsive
+  const [version, setVersion] = useRecoilState(media_version);
+  const PC = useMediaQuery({
+    query: "(min-width:1200px)",
+  });
+  const TABLET = useMediaQuery({
+    query: "(min-width:768px) and (max-width:1199px)",
+  });
+  const MOBILE = useMediaQuery({
+    query: "(max-width:767px)",
+  });
+  useEffect(() => {
+    setVersion(PC ? "PC" : TABLET ? "TABLET" : "MOBILE");
+  }, [PC, TABLET, MOBILE]);
+
   return (
     <Level.Provider value={{ exp: curExp, setExp: setCurExp }}>
       <AnimatePresence>
