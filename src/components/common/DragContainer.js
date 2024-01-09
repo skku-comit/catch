@@ -29,14 +29,16 @@ const DragContainer = ({ updateBackdropOpacity, setBackdropOpacity }) => {
       }}
       className={classes["drag-container"]}
       drag="y"
-      dragConstraints={{ top: -3000, bottom: 0 }}
+      dragConstraints={{ top: -1 * window.innerHeight, bottom: 0 }}
       dragElastic={0.3}
       dragMomentum={false}
       onDrag={(event, info) => {
         updateBackdropOpacity(info.point.y);
       }}
       onDragEnd={(event, info) => {
-        if (info.offset.y < -350) {
+        console.log("놨음");
+        console.log(info.offset.y);
+        if (info.offset.y < -90) {
           openBox();
         } else {
           closeBox();
