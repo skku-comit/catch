@@ -21,10 +21,10 @@ function App() {
   // React-Responsive
   const [version, setVersion] = useRecoilState(media_version);
   const PC = useMediaQuery({
-    query: "(min-width:1200px)",
+    query: "(min-width:1025px)",
   });
   const TABLET = useMediaQuery({
-    query: "(min-width:768px) and (max-width:1199px)",
+    query: "(min-width:768px) and (max-width:1024px)",
   });
   const MOBILE = useMediaQuery({
     query: "(max-width:767px)",
@@ -32,6 +32,9 @@ function App() {
   useEffect(() => {
     setVersion(PC ? "PC" : TABLET ? "TABLET" : "MOBILE");
   }, [PC, TABLET, MOBILE]);
+  useEffect(() => {
+    console.log(version);
+  }, [version]);
 
   return (
     <Level.Provider value={{ exp: curExp, setExp: setCurExp }}>

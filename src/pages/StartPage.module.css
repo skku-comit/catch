@@ -1,13 +1,13 @@
 .start-page {
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   /* background changes to img later */
   background: url("../../public/images/background/start_page.png") center
-    center/cover no-repeat;
+    center/contain no-repeat;
   position: relative;
   overflow: hidden;
 }
@@ -19,77 +19,4 @@
   opacity: 1;
   position: fixed;
   z-index: 2;
-}
-.drag-container {
-  width: 903px;
-  height: 1399px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  position: absolute;
-  top: 92%;
-  z-index: 3;
-}
-
-.image {
-  width: 903px;
-  height: 65px;
-  background: url("../assets/box/box-drag-arrow.png") center center/contain
-    no-repeat;
-  animation: 1s flash infinite alternate;
-
-  position: relative;
-  bottom: 2.5%;
-}
-@keyframes flash {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.text {
-  width: 903px;
-  height: 1299px;
-  background: url("../assets/box/box_drag-page.png") center center/contain
-    no-repeat;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-end;
-  position: relative;
-}
-
-.start-link {
-  background: url("../assets/button/button-start.png") center center/contain
-    no-repeat transparent;
-  width: 390px;
-  height: 134px;
-  position: absolute;
-  bottom: 7.4%;
-  right: 28.1%;
-}
-
-/* .start-link:active {
-  height: 120px;
-} */
-
-.start-button {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-.start-button:focus {
-  outline: none;
-}
-
-.area {
-  width: 903px;
-  height: 300px;
-
-  position: absolute;
-  top: -280px;
 }
