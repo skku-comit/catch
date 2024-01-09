@@ -1,9 +1,9 @@
 .container {
   position: relative;
   top: -5%;
-  left: 1vw;
+  /* left: 1vw; */
   /* width: 95.21vw; */
-  width: 96.6vw;
+  width: 96.6dvw;
   height: 5.73vh;
   /* margin-bottom: 10%; */
 }
