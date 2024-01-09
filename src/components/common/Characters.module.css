@@ -3,7 +3,11 @@
   height: 54.23%;
 
   position: relative;
-  bottom: 7.8%;
+  /* bottom: 7.8%; */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 .catch {
   animation: floating 3s ease-in-out infinite;
@@ -131,8 +135,8 @@
   }
 }
 .citizen {
-  width: 32%;
-  height: 90%;
+  /* width: 20%; */
+  height: 100%;
 
   background-repeat: no-repeat;
   background-size: contain;
@@ -140,7 +144,7 @@
 
   position: absolute;
   right: 15px;
-  top: 30px;
+  /* top: 30px; */
 }
 
 .kidOff {

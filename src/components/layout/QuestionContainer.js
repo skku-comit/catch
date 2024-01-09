@@ -63,9 +63,9 @@ const QuestionContainer = ({
           Number <= 6 ? classes.background1 : classes.background2
         }`}
       />
-      {checkAnswer === "" && !checkFinished && !checkTimer && (
+      {/* {checkAnswer === "" && !checkFinished && !checkTimer && (
         <div className={classes["triangle"]}></div>
-      )}
+      )} */}
       <motion.div
         className={`${classes["question-problem"]} 
         ${

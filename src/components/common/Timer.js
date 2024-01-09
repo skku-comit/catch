@@ -21,7 +21,7 @@ const Timer = (props) => {
       if (!isAnswered) {
         timerAnimation = gsap.fromTo(
           barRef.current,
-          { scaleX: 0.99 },
+          { scaleX: 1 },
           {
             scaleX: 0,
             duration: 20.3,
@@ -48,12 +48,8 @@ const Timer = (props) => {
   }, [isAnswered, props.isTyped]);
 
   return (
-    <div className={classes["time-container"]}>
-      <img
-        src={timer}
-        className={classes["timer-container"]}
-        alt="timer-container"
-      />
+    <div className={classes["container"]}>
+      <img src={timer} className={classes["timer-image"]} alt="timer-image" />
       <div className={classes["bar-container"]}>
         <img
           src={timeContainerImg}

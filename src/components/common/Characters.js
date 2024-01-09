@@ -57,49 +57,50 @@ const Characters = ({ Number, CitizenImage }) => {
   };
   return (
     <div className={classes["character-container"]}>
-      <motion.img
-        className={`${classes.catch} ${
-          level === 3
-            ? classes.catch3
-            : level === 4
-            ? classes.catch4
-            : level === 5
-            ? classes.catch5
-            : classes.catch12
-        }        
+      <div>
+        <motion.img
+          className={`${classes.catch} ${
+            level === 3
+              ? classes.catch3
+              : level === 4
+              ? classes.catch4
+              : level === 5
+              ? classes.catch5
+              : classes.catch12
+          }        
         ${levelUp && !levelUpDone && classes.disappearCatch}        
         ${levelUpDone && classes.appearCatch}`}
-        src={selectCatchImage(level)}
-        alt="catch"
-        animate={{
-          y: [-10, 10, -10],
-        }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-        }}
-      />
-      <img
-        className={`${classes.catch} ${
-          level === 3
-            ? classes.catch3
-            : level === 4
-            ? classes.catch4
-            : level === 5
-            ? classes.catch5
-            : classes.catch12
-        }        
+          src={selectCatchImage(level)}
+          alt="catch"
+          animate={{
+            y: [-10, 10, -10],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+          }}
+        />
+        <img
+          className={`${classes.catch} ${
+            level === 3
+              ? classes.catch3
+              : level === 4
+              ? classes.catch4
+              : level === 5
+              ? classes.catch5
+              : classes.catch12
+          }        
         ${classes.whiteCatch}
         ${levelUp && !levelUpDone && classes.disappearWhiteCatch}
         ${levelUpDone && classes.appearWhiteCatch}`}
-        src={selectWhiteCatchImage(level)}
-        alt="WhiteCatch"
-      />
-      <motion.div
-        className={`${classes["citizen"]} ${classes["floating"]}`}
-        style={{
-          backgroundImage: `url(${CitizenImage})`,
-        }}
+          src={selectWhiteCatchImage(level)}
+          alt="WhiteCatch"
+        />
+      </div>
+      {/* <img src={CitizenImage} alt="citizen Image" /> */}
+      <motion.img
+        className={classes["citizen"]}
+        src={CitizenImage}
         animate={{
           y: [-10, 10, -10],
         }}
@@ -108,10 +109,10 @@ const Characters = ({ Number, CitizenImage }) => {
           repeat: Infinity,
         }}
       >
-        <div
+        {/* <div
           className={`${classes["kidOff"]} ${Number === 4 && classes.kidOn}`}
-        ></div>
-      </motion.div>
+        ></div> */}
+      </motion.img>
     </div>
   );
 };

@@ -15,15 +15,13 @@ const ImageContainer = ({
 }) => {
   return (
     <div className={classes["image-container"]}>
-      <div className={classes["background"]}>
-        <Timer
-          setIsTimeEnd={setTimeEnd}
-          isAnswered={isAnswered}
-          isTyped={checkTypingFinished}
-        />
-        <ExpBar isStart={isStart} />
-        <Characters Number={Number} CitizenImage={Citizen} />
-      </div>
+      <Timer
+        setIsTimeEnd={setTimeEnd}
+        isAnswered={isAnswered}
+        isTyped={checkTypingFinished}
+      />
+      <ExpBar isStart={isStart} />
+      <Characters Number={Number} CitizenImage={Citizen} />
     </div>
   );
 };
