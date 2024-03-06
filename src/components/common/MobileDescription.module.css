@@ -1,0 +1,23 @@
+.text {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: url("../../assets/box/box_drag-page.png") center center/contain
+    no-repeat;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.start-link {
+  background: url("../../assets/button/button-start.png") center center/contain
+    no-repeat transparent;
+  width: 35%;
+  aspect-ratio: 3/1;
+
+  display: block;
+
+  position: relative;
+  bottom: 8%;
+}
