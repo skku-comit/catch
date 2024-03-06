@@ -10,7 +10,9 @@ import { Link } from "react-router-dom";
 import classes from "./StartPage.module.css";
 // Components
 import DragContainer from "../components/common/DragContainer";
-
+// Mobile
+import MobileDragContainer from "../components/common/MobileDescription";
+import MobileDescription from "../components/common/MobileDescription";
 const StartPage = () => {
   const [backdropOpacity, setBackdropOpacity] = useState(0);
   const version = useRecoilValue(media_version);
@@ -20,6 +22,11 @@ const StartPage = () => {
     setBackdropOpacity(opacity);
   };
 
+  // mobile
+  const [isOpenDescription, setIsOpenDescription] = useState(false);
+  function openDescriptionHandler() {
+    setIsOpenDescription((prev) => !prev);
+  }
   return (
     <motion.div
       className={classes["start-page"]}
@@ -28,14 +35,31 @@ const StartPage = () => {
       transition={{ duration: 0.3 }}
       exit={{ opacity: 0 }}
     >
-      <motion.div
-        className={classes["backdrop"]}
-        style={{ opacity: backdropOpacity }}
-      />
-      <DragContainer
-        updateBackdropOpacity={updateBackdropOpacity}
-        setBackdropOpacity={setBackdropOpacity}
-      />
+      {version !== "MOBILE" ? (
+        <>
+          <motion.div
+            className={classes["backdrop"]}
+            style={{ opacity: backdropOpacity }}
+          />
+
+          <DragContainer
+            updateBackdropOpacity={updateBackdropOpacity}
+            setBackdropOpacity={setBackdropOpacity}
+          />
+        </>
+      ) : (
+        !isOpenDescription && (
+          <button
+            className={classes["mobile-startBtn"]}
+            style={{
+              // bottom: (window.innerHeight - (window.innerWidth * 4) / 3) / 2,
+              bottom: (window.innerHeight - (window.innerWidth * 6) / 5) / 2,
+            }}
+            onClick={openDescriptionHandler}
+          />
+        )
+      )}
+      {isOpenDescription && <MobileDescription />}
     </motion.div>
   );
 };

@@ -20,3 +20,13 @@
   position: fixed;
   z-index: 2;
 }
+
+.mobile-startBtn {
+  width: 20%;
+  height: 6.5%;
+  background: url("../assets/button/button-info.png") center center/contain
+    no-repeat transparent;
+  border: none;
+
+  position: absolute;
+}

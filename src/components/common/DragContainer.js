@@ -13,9 +13,7 @@ const DragContainer = ({ updateBackdropOpacity, setBackdropOpacity }) => {
     await controls.start({ y: -1 * 0.95 * window.innerHeight });
     setBackdropOpacity(0.5);
   };
-  useEffect(() => {
-    console.log(container.current.clientHeight);
-  }, []);
+
   const closeBox = async () => {
     await controls.start({
       y: 0,
@@ -36,8 +34,7 @@ const DragContainer = ({ updateBackdropOpacity, setBackdropOpacity }) => {
         updateBackdropOpacity(info.point.y);
       }}
       onDragEnd={(event, info) => {
-        console.log("놨음");
-        console.log(info.offset.y);
+        console.log(info);
         if (info.offset.y < -90) {
           openBox();
         } else {
