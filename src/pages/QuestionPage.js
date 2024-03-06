@@ -56,6 +56,9 @@ const QuestionPage = (props) => {
   };
   return (
     <motion.div
+      style={{
+        height: Math.min(window.innerHeight, (window.innerWidth * 4) / 3),
+      }}
       className={classes["page"]}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

@@ -20,7 +20,6 @@ const StartPage = () => {
     setBackdropOpacity(opacity);
   };
 
-  console.log((window.innerHeight - window.innerWidth * 1.17) / 2);
   return (
     <motion.div
       className={classes["start-page"]}

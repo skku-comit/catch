@@ -1,6 +1,6 @@
 .number {
-  width: 100px;
-  height: 100px;
+  width: 13.4%;
+  aspect-ratio: 1 / 1;
 
   background: url("../../assets/box/box_level.png") no-repeat;
   background-size: contain;
@@ -10,16 +10,16 @@
 }
 
 .number-text {
-  font-size: 64px;
   line-height: 112px;
+  font-size: 64px;
   font-family: MapleStoryBold;
   color: white;
   text-align: center;
 
-  position: absolute;
+  position: relative;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* left: 50%; */
+  transform: translateY(-50%);
 }
 
 .done {

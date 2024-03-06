@@ -15,37 +15,37 @@ const Timer = (props) => {
     props.setIsTimeEnd(true);
   };
 
-  useEffect(() => {
-    let timerAnimation = null;
-    if (props.isTyped) {
-      if (!isAnswered) {
-        timerAnimation = gsap.fromTo(
-          barRef.current,
-          { scaleX: 1 },
-          {
-            scaleX: 0,
-            duration: 20.3,
-            ease: "none",
-            transformOrigin: "left",
-            onComplete: () => {
-              setWhenTimeEndHandler();
-            },
-            onUpdate: () => {
-              if (isAnswered) {
-                timerAnimation.kill();
-              }
-            },
-          }
-        );
-      }
-    }
+  // useEffect(() => {
+  //   let timerAnimation = null;
+  //   if (props.isTyped) {
+  //     if (!isAnswered) {
+  //       timerAnimation = gsap.fromTo(
+  //         barRef.current,
+  //         { scaleX: 1 },
+  //         {
+  //           scaleX: 0,
+  //           duration: 20.3,
+  //           ease: "none",
+  //           transformOrigin: "left",
+  //           onComplete: () => {
+  //             setWhenTimeEndHandler();
+  //           },
+  //           onUpdate: () => {
+  //             if (isAnswered) {
+  //               timerAnimation.kill();
+  //             }
+  //           },
+  //         }
+  //       );
+  //     }
+  //   }
 
-    return () => {
-      if (timerAnimation) {
-        timerAnimation.kill();
-      }
-    };
-  }, [isAnswered, props.isTyped]);
+  //   return () => {
+  //     if (timerAnimation) {
+  //       timerAnimation.kill();
+  //     }
+  //   };
+  // }, [isAnswered, props.isTyped]);
 
   return (
     <div className={classes["container"]}>
